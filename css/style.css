@@ -4,7 +4,26 @@
 body{
     font-family: Verdana, sans-serif;
     margin: 0;
+    background-image: url(../assets/images/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-color: cadetblue;
+    color:azure;
+    position: relative;
 }
+
+#blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(4, 67, 144);
+    opacity: 0.2;
+    z-index: -1;
+  }
 
 header h1{
     font-size: 35px;
@@ -136,6 +155,59 @@ img{
     color:#4f4f4f;
     transition: all 0.2s; /* CSS transitions https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
 }
+
+.flex-item a.Theory {
+    background-image: url(../assets/images/Theory.png);
+}
+
+.flex-item a.imageTheoryCreatures {
+    background-image: url(../assets/images/TheoryCreatures.png);
+}
+
+.flex-item a.Amoebas {
+    background-image: url(../assets/images/Amoebas.jpg);
+}
+
+.flex-item a.HandAR {
+    background-image: url(../assets/images/HandAR.png);
+}
+
+.flex-item a.HandARCharacter {
+    background-image: url(../assets/images/HandARCharacter.png);
+}
+
+.flex-item a.RandomFractal {
+    background-image: url(../assets/images/RandomFractal.png);
+}
+
+.flex-item a.EllipseRotating {
+    background-image: url(../assets/images/EllipseRotating.png);
+}
+.flex-item a.RandomFractals {
+    background-image: url(../assets/images/RandomFractals.png);
+}
+.flex-item a.ChristmasTree {
+    background-image: url(../assets/images/ChristmasTree.png);
+}
+.flex-item a.Quotes {
+    background-image: url(../assets/images/Quotes.png);
+}
+.flex-item a.Kite {
+    background-image: url(../assets/images/FlyAKite.png);
+}
+.flex-item a.FeedingCreatures{
+    background-image: url(../assets/images/FeeingCreatures.png);
+}
+.flex-item a.MidTerm{
+    background-image: url(../assets/images/MidTerm.png)
+}
+.flex-item a.PM25{
+    background-image: url(../assets/images/PM25.png)
+}
+
+
+
+
 
 /* want a different background image for each project? */
 /* try give each a tag a unique id in your HTML and then set different background images here*/
