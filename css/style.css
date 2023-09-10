@@ -1,19 +1,34 @@
 
 /*This is a comment in CSS*/
 body {
-    font-family: Verdana, sans-serif;
+    /* font-family: Verdana, sans-serif; */
+    font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
     margin: 0;
     background-color:rgb(0, 0, 90);
     color: rgb(243, 255, 255);
     position: relative;
 }
 
-.blur {
+.backgroundImage {
     background-image: url(../assets/images/BG.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    filter: blur(3px);
+    /* filter: blur(3px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.backgroundImageJellyfish {
+    background-image: url(../assets/images/BG2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(6px);
     position: absolute;
     top: 0;
     left: 0;
@@ -49,15 +64,15 @@ main.documentation-page h3{
 }
 
 li{
-    font-family: Helvetica, sans-serif;
+    /* font-family: Helvetica, sans-serif; */
     font-size: 16px;
     line-height: 1.6em;
 }
 p{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6em;
     margin: 2.5em 0;
-    font-family: Helvetica, sans-serif;
+    /* font-family: Helvetica, sans-serif; */
 }
 
 main,
@@ -162,6 +177,10 @@ img{
     text-decoration: none;
     color:#4f4f4f;
     transition: all 0.2s; /* CSS transitions https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+}
+
+.flex-item a.TangibleIllusions{
+    background-image: url(../assets/images/TangibleIllusions.png)
 }
 
 .flex-item a.Theory {
