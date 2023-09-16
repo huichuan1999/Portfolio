@@ -1,0 +1,163 @@
+
+/*This is a comment in CSS*/
+body {
+    /* font-family: Verdana, sans-serif; */
+    font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
+    margin: 0;
+    background-color:rgb(52, 92, 130);
+    color: rgb(243, 255, 255);
+    position: relative;
+}
+
+.backgroundImage {
+    background-image: url(../assets/images/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(5px);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.backgroundImageJellyfish {
+    background-image: url(../assets/images/BG2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(6px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay {
+    background-color:rgba(0, 57, 111, 0.393);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#top-right-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    z-index: 10000;
+}
+
+#menu-button, #language-button {
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: rgb(243, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+}
+
+#language-button {
+    font-size: 1em;
+    margin-left: 20px; /* 设置按钮间的间距 */
+}
+
+header h1{
+    font-size: 35px;
+    margin:20px 0;
+}
+header h2{
+    font-size: 20px;
+    margin: 0px 0px 40px 0px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+main.documentation-page h3{
+    margin-top: 40px;
+}
+
+li{
+    /* font-family: Helvetica, sans-serif; */
+    font-size: 16px;
+    line-height: 1.6em;
+}
+p{
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 2.5em 0;
+    /* font-family: Helvetica, sans-serif; */
+}
+
+main,
+header{
+    width:100%;
+    max-width:1400px; /* means it won't be larger than 1200px on larger screens */
+    box-sizing: border-box;
+    margin:50 auto;
+    padding: 50px 3%;
+}
+
+header.documentation-header{
+    padding: 0 3%;
+}
+
+.documentation-header section,
+main.documentation-page section{
+    margin: 10px 10%;
+}
+
+footer{
+    width:100%;
+    min-height:100px;
+}
+
+
+nav{
+    padding:10px 3%;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(243, 255, 255);
+}
+
+.center-text{
+    text-align: center;
+}
+.centered-content{
+   margin: 50px;
+}
+
+img{
+    width: 100%;
+}
+
+/* original aspect ratio width="640" height="360" */
+.responsive-video{
+    position: relative;
+    width: 100%; /* adjust this and the padding-top to change how big it is*/
+    height: 0;
+    padding-top: 57%; /* padding top is in reltation to the width of parent, it preserves aspect ratio*/
+    /* margin: 0 auto; */ /*this would center your video in the section container*/
+}
+.responsive-video iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,145 @@
+/* Flex layouts are one of the easier ways to style responsive layouts that work on all devices */
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox */
+
+.flex-container{
+    display: flex; /* all children will now be flex items */
+    flex-direction: row; /* other option is column */
+    flex-wrap: wrap; /* means the children will wrap to a new line */
+}
+
+.flex-item{
+    display: flex;
+    /* the following three items can be put on one line: https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.3%; /*width of the box, take up a quarter of the parent's size*/
+    box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
+    padding: 10px;
+}
+
+.flex-basis-third .flex-item{
+    flex-basis: 33.33%; 
+}
+
+.flex-basis-half .flex-item{
+    flex-basis: 50%; 
+}
+
+.flex-item a {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding: 30% 0;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(243, 255, 255);;
+}
+
+.flex-item a h4 {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s;
+    filter: none;
+    margin: 10px;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.flex-item a:hover h4 {
+    opacity: 1;
+}
+
+.flex-item a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: none;
+    transition: background-size 1s, filter 0.5s;
+}
+
+.flex-item a:hover::before {
+    filter: blur(6px);
+    background-size: 120%;
+}
+
+.flex-item a.TangibleIllusions::before {
+    background-image: url(../assets/images/TangibleIllusions.png);
+}
+
+.flex-item a.Theory::before {
+    background-image: url(../assets/images/Theory.png);
+}
+
+.flex-item a.imageTheoryCreatures::before {
+    background-image: url(../assets/images/TheoryCreatures.png);
+}
+
+.flex-item a.Amoebas::before {
+    background-image: url(../assets/images/Amoebas.jpg);
+}
+
+.flex-item a.HandAR::before {
+    background-image: url(../assets/images/HandAR.png);
+}
+
+.flex-item a.HandARCharacter::before {
+    background-image: url(../assets/images/HandARCharacter.png);
+}
+
+.flex-item a.RandomFractal::before {
+    background-image: url(../assets/images/RandomFractal.png);
+}
+
+.flex-item a.EllipseRotating::before {
+    background-image: url(../assets/images/EllipseRotating.png);
+}
+
+.flex-item a.RandomFractals::before {
+    background-image: url(../assets/images/RandomFractals.png);
+}
+
+.flex-item a.ChristmasTree::before {
+    background-image: url(../assets/images/ChristmasTree.png);
+}
+
+.flex-item a.Quotes::before {
+    background-image: url(../assets/images/Quotes.png);
+}
+
+.flex-item a.Kite::before {
+    background-image: url(../assets/images/FlyAKite.png);
+}
+
+.flex-item a.FeedingCreatures::before {
+    background-image: url(../assets/images/FeeingCreatures.png);
+}
+
+.flex-item a.MidTerm::before {
+    background-image: url(../assets/images/MidTerm.png);
+}
+
+.flex-item a.PM25::before {
+    background-image: url(../assets/images/PM25.png);
+}
+
+.flex-item a.OpticalFlow::before {
+    background-image: url(../assets/images/OpticalFlow.png);
+}
+
+/* want a different background image for each project? */
+/* try give each a tag a unique id in your HTML and then set different background images here*/
+/* EXAMPLE CSS: won't work if you just un-comment this:*/
+/* .flex-item a#my-special-id{
+    background-image: url(../assets/images/custom-image-name.jpeg); 
+} */
+
