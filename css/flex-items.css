@@ -55,6 +55,7 @@
 
 .flex-item a::before {
     content: "";
+    border-radius: 10px;
     position: absolute;
     top: 0;
     right: 0;
