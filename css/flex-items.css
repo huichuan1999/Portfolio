@@ -137,6 +137,11 @@
     background-image: url(../assets/images/OpticalFlow.png);
 }
 
+.flex-item a.SlientCalcite::before {
+    background-image: url(../Illustrations/images/沉默的方解石.jpg);
+}
+
+
 /* want a different background image for each project? */
 /* try give each a tag a unique id in your HTML and then set different background images here*/
 /* EXAMPLE CSS: won't work if you just un-comment this:*/
