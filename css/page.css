@@ -39,6 +39,11 @@ body {
     z-index: -1;
 }
 
+a{
+    color:white;
+    font-weight: bold;
+}
+
 .overlay {
     background-color:rgba(0, 57, 111, 0.393);
     position: absolute;
@@ -160,4 +165,11 @@ img{
     left:0;
     height: 100%;
     width: 100%;
+}
+
+.blog-text{
+    text-align: center;
+}
+.blog-content{
+   margin: 120px;
 }
