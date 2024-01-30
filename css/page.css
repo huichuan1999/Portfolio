@@ -18,8 +18,10 @@ body {
     /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
     font-family: 'MyPixelFont';
     margin: 0;
-    background-color:#fdf4e5;
-    color: #c1121f;
+    /* background-color:#fdf4e5;
+    color: #c1121f; */
+    background-color:rgb(52, 92, 130);
+    color: rgb(243, 255, 255);
     position: relative;
     cursor: url('../assets/images/cursor/cursor-white.png') , auto;
 }
@@ -36,14 +38,23 @@ a:hover, button:hover, input[type="submit"]:hover {
     cursor: url('../assets/images/cursor/cursor-point.png') , auto;
 }
 .backgroundImage {
-    background-image: url(../assets/images/BG.png);
+    background-image: url(../assets/images/BG-cut.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    filter: blur(5px);
+    background-position:top;
+    filter: blur(2px);
     position: absolute;
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.overlay {
+    background-color:rgba(0, 45, 62, 0.759);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -75,23 +86,13 @@ a:hover, button:hover, input[type="submit"]:hover {
     margin-bottom: 60px;
 }
 
-.overlay {
-    background-color:rgba(0, 57, 111, 0.393);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
 #top-right-buttons {
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 10px;
     right: 30px;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 #menu-button, #language-button {
@@ -200,5 +201,5 @@ footer{
     top: 0;
     width: 0.9em; /* 正方形的大小 */
     height: 0.9em;
-    background-color: #c1121f; /* 正方形的颜色 */
+    background-color: rgb(243, 255, 255); /* 正方形的颜色 */
 }

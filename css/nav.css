@@ -7,7 +7,7 @@
 .nav{
     font-size:20px;
     height:40px;
-    background: #c1121f;
+    /* background: #002840; */
 }
 .btli{
     font-weight: 700; /* Bold */
@@ -18,19 +18,19 @@
     text-align: center;
 }
 .navlist a{
-    color:#fdf4e5;
+    color:#f3ffff;
     display:block;
     padding:0 25px;
 }
 .navlist a:hover{
-    background: #c1121f;
+    background: #3c8dab93;
     transition: opacity 1s;
 }
 .droplist{
     font-weight: 300;
     font-size: 0.8em;
-    background:#c41411;
-    box-shadow: 0 1px 2px rgb(111, 102, 129);
+    /* background:#c41411; */
+    /* box-shadow: 0 1px 2px rgb(111, 102, 129); */
     display:none;
     position: absolute; 
     left: 0; 
@@ -41,7 +41,7 @@
 }
 .btli:hover .droplist{
     display:block; 
-    background: #c41411;
+    /* background: #c41411; */
 }
 
 /* 
