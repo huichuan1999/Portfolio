@@ -1,14 +1,40 @@
-
-/*This is a comment in CSS*/
-body {
-    /* font-family: Verdana, sans-serif; */
-    font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
-    margin: 0;
-    background-color:rgb(52, 92, 130);
-    color: rgb(243, 255, 255);
-    position: relative;
+@font-face {
+    font-family: 'MyPixelFont';
+    src: url('/fonts/Pixel\ Georgia.ttf') format('truetype');
+    /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MyPixelFont';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
+body {
+    /* font-family: Verdana, sans-serif; */
+    /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
+    font-family: 'MyPixelFont';
+    margin: 0;
+    background-color:#fdf4e5;
+    color: #c1121f;
+    position: relative;
+    cursor: url('../assets/images/cursor/cursor-white.png') , auto;
+}
+b, .bold {
+    font-weight: bold;
+}
+a {
+    text-decoration: none; /* 去除下划线 */
+    color: inherit; /* 颜色继承父元素 */
+}
+
+/* 当鼠标悬停在可点击的元素上时，将鼠标更改图形 */
+a:hover, button:hover, input[type="submit"]:hover {
+    cursor: url('../assets/images/cursor/cursor-point.png') , auto;
+}
 .backgroundImage {
     background-image: url(../assets/images/BG.png);
     background-size: cover;
@@ -39,9 +65,14 @@ body {
     z-index: -1;
 }
 
-a{
-    color:white;
-    font-weight: bold;
+.pixel-style{
+    image-rendering: pixelated; /* 使图片在放大时保持像素风格 */
+}
+
+#huichuan-wang{
+    width:50vw;
+    margin-left:0;
+    margin-bottom: 60px;
 }
 
 .overlay {
@@ -94,7 +125,6 @@ main.documentation-page h3{
 
 li{
     /* font-family: Helvetica, sans-serif; */
-    font-size: 16px;
     line-height: 1.6em;
 }
 p{
@@ -128,29 +158,6 @@ footer{
 }
 
 
-nav{
-    padding:10px 3%;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-}
-nav a:hover{
-    color: rgb(243, 255, 255);
-}
-
-.center-text{
-    text-align: center;
-}
-.centered-content{
-   margin: 50px;
-}
-
-img{
-    width: 100%;
-}
-
 /* original aspect ratio width="640" height="360" */
 .responsive-video{
     position: relative;
@@ -172,4 +179,26 @@ img{
 }
 .blog-content{
    margin: 120px;
+}
+
+.custom-list {
+    list-style: none; /* 移除默认列表样式 */
+    padding: 0; /* 移除左侧内边距 */
+    margin-left: 1.5em; /* 增加左侧外边距以使文本与其他内容对齐 */
+}
+
+.custom-list li {
+    position: relative; /* 为伪元素定位 */
+    font-size: inherit; /* 继承字体大小 */
+    line-height: inherit; /* 继承行高 */
+}
+
+.custom-list li::before {
+    content: ''; /* 伪元素的内容 */
+    position: absolute; /* 定位伪元素 */
+    left: -1.5em; /* 根据需要调整位置 */
+    top: 0;
+    width: 0.9em; /* 正方形的大小 */
+    height: 0.9em;
+    background-color: #c1121f; /* 正方形的颜色 */
 }
