@@ -14,7 +14,8 @@ var sketch = function(p) {
   }
 
   p.draw = function() {
-      p.background(0);
+      // p.background(0);
+      p.clear();
 
       // 更新物理系统
       physics.update();

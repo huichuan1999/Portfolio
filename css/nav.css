@@ -4,19 +4,37 @@
     text-decoration: none;
     list-style: none;
 }
-.nav{
-    font-size:20px;
-    height:40px;
-    /* background: #002840; */
+
+.nav {
+    font-size: 16px;
+    height: 40px;
+    /* display: flex;  */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中（如果需要） */
+    flex-direction: row;
 }
-.btli{
-    font-weight: 700; /* Bold */
+
+.navlist{
+    display: flex; /* 设置为 Flex 容器 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中（如果需要） */
+    /* border-bottom: 2px solid #f3ffff; */
+    width: 100vw;
+    flex-wrap: nowrap; /* 默认情况下不换行 */
+}
+
+.btli {
     position: relative;
-    /* 横排对齐 */
-    float:left; 
-    line-height:40px;
-    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    padding: 5px; /* 添加一些内边距，使文本与边框有间隔 */
+    margin-left: 8px;
+    margin-right: 8px;
+
+    /* flex-basis: 25%; */
+     /*width of the box, take up a quarter of the parent's size*/
 }
+
 .navlist a{
     color:#f3ffff;
     display:block;
@@ -24,7 +42,8 @@
 }
 .navlist a:hover{
     background: #3c8dab93;
-    transition: opacity 1s;
+    border: 2px solid #f3ffff; 
+    transition: opacity 2s;
 }
 .droplist{
     font-weight: 300;
@@ -42,6 +61,28 @@
 .btli:hover .droplist{
     display:block; 
     /* background: #c41411; */
+}
+
+.custom-list {
+    list-style: none; /* 移除默认列表样式 */
+    padding: 0; /* 移除左侧内边距 */
+    margin-left: 1.5em; /* 增加左侧外边距以使文本与其他内容对齐 */
+}
+
+.custom-list li {
+    position: relative; /* 为伪元素定位 */
+    font-size: inherit; /* 继承字体大小 */
+    line-height: inherit; /* 继承行高 */
+}
+
+.custom-list li::before {
+    content: ''; /* 伪元素的内容 */
+    position: absolute; /* 定位伪元素 */
+    left: -1.5em; /* 根据需要调整位置 */
+    top: 0;
+    width: 0.9em; /* 正方形的大小 */
+    height: 0.9em;
+    background-color: rgb(243, 255, 255); /* 正方形的颜色 */
 }
 
 /* 

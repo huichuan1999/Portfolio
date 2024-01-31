@@ -16,9 +16,9 @@
 
 /* Large */
 @media screen and (max-width: 992px) {
-    /* body {
-      background-color: rgb(255, 81, 0);
-    } */
+  .navlist {
+    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+}
 
     .documentation-header section,
     main.documentation-page section{
@@ -29,9 +29,9 @@
 
 /* Medium */
 @media screen and (max-width: 768px) {
-    /* body {
-      background-color: rgb(255, 0, 191);
-    } */
+  .navlist {
+    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+}
 
     .flex-item{
         flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
@@ -40,9 +40,9 @@
 
 /* Small */
 @media screen and (max-width: 576px) {
-    /* body {
-      background-color: blue;
-    } */
+  .navlist {
+    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+}
 
     .flex-item{
         flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/

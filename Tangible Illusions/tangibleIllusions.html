@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
+    <script src="../JavaScripts/Butterfly.js"></script>
+    <script src="../JavaScripts/butterflySketch.js"></script>
+
+    <title>Tangible Illusions: The Soft Boundary of Life</title>
+
+    <!-- including for some global styling --> 
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/p5.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <style>
+        body{
+            color:white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- if you have sub-pages think about adding a simple back button -->
+    <div class="backgroundImageJellyfish"></div>
+    <div class="overlay"></div>
+    <!-- <nav>
+        <a href="../">HOME</a>
+    </nav> -->
+    <div class="nav">
+        <ul class="navlist">
+            <li class="btli"><a href="../index.html">HOME</a></li>
+            <li class="btli"><a href="./computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="#">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="#">GAME DEV</a></li>
+            <li class="btli"><a href="#">GRAPHIC DESIGN</a></li>
+            <li class="btli"><a href="#">CURATING</a></li>
+            <li class="btli"><a href="#">CONTACT</a>
+                <ul class="droplist">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Wechat</a></li>
+                    <li><a href="#">Xiaohongshu/Red</a></li>
+                    <li><a href="#">X/tweeter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <header class="documentation-header">
+        <section class="center-text">
+            <h1><br>Tangible Illusions: The Soft Boundary of Life</h1>
+            <h2>by Huichuan Wang</h6>
+                <a href="https://huichuan1999.github.io/Horizontal-Ecosystem/ ">
+                    <h4 style=color:azure;>Click here to play: Horizontal-Ecosystem</h4>
+                </a>
+                <a href="https://huichuan1999.github.io/Vertical-Jellyfish/ ">
+                    <h4 style=color:azure;>Click here to play: Vertical-Jellyfish</h4>
+                </a>
+        </section>
+    </header>
+
+    <main class="documentation-page">
+        <section>
+            <div class="responsive-video centered-content">
+                <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
+                <iframe
+                    src="https://player.vimeo.com/video/862584976?h=2678e1a68b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TangibleIllusions"></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </section>
+        <section>
+            <br>
+            <br>
+            <h3>Introduction</h3>
+            <p>
+                Would you raise your hand to interact with these creatures?
+            </p>
+            <p>This project presents an evocative intersection of computer vision,
+                physics simulations, and artistic contemplation, blurring the lines
+                between digital and organic lifeforms. Using Google's MediaPipe Hand
+                technology, the application captures real-time hand gestures and morphs
+                them into an array of dynamic particles. These particles then breathe
+                life into an array of virtual marine organisms—soft-bodied creatures
+                reminiscent of jellyfish—under the governance of toxiclibs.js physics
+                simulations.
+            </p>
+            <p>
+                Each virtual entity responds uniquely to the user's movements,
+                manifesting diverse interaction patterns such as attraction, repulsion,
+                and particle state alterations. This interactivity presents a tangible
+                sense of softness, a quality often associated with life and one that
+                humans find compelling to touch. However, while our fingertips can't
+                perceive these virtual entities, they seem to feel us.
+            </p>
+            <p>
+                At its core, the project poses a philosophical exploration of life and
+                the virtual sensation of touch. This thought-provoking concept stimulates
+                viewers to reevaluate the boundaries of life and digital existence, while
+                highlighting the inherent appeal of softness. By merging technology
+                and art, the project invites participants to an immersive, engaging
+                journey of interaction, invoking deep reflections on life, touch, and our
+                relationship with the digital realm.
+            </p>
+
+            <!-- if you have a full width image try make it not too tall -->
+            <img src="../assets/images/dataentry4-3vertical.png" />
+
+        </section>
+        <section>
+            <h3>Mouse interaction creatures prototype</h3>
+            <!-- <script src="../JavaScripts/butterflySketch.js"></script> -->
+            <div id="p5-Butterfly"></div>
+        </section>
+        <section>
+            <h3>Development Process</h3>
+
+            <!-- example of styling for three images, you can write your own styling -->
+            <!-- <div class="flex-container flex-basis-third">
+                    <div class="flex-item">
+                        <img src="../assets/images/FeeingCreatures.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/movetofood.jpg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/webapp.png"/>
+                    </div>
+                </div> -->
+
+            <p>
+                Initially, I wanted to create something entirely new, using AR and perhaps multiple screens surrounding
+                an empty center, with beautiful traces on the floor, and screens reflecting vibrant, living creatures.
+            </p>
+            <p>
+                However, as I progressed, I realized this idea was not feasible due to numerous flaws and requirements
+                beyond my current abilities. For example, I am not skilled in modeling, and while I know most people
+                using game engines borrow assets from elsewhere, my high aesthetic standards make it almost impossible
+                to find satisfactory assets. I prefer to control and decide all visual presentations, trusting my
+                abilities as a fine artist, but learning to that extent in a short time is too challenging, especially
+                since I spent all of June busy with my artist group, curation and personal affairs.
+            </p>
+            <p>
+                After receiving invitations to participate in EVA London and V&A digital design week, I realized my
+                existing prototypes might be interesting but were not sufficient to support a formal exhibition. After
+                evaluating what I had, I chose to continue developing my Hand-tracking Jellyfish project.
+            </p>
+
+            <!-- example of styling for three images, you can write your own styling -->
+            <div class="flex-container flex-basis-half">
+                <div class="flex-item">
+                    <img src="../assets/images/TangibleIllustions-sketches0.png" />
+                </div>
+                <div class="flex-item">
+                    <img src="../assets/images/TangibleIllustions-sketches.png" />
+                </div>
+            </div>
+            <div>
+                <h3>Catalog of Species</h3>
+                <img src="../assets/images/Species.png" />
+            </div>
+            <div>
+                <h3>On-site Installation</h3>
+                <br>
+                <br>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="./OnSitePhotos/DSC09762.png" />
+                    </div>
+                    <div class="flex-item">
+                        <img src="./OnSitePhotos/DSC09763.png" />
+                    </div>
+                    <div class="flex-item">
+                        <img src="./OnSitePhotos/DSC09764.png" />
+                    </div>
+                    <div class="flex-item">
+                        <img src="./OnSitePhotos/DSC09765.png" />
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <img src="./OnSitePhotos/IMG_20230901_201946.jpg" />
+                <img src="./OnSitePhotos/IMG_20230901_202425.jpg" />
+                <img src="./OnSitePhotos/IMG_20230901_203016.jpg" />
+                <img src="./OnSitePhotos/Jellyfish1.jpg" />
+                <img src="./OnSitePhotos/DSC097581.png" />
+                <img src="./OnSitePhotos/DSC097518.png" />
+                <img src="./OnSitePhotos/DSC0971518.png" />
+            </div>
+
+            <!-- default flex item is for 4 & follows media query styling for home page -->
+            <!-- <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                </div> -->
+
+        </section>
+        <section>
+            <h3>Reflection</h3>
+            <p>
+                First and foremost, I am immensely grateful to you for providing us with enough time to prepare our work
+                at our exhibition spaces. Without these ten-plus days, I would have been utterly unable to set up these
+                two projections, which can be considered enormous. This was the largest scale setup I have ever done for
+                my work, and I realized that as the scale increases, the effort required grows exponentially. Yet, I
+                managed to do it, and perhaps I can do even better next time.
+            </p>
+            <p>
+                I encountered many issues that I had not previously considered, such as where to place the computer, the
+                length of cables required, the type of projector needed, and where they need to be installed. For
+                example, initially I wanted to hang the curtains from the ceiling, but knowing that wasn't allowed I
+                decided to build a wooden frame - thanks to Luke for helping me with this, although after setting it up
+                I realized I should have painted the timber white first. Next time I will consider what is definitely
+                feasible, what may change, and if so, what are the possibilities.
+            </p>
+            <p>
+                When guiding the audience to interact, I found that my web camera does not work well in dark
+                environments, and installing light bulbs directly was too glaring and distracting. Therefore, I had to
+                3D print a "lampshade" to cover it temporarily. This was a problem I had not anticipated at all. If
+                there is another opportunity for the projection display, I might consider better solutions:
+                <br>
+                <br>
+                1. Use Kinect to capture people's movements instead of webcams,
+                <br>
+                2. Model a more integrated and aesthetically pleasing web camera lighting device and test its effects.
+                <br>
+                <br>
+                This whole process was not easy. Fortunately, I did it. Although there are still rough places, I learned
+                a lot and am confident to do better.
+            </p>
+        </section>
+        <section>
+            <h3>Future Prospects</h3>
+
+            <h4>Explore interactions between creatures</h4>
+            <p>
+                In the future, I hope the interactivity in my work extends beyond just human-to-creature interactions
+                (for example, the human hand in this case) to include interactions between creatures themselves. In this
+                current project, the interactions between creatures are limited to some basic attraction and repulsion
+                forces, or one creature acting as a component of another. There are many possibilities for interactions
+                between creatures. Maybe two organisms come together and one eats the other, or one organism parasitizes
+                the other and sheds itself when necessary, etc.
+            </p>
+            <h4>Explore the evolution of creatures</h4>
+            <p>
+                I am interested in exploring the evolution of creatures by introducing 'time' as a critical factor or
+                variable. If I set a total duration ranging from 3 days to several weeks—depending on the length of the
+                exhibition I plan to participate in—I wonder what changes my code-based creatures will undergo each day.
+                What rate of growth will they have? How long will the lifespan of each individual be? Perhaps they will
+                understand natural cell death, similar to human cells; how should I deal with creatures that die? Is it
+                possible for creatures of different forms to exchange, merge, and pass their genetic information to the
+                next generation?
+            </p>
+            <h4>Pursuit of Better Performance</h4>
+            <p>
+                There is another issue with my code: its frameRate is actually not very high, despite my best efforts to
+                optimize it, such as moving the hand-tracking part to be processed by the GPU. When I run both sets of
+                codes
+                in the browser at the same time, their frameRates are about 10 to 20. Thanks to Andy's suggestion, he
+                said
+                that this makes the creatures appear to drift slowly in the sea, and if the frameRate is too high, it
+                might
+                not have this effect. If I want to achieve better performance, perhaps I can try moving it to
+                Processing, or
+                writing it in C++, or even learning shaders, like GLSL, to use the GPU to render images, which would
+                make it
+                very fast.
+            </p>
+
+        </section>
+        <section>
+            <h3>Acknowledgements</h3>
+            <li>http://haptic-data.com/toxiclibsjs/</li>
+
+            <li>https://github.com/hapticdata/toxiclibsjs</li>
+
+            <li>http://haptic-data.com/toxiclibsjs/examples/thread</li>
+
+            <li>http://haptic-data.com/toxiclibsjs/examples/super-ellipsoid</li>
+
+            <li>https://natureofcode.com/book/chapter-5-physics-libraries/</li>
+
+            <li>https://thecodingtrain.com/challenges/15-object-oriented-fractal-trees</li>
+
+            <li>https://www.youtube.com/watch?v=HhceJ5xxl-4</li>
+
+            <li>https://codepen.io/mediapipe/pen/RwGWYJw</li>
+
+            <li>https://github.com/google/mediapipe/blob/01fbbd9f6714e47f7b60e844a5c4d93354935e29/docs/solutions/hands.md?plain=1#L345</li>
+
+            <li>https://developers.google.com/mediapipe/solutions/vision/hand_landmarker</li>
+
+            <li>https://natureofcode.com/book/chapter-9-the-evolution-of-code/</li>
+            <!-- <ul>
+                <li>Shiffman, D. (n.d.). p5.js Web Editor. [online] editor.p5js.org. Available at:
+                    https://editor.p5js.org/codingtrain/sketches/sy1p1vnQn [Accessed 1 May 2023]</li>
+                <li>p5js.org. (n.d.). examples | p5.js. [online] Available at:
+                    https://p5js.org/zhHans/examples/simulate-particles.html [Accessed 1 May 2023].</li>
+                <li>Shhiffman, D. (2009). The Nature of Code. [online] Natureofcode.com. Available at:
+                    https://natureofcode.com/book/chapter-9-the-evolution-of-code/.
+                </li>
+                <li>Wiener, N. (2013). Cybernetics or control and communication in the animal and the machine.
+                    Mansfield Centre, Ct: Martino.</li>
+                <li>Bennett, J. (2009). Vibrant Matter A Political Ecology of Things. Duke University Press.
+                </li>
+                <li>Langton, C.G. and Katsunori Shimohara (1997). Artificial life V : proceedings of the Fifth
+                    International Workshop on the Synthesis and Simulation of Living Systems. Cambridge, Mass.: Mit
+                    Press.
+                </li>
+                <li>Slava Gerovitch (2004). From newspeak to cyberspeak : a history of soviet cybernetics. Cambridge,
+                    Mass.: Mit Press.
+                </li>
+            </ul> -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- normally information like contact details etc  -->
+        <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
+
+    </footer>
+</body>
+
+</html>

@@ -4,3 +4,7 @@
     height: 100vh;
     z-index:1000
 }
+#p5-Butterfly{
+    display: block;
+    width: 100%;
+}
