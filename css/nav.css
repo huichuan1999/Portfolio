@@ -7,7 +7,7 @@
 
 .nav {
     font-size: 16px;
-    height: 40px;
+
     /* display: flex;  */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中（如果需要） */
@@ -18,7 +18,7 @@
     display: flex; /* 设置为 Flex 容器 */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中（如果需要） */
-    /* border-bottom: 2px solid #f3ffff; */
+    border: 2px solid #f3ffff;
     width: 100vw;
     flex-wrap: nowrap; /* 默认情况下不换行 */
 }

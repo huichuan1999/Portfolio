@@ -12,7 +12,10 @@
     font-weight: bold;
     font-style: normal;
 }
-
+main, header  {
+    margin: 0;
+    padding: 0;
+}
 body {
     /* font-family: Verdana, sans-serif; */
     /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
@@ -29,6 +32,7 @@ body {
 b, .bold {
     font-weight: bold;
 }
+
 a {
     text-decoration: none; /* 去除下划线 */
     color: inherit; /* 颜色继承父元素 */
@@ -107,9 +111,9 @@ a:hover, button:hover, input[type="submit"]:hover {
 
 #huichuan-wangEN {
     position: absolute;
-    top:60%;
-    left:5%;
-    width: 40vw;
+    top:74%;
+    left:15%;
+    width: 20vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
 }
@@ -125,9 +129,9 @@ a:hover, button:hover, input[type="submit"]:hover {
 }
 #huichuan-wangCN {
     position: absolute;
-    top:40%;
+    top:70%;
     left:5%;
-    width: 12vw;
+    width: 7vw;
     z-index: 100;
     animation: float2 3s ease-in-out infinite;
 }
@@ -179,15 +183,6 @@ p{
     line-height: 1.6em;
     margin: 2.5em 0;
     /* font-family: Helvetica, sans-serif; */
-}
-
-main,
-header{
-    width:100%;
-    max-width:1400px; /* means it won't be larger than 1200px on larger screens */
-    box-sizing: border-box;
-    margin:50 auto;
-    padding: 50px 3%;
 }
 
 header.documentation-header{

@@ -48,9 +48,12 @@ class ParticleNetwork {
       strokeWeight(1);
       line(spring.a.x, spring.a.y, spring.b.x, spring.b.y);
       if (spring.b !== this.particles[this.particles.indexOf(spring.a) + 1]) {
-        stroke(255,100);
+        stroke(255,50);
+        strokeWeight(3);
         fill(255,50);
-        ellipse(spring.b.x, spring.b.y, 10, 10);
+        // rectMode(CENTER);
+        // rect(spring.b.x, spring.b.y, 16,16);
+        circle(spring.b.x, spring.b.y, 16);
       }
     }
 

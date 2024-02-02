@@ -36,7 +36,7 @@ class Star {
 
         //加上尾巴
         const startPosition = new Vec2D(width / 2, height / 4);
-        const stepDirection = new Vec2D(1, 0).normalizeTo(22);
+        const stepDirection = new Vec2D(1, 0).normalizeTo(40);
         const numParticles = random(10, 20);
         const strength = 0.003;
         const damping = 0;
@@ -98,7 +98,7 @@ class Star {
   }
 
   updateInnerSprings() {
-    let dynamicLength = this.radius1 + (this.radius1 - 5) * sin(this.time);
+    let dynamicLength = this.radius1 + (this.radius1 - 5) * sin(this.time/2);
     for (let spring of this.innerSprings) {
       spring.setRestLength(dynamicLength);
     }
@@ -108,20 +108,22 @@ class Star {
   draw() {
 
     // Draw springs
-    strokeWeight(1);
-    stroke(255, 80); // Set the color to gray
+    strokeWeight(2);
+    stroke(255, 120); // Set the color to gray
     for (let i = 0; i < physics.springs.length; i++) {
       let spring = physics.springs[i];
       line(spring.a.x, spring.a.y, spring.b.x, spring.b.y);
     }
 
     fill(255, 100);
-    stroke(255, 200);
-    strokeWeight(2);
+    stroke(255, 150);
+    strokeWeight(4);
     beginShape();// draw stars
     for (let p of this.points) {
       vertex(p.x, p.y);
-      circle(p.x, p.y, 16);
+      circle(p.x, p.y, 30);
+      // rectMode(CENTER);
+      // rect(p.x, p.y, 30, 30);
     }
     endShape(CLOSE);
 
