@@ -12,7 +12,7 @@
     /* the following three items can be put on one line: https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 33.3%; /*width of the box, take up a quarter of the parent's size*/
+    flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
     box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
     padding: 10px;
 }

@@ -3,7 +3,7 @@ var sketch = function(p) {
   let butterfly;
 
   p.setup = function() {
-      let canvas = p.createCanvas(600, 600);
+      let canvas = p.createCanvas(600, 400);
       canvas.parent('p5-Butterfly');
 
       // 初始化物理系统
@@ -16,6 +16,10 @@ var sketch = function(p) {
   p.draw = function() {
       // p.background(0);
       p.clear();
+      p.noFill();
+      p.stroke(255);
+      p.strokeWeight(3);
+      p.rect(0,0,600,400);
 
       // 更新物理系统
       physics.update();

@@ -1,61 +1,89 @@
 @font-face {
     font-family: 'MyPixelFont';
-    src: url('../fonts/Pixel\ Georgia.ttf') format('truetype');
+    src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
     /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'MyPixelFont';
     /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
-    src: url('../fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
-main, header  {
+
+@font-face {
+    font-family: 'TextContent';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main,
+header {
     margin: 0;
     padding: 0;
 }
+
 body {
     /* font-family: Verdana, sans-serif; */
     /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
     position: relative;
-    height:100%;
+    height: 100%;
     font-family: 'MyPixelFont';
     margin: 0;
     /* background-color:#fdf4e5;
     color: #c1121f; */
-    background-color:rgb(52, 92, 130);
-    color: rgb(243, 255, 255); 
-    cursor: url('../assets/images/cursor/cursor-white.png') , auto;
+    background-color: rgb(52, 92, 130);
+    color: rgb(243, 255, 255);
+    cursor: url('../assets/images/cursor/cursor-white.png'), auto;
 }
-b, .bold {
+
+b,
+.bold {
     font-weight: bold;
 }
 
 a {
-    text-decoration: none; /* 去除下划线 */
-    color: inherit; /* 颜色继承父元素 */
+    text-decoration: none;
+    /* 去除下划线 */
+    color: inherit;
+    /* 颜色继承父元素 */
 }
 
-img{
-    width:100%
+img {
+    width: 100%
 }
 
 /* 当鼠标悬停在可点击的元素上时，将鼠标更改图形 */
-a:hover, button:hover, input[type="submit"]:hover {
-    cursor: url('../assets/images/cursor/cursor-point.png') , auto;
+a:hover,
+button:hover,
+input[type="submit"]:hover {
+    cursor: url('../assets/images/cursor/cursor-point.png'), auto;
 }
 
 /* 滚动背景图 */
 @keyframes scrollBackground {
-    0% { background-position: 0 0; }
-    50% { background-position: 0 100%; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 100%;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
+
 .backgroundImage {
     background-image: url(../assets/images/BGJPEG.jpg);
-    background-size: 100% auto; /* 调整背景大小以使背景高度适应内容 */
+    background-size: 100% auto;
+    /* 调整背景大小以使背景高度适应内容 */
     background-repeat: no-repeat;
     background-position: top;
     filter: blur(2px);
@@ -67,11 +95,12 @@ a:hover, button:hover, input[type="submit"]:hover {
     width: 105vw;
     height: 100%;
     z-index: -2;
-    animation: scrollBackground 720s linear infinite; /* 应用动画, 改速度就是改持续时间*/
+    animation: scrollBackground 720s linear infinite;
+    /* 应用动画, 改速度就是改持续时间*/
 }
 
 .overlay {
-    background-color:rgba(0, 45, 62, 0.759);
+    background-color: rgba(0, 45, 62, 0.759);
     position: absolute;
     top: 0;
     left: 0;
@@ -94,43 +123,56 @@ a:hover, button:hover, input[type="submit"]:hover {
     z-index: -1;
 }
 
-.pixel-style{
-    image-rendering: pixelated; /* 使图片在放大时保持像素风格 */
+.pixel-style {
+    image-rendering: pixelated;
+    /* 使图片在放大时保持像素风格 */
 }
 
 @keyframes float1 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
-        opacity: 1; /* 动画开始和结束时元素完全不透明 */
+        opacity: 1;
+        /* 动画开始和结束时元素完全不透明 */
     }
+
     50% {
         transform: translateY(-24px);
-        opacity: 0.5; /* 动画中间时元素的透明度降低 */
+        opacity: 0.5;
+        /* 动画中间时元素的透明度降低 */
     }
 }
 
 #huichuan-wangEN {
     position: absolute;
-    top:75%;
-    left:17%;
+    top: 75%;
+    left: 17%;
     width: 20vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
 }
+
 @keyframes float2 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
-        opacity: 0.8; /* 动画开始和结束时元素完全不透明 */
+        opacity: 0.8;
+        /* 动画开始和结束时元素完全不透明 */
     }
+
     50% {
         transform: translateY(24px);
-        opacity: 0.3; /* 动画中间时元素的透明度降低 */
+        opacity: 0.3;
+        /* 动画中间时元素的透明度降低 */
     }
 }
+
 #huichuan-wangCN {
     position: absolute;
-    top:70%;
-    left:5%;
+    top: 70%;
+    left: 5%;
     width: 10vw;
     z-index: 100;
     animation: float2 3s ease-in-out infinite;
@@ -145,7 +187,8 @@ a:hover, button:hover, input[type="submit"]:hover {
     z-index: 1000;
 }
 
-#menu-button, #language-button {
+#menu-button,
+#language-button {
     font-size: 2em;
     background: none;
     border: none;
@@ -156,74 +199,85 @@ a:hover, button:hover, input[type="submit"]:hover {
 
 #language-button {
     font-size: 1em;
-    margin-left: 20px; /* 设置按钮间的间距 */
+    margin-left: 20px;
+    /* 设置按钮间的间距 */
 }
 
-header h1{
+header h1 {
     font-size: 35px;
-    margin:20px 0;
+    margin: 20px 0;
 }
-header h2{
+
+header h2 {
     font-size: 20px;
     margin: 0px 0px 40px 0px;
     font-weight: normal;
     font-style: italic;
 }
 
-main.documentation-page h3{
+main.documentation-page h3 {
     margin-top: 40px;
 }
 
-li{
+li {
     /* font-family: Helvetica, sans-serif; */
     line-height: 1.6em;
 }
-p{
+
+p {
+    /* font-family: 'TextContent'; */
+    font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
+    font-family: 'TextContent';
     font-size: 16px;
     line-height: 1.6em;
     margin: 2.5em 0;
     /* font-family: Helvetica, sans-serif; */
 }
 
-header.documentation-header{
+header.documentation-header {
     padding: 0 3%;
 }
 
 .documentation-header section,
-main.documentation-page section{
+main.documentation-page section {
     margin: 10px 10%;
 }
 
-footer{
-    width:100%;
-    min-height:100px;
+footer {
+    width: 100%;
+    min-height: 100px;
 }
 
 
 /* original aspect ratio width="640" height="360" */
-.responsive-video{
+.responsive-video {
     position: relative;
-    width: 100%; /* adjust this and the padding-top to change how big it is*/
+    width: 100%;
+    /* adjust this and the padding-top to change how big it is*/
     height: 0;
-    padding-top: 57%; /* padding top is in reltation to the width of parent, it preserves aspect ratio*/
-    /* margin: 0 auto; */ /*this would center your video in the section container*/
+    padding-top: 57%;
+    /* padding top is in reltation to the width of parent, it preserves aspect ratio*/
+    /* margin: 0 auto; */
+    /*this would center your video in the section container*/
 }
-.responsive-video iframe{
+
+.responsive-video iframe {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 }
 
-.blog-text{
+.blog-text {
     text-align: center;
 }
-.blog-content{
-   margin: 120px;
+
+.blog-content {
+    margin: 120px;
 }
 
-.page-container{
+.page-container {
     /* 上下10%，左右20% */
-    padding:10% 20%;
+    padding: 10% 16%;
 }
