@@ -111,8 +111,8 @@ a:hover, button:hover, input[type="submit"]:hover {
 
 #huichuan-wangEN {
     position: absolute;
-    top:74%;
-    left:15%;
+    top:75%;
+    left:17%;
     width: 20vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
@@ -131,7 +131,7 @@ a:hover, button:hover, input[type="submit"]:hover {
     position: absolute;
     top:70%;
     left:5%;
-    width: 7vw;
+    width: 10vw;
     z-index: 100;
     animation: float2 3s ease-in-out infinite;
 }
