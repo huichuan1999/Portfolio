@@ -9,7 +9,9 @@ let canvas;
 let draggedParticle = null;
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
+    // canvas = createCanvas(windowWidth, windowHeight);
+    let navHeight = document.querySelector('.nav').offsetHeight;
+    canvas = createCanvas(windowWidth, windowHeight - navHeight);
     canvas.parent('p5-Jellyfish');
 
     frameRate(60);

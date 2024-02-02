@@ -8,3 +8,8 @@
     display: block;
     width: 100%;
 }
+#p5-Jellyfish{
+    display: block;
+    width: 100vw;
+    /* height: 100vh; */
+}

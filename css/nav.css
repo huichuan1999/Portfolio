@@ -7,11 +7,11 @@
 
 .nav {
     font-size: 16px;
-
     /* display: flex;  */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中（如果需要） */
     flex-direction: row;
+    width: 100vw;
 }
 
 .navlist{
@@ -19,7 +19,7 @@
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中（如果需要） */
     border: 2px solid #f3ffff;
-    width: 100vw;
+    /* width: 100vw; */
     flex-wrap: nowrap; /* 默认情况下不换行 */
 }
 

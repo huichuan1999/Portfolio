@@ -1,0 +1,22 @@
+/* 滚动背景图 */
+@keyframes scrollBackground-sub {
+    0% { background-position: 0 0; }
+    50% { background-position: 0 100%; }
+    100% { background-position: 0 0; }
+}
+.backgroundImage-sub {
+    background-image: url(../assets/images/BGJPEG.jpg);
+    background-size: 100% auto; /* 调整背景大小以使背景高度适应内容 */
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: blur(2px);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: -2.5%;
+    width: 105vw;
+    height: 100%;
+    z-index: -2;
+    animation: scrollBackground 1200s linear infinite; /* 应用动画, 改速度就是改持续时间*/
+}

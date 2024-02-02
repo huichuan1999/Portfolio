@@ -19,15 +19,15 @@ main, header  {
 body {
     /* font-family: Verdana, sans-serif; */
     /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
+    position: relative;
+    height:100%;
     font-family: 'MyPixelFont';
     margin: 0;
     /* background-color:#fdf4e5;
     color: #c1121f; */
     background-color:rgb(52, 92, 130);
-    color: rgb(243, 255, 255);
-    position: relative;
+    color: rgb(243, 255, 255); 
     cursor: url('../assets/images/cursor/cursor-white.png') , auto;
-    overflow-x: hidden;
 }
 b, .bold {
     font-weight: bold;
@@ -67,7 +67,7 @@ a:hover, button:hover, input[type="submit"]:hover {
     width: 105vw;
     height: 100%;
     z-index: -2;
-    animation: scrollBackground 640s linear infinite; /* 应用动画, 改速度就是改持续时间*/
+    animation: scrollBackground 720s linear infinite; /* 应用动画, 改速度就是改持续时间*/
 }
 
 .overlay {
@@ -223,3 +223,7 @@ footer{
    margin: 120px;
 }
 
+.page-container{
+    /* 上下10%，左右20% */
+    padding:10% 20%;
+}
