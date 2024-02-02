@@ -1,2 +1,2 @@
-# wcc-portfolio
+# my personal artist website source code
  
