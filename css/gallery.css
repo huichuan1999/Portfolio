@@ -1,39 +1,130 @@
 
-.gallery{
-    /* 设置两边阴影 */
-    -webkit-mask-image: linear-gradient(to right,#0000,#000,#000,#0000);
-    overflow-x: auto;
-    display: flex;
-    width: 100%; /* 确保gallery元素占据所有可用宽度 */
-    min-height: 200px; /* 你可以根据需要调整这个值 */
-    /* flex-wrap: wrap; */
-    /* 设置间距 */
-    gap: 5rem;
-    align-items:start;
-    padding: 50px;
-}
-.gallery>div{
-    block-size: 340px;
-    /* background-color: #fff; */
-    /* 设置宽高比 */
-    aspect-ratio: 1;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 5px rgba(0, 42, 26, 0.917);
-}
-.gallery img{
-    height: 100%;
-    width: 100%;
+/* CSS部分 */
+* {
+    box-sizing: border-box;
 }
 
-/* 设置滚动条的高度 */
-::-webkit-scrollbar{
-    height: 10px;
+body {
+    /* 渐变效果 */
+    background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+    overflow: hidden;
+    height: 100vh;
 }
-/* 设置滚动条的背景色 */
-::-webkit-scrollbar-track{
-    background-color: #25642b;
+
+.images img {
+    border: #aa3d5656 double 5px;
+    max-width: 50vh;
+    max-height: 50vh;
+    transition: .5s;
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgb(190, 185, 145);
-    border-radius: 10px;
+
+.images:hover img {
+    /* box-shadow: 0 10px 30px #aa3d5693; */
+    box-shadow: 10px 20px #aa3d5656;
+    mix-blend-mode: multiply;
+    transform: scale(1.5);
 }
+
+/* 创建一个水平滚动的包裹容器，用于展示内容 */
+.shell {
+    display: flex;
+    padding:5%;
+    flex-direction: column;
+    align-items: center;
+    width: 100vh;
+    /*旋转90度，向上平移一个视口高度的距离 */
+    transform: rotate(-90deg) translate3d(0, -100vh, 0);
+    /* 设置变换的原点为右上角 */
+    transform-origin: right top;
+    overflow-x: auto;
+    height: 100vw;
+    /* 设置3D透视效果 */
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+/* 创建一个图片容器，用于展示图片 */
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 设置最小高度为视口高度的40% */
+    min-height: 40vh;
+    /* 设置变换的原点为中心点 */
+    transform-origin: 50% 50%;
+    /* 旋转90度，向前平移0.1px，放大1.1倍，向右平移0px，向下平移2vh */
+    transform: rotate(90deg) translateZ(.1px) scale(1.1) translateX(0px) translateY(2vh);
+    transition: 1s;
+    /* 增加图片之间的间距 */
+    margin:20%;
+}
+
+.slower {
+    transform: rotate(90deg) translateZ(-.12px) scale(1.3) translateX(0%) translateY(-8vh);
+}
+
+.slower1 {
+    transform: rotate(90deg) translateZ(-.25px) scale(1.4) translateX(0%) translateY(2vh);
+}
+
+.slower-down {
+    transform: rotate(90deg) translateZ(-.1px) scale(1) translateX(0%) translateY(16vh);
+}
+
+.faster {
+    transform: rotate(90deg) translateZ(-.05px) scale(1.1) translateX(0%) translateY(12vh);
+}
+
+.faster1 {
+    transform: rotate(90deg) translateZ(.05px) scale(1.4) translateX(0%) translateY(10vh);
+}
+
+.fastest {
+    transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
+}
+
+.vertical {
+    transform: rotate(90deg) translateZ(-.1px) scale(1.6) translateX(0%) translateY(-3vh);
+}
+
+/* 滚动背景图 */
+@keyframes scrollBackground-illustrations {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0; /* 滚动到最右边 */
+    }
+}
+
+
+.backgroundImage-illustrations {
+    background-image: url(../assets/illustrations/lighthouse-of-the-stars-small.jpg);
+    background-size: auto 100%; /* 使背景高度适应视口，宽度自动调整 */
+    background-repeat: no-repeat;
+    background-position: top left; /* 从顶部左侧开始显示 */
+    filter: blur(6px);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 视口的100%宽 */
+    height: 100vh; /* 视口的100%高 */
+    z-index: -2;
+    animation: scrollBackground-illustrations 60s linear infinite;
+}
+
+
+.overlay-illustrations {
+    background-color: rgba(167, 160, 165, 0.584);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply; 
+}
+
+

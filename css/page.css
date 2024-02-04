@@ -146,7 +146,7 @@ input[type="submit"]:hover {
 
 #huichuan-wangEN {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 17%;
     width: 20vw;
     z-index: 100;
@@ -171,7 +171,7 @@ input[type="submit"]:hover {
 
 #huichuan-wangCN {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 5%;
     width: 10vw;
     z-index: 100;
@@ -280,4 +280,27 @@ footer {
 .page-container {
     /* 上下10%，左右20% */
     padding: 10% 16%;
+}
+
+/* 自定义滚动条样式 */
+/* 滚动条的整体样式 */
+::-webkit-scrollbar {
+    width: 4px; /* 控制滚动条的宽度 */
+}
+
+/* 滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+    background: rgba(52, 92, 130, 0.651); /* 深蓝色背景 */
+    mix-blend-mode:multiply;
+}
+
+/* 滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+    background: lightblue; /* 浅蓝色滚动条 */
+    border-radius: 2px; /* 滚动条滑块的圆角边 */
+}
+
+/* 当鼠标悬停在滚动条滑块上时 */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(243, 255, 255);/* 滚动条滑块的悬停颜色 */
 }
