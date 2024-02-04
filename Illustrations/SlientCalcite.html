@@ -1,53 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
 
-        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
 
-        <title>WCC Portfolio - Demo Page</title>
+    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- including for some global styling -->
-        <link rel="stylesheet" href="/css/flex-items.css">
-        <link rel="stylesheet" href="/css/meida-Queries.css">
-        <link rel="stylesheet" href="/css/page.css">
+    <title>Slient Calcite</title>
 
-    </head>
-    <body>
-        <!-- if you have sub-pages think about adding a simple back button -->
-        <nav>
-            <a href="../">HOME</a>
-        </nav>
-        <header class="documentation-header">
-            <section class="center-text">
-                <h1>Demo page</h1>
-                <p>Please don't include this in your portfolio.</p> 
-                <p>This is just a page of some demonstrations of how to include various other media, especially if you just want to document a project quickly instead of hosting the code online.</p>
-            </section>
-        </header>
+    <!-- including for some global styling -->
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/nav.css">
 
-        <main class="documentation-page">
-            <section>
-                <h3>Embed a Vimeo Video</h3>
-                <div class="responsive-video">
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>Video from this <a href="https://vimeo.com/blog/post/how-to-embed-videos/?s=embed" target="_blank">Vimeo Learn Resource</a></p>
+</head>
 
-            </section>
-            <section>
-                <h3>Add an image</h3>
-                <img id="striped-image" src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                <p>You can add images into your HTML document (see above), or add them as background images in CSS styling (like on the main page).</p>
-            </section>
+<body>
+    <!-- if you have sub-pages think about adding a simple back button -->
+    <div class="backgroundImage"></div>
+    <div class="overlay"></div>
+    <div class="nav">
+        <ul class="navlist">
 
-        </main>
+            <li class="btli"><a href="../index.html">HOME</a></li>
+            <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="#">GAME DEV</a></li>
+            <li class="btli"><a href="#">GRAPHIC DESIGN</a></li>
+            <li class="btli"><a href="#">EXHIBITIONS</a></li>
+            <li class="btli"><a href="#">CONTACT</a>
+                <ul class="droplist">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Wechat</a></li>
+                    <li><a href="#">Xiaohongshu/Red</a></li>
+                    <li><a href="#">X/tweeter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-        <footer>
-            <!-- normally information like contact details etc  -->
-            <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
-            
-         </footer>
-    </body>
+    <header class="documentation-header">
+        <section class="center-text">
+            <h1><br>Slient Calcite</h1>
+            <p>Please don't include this in your portfolio.</p>
+            <p>This is just a page of some demonstrations of how to include various other media, especially if you just
+                want to document a project quickly instead of hosting the code online.</p>
+        </section>
+    </header>
+
+    <main class="documentation-page">
+        <section>
+            <h3>Embed a Vimeo Video</h3>
+            <div class="responsive-video">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%"
+                    height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Video from this <a href="https://vimeo.com/blog/post/how-to-embed-videos/?s=embed" target="_blank">Vimeo
+                    Learn Resource</a></p>
+
+        </section>
+        <section>
+            <h3>Add an image</h3>
+            <img id="striped-image" src="../assets/images/repeating-diagonal-lines-rect.jpeg" />
+            <p>You can add images into your HTML document (see above), or add them as background images in CSS styling
+                (like on the main page).</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- normally information like contact details etc  -->
+        <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
+
+    </footer>
+</body>
+
 </html>

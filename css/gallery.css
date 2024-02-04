@@ -112,7 +112,7 @@ body {
     width: 100vw; /* 视口的100%宽 */
     height: 100vh; /* 视口的100%高 */
     z-index: -2;
-    animation: scrollBackground-illustrations 60s linear infinite;
+    animation: scrollBackground-illustrations 240s linear infinite;
 }
 
 
