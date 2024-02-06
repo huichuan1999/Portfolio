@@ -123,6 +123,20 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+.backgroundImageThePool {
+    background-image: url(../assets/images/IMG_20231207_135331.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .pixel-style {
     image-rendering: pixelated;
     /* 使图片在放大时保持像素风格 */
@@ -215,6 +229,10 @@ header h2 {
     font-style: italic;
 }
 
+h3 {
+    font-weight: normal;
+}
+
 li {
     /* font-family: Helvetica, sans-serif; */
     line-height: 1.6em;
@@ -223,10 +241,9 @@ li {
 p {
     /* font-family: 'TextContent'; */
     font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
-    font-family: 'TextContent';
     font-size: 16px;
     line-height: 1.6em;
-    margin: 2.5em 0;
+    margin: 2em 0;
     /* font-family: Helvetica, sans-serif; */
 }
 
@@ -263,25 +280,37 @@ p {
     padding: 10% 16%;
 }
 
+.flexbox-container {
+    padding-top: 3%;
+    padding-left: 29%;
+    padding-right: 12%;
+    padding-bottom: 10%;
+}
+
 /* 自定义滚动条样式 */
 /* 滚动条的整体样式 */
 ::-webkit-scrollbar {
-    width: 4px; /* 控制滚动条的宽度 */
+    width: 8px;
+    /* 控制滚动条的宽度 */
 }
 
 /* 滚动条轨道的样式 */
 ::-webkit-scrollbar-track {
-    background: rgba(52, 92, 130, 0.651); /* 深蓝色背景 */
-    mix-blend-mode:multiply;
+    background: rgba(52, 92, 130, 0.651);
+    /* 深蓝色背景 */
+    mix-blend-mode: multiply;
 }
 
 /* 滚动条滑块的样式 */
 ::-webkit-scrollbar-thumb {
-    background: lightblue; /* 浅蓝色滚动条 */
-    border-radius: 2px; /* 滚动条滑块的圆角边 */
+    background: lightblue;
+    /* 浅蓝色滚动条 */
+    border-radius: 2px;
+    /* 滚动条滑块的圆角边 */
 }
 
 /* 当鼠标悬停在滚动条滑块上时 */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(243, 255, 255);/* 滚动条滑块的悬停颜色 */
+    background: rgb(243, 255, 255);
+    /* 滚动条滑块的悬停颜色 */
 }

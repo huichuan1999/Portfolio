@@ -12,9 +12,9 @@
     /* the following three items can be put on one line: https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 25%; /*width of the box, take up a quarter of the parent's size*/
+    flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
     box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
-    padding: 10px;
+    padding: 7px;
 }
 
 .flex-basis-third .flex-item{
@@ -40,6 +40,7 @@
     text-align: center;
     text-decoration: none;
     color:rgb(243, 255, 255);
+    border: 2px double rgb(243, 255, 255); /* 设置边框为2px宽的白色双线 */
     overflow: hidden; /* 隐藏溢出的内容 */
 }
 
@@ -75,6 +76,14 @@
 .flex-item a:hover::before {
     filter: blur(6px);
     background-size: 120%;
+}
+
+.flex-item a.CodeInCode::before {
+    background-image: url(../assets/images/CodeInCode.png);
+}
+
+.flex-item a.ThePool::before {
+    background-image: url(../assets/images/ThePool.jpg);
 }
 
 .flex-item a.TangibleIllusions::before {
