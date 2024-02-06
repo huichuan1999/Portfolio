@@ -12,7 +12,7 @@
     /* the following three items can be put on one line: https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
+    flex-basis: 25%; /*width of the box, take up a quarter of the parent's size*/
     box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
     padding: 10px;
 }
@@ -33,10 +33,14 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding: 30% 0;
+    /* 使盒子为长方形 */
+    /* padding: 30% 0; */
+    padding-top: 50%; /* 顶部内边距设置为100% */
+    padding-bottom: 50%; /* 底部部内边距设置为100% */
     text-align: center;
     text-decoration: none;
-    color:rgb(243, 255, 255);;
+    color:rgb(243, 255, 255);
+    overflow: hidden; /* 隐藏溢出的内容 */
 }
 
 .flex-item a h4 {
@@ -44,7 +48,7 @@
     opacity: 0;
     transition: opacity 0.5s;
     filter: none;
-    margin: 10px;
+    margin: 12px;
     padding: 5px 10px;
     z-index: 1;
 }

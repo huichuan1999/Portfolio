@@ -215,10 +215,6 @@ header h2 {
     font-style: italic;
 }
 
-main.documentation-page h3 {
-    margin-top: 40px;
-}
-
 li {
     /* font-family: Helvetica, sans-serif; */
     line-height: 1.6em;
@@ -233,21 +229,6 @@ p {
     margin: 2.5em 0;
     /* font-family: Helvetica, sans-serif; */
 }
-
-header.documentation-header {
-    padding: 0 3%;
-}
-
-.documentation-header section,
-main.documentation-page section {
-    margin: 10px 10%;
-}
-
-footer {
-    width: 100%;
-    min-height: 100px;
-}
-
 
 /* original aspect ratio width="640" height="360" */
 .responsive-video {
