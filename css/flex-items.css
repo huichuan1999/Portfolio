@@ -17,6 +17,10 @@
     padding: 7px;
 }
 
+.flex-basis-forth .flex-item{
+    flex-basis: 25%; 
+}
+
 .flex-basis-third .flex-item{
     flex-basis: 33.33%; 
 }

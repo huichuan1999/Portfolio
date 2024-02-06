@@ -137,6 +137,20 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+.backgroundImageCodeInCode {
+    background-image: url(../assets/images/codeInCode/BG-CodeInCode.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .pixel-style {
     image-rendering: pixelated;
     /* 使图片在放大时保持像素风格 */
