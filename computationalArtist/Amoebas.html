@@ -9,19 +9,39 @@
 
     <title>Virtual Biome - Amoebas</title>
 
-    <!-- including for some global styling -->
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/p5.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body>
     <!-- if you have sub-pages think about adding a simple back button -->
-    <div class="backgroundImage "></div>
+    <div class="backgroundImage"></div>
     <div class="overlay"></div>
-    <nav>
-        <a href="../">HOME</a>
-    </nav>
-    <header class="documentation-header">
+    <div class="nav">
+        <ul class="navlist">
+            <li class="btli"><a href="../index.html">HOME</a></li>
+            <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
+            <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
+            <li class="btli"><a href="../exhibitions/enhibitions.html">EXHIBITIONS</a></li>
+            <li class="btli"><a href="../about/aboutMe.html">CONTACT</a>
+                <ul class="droplist">
+                    <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
+                    <li><a href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="page-container">
         <section class="center-text">
             <h1>Virtual Biome:
                 Exploring The Definition of Life, Self-Organization, and Artificial Intervention</h1>
@@ -30,9 +50,7 @@
                     <h4 style=color:azure;>Click here to play</h4>
                 </a>
         </section>
-    </header>
 
-    <main class="documentation-page">
         <section>
             <div class="responsive-video centered-content">
                 <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
@@ -206,7 +224,7 @@
                 </li>
             </ul>
         </section>
-    </main>
+    </div>
 
     <footer>
         <!-- normally information like contact details etc  -->
