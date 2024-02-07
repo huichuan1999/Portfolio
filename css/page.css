@@ -151,6 +151,33 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+.backgroundImageComputationalArts {
+    background-image: url(../assets/images/BG-ComputationalArt.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.backgroundImageGameDev {
+        background-image: url(../assets/images/WHITETREE\ BG01.png);
+        background-size: cover; /* 覆盖整个元素的背景区域 */
+        background-repeat: no-repeat;
+        background-position: center center; /* 图像居中显示 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw; /* 视口的100%宽 */
+        height: 100vh; /* 视口的100%高 */
+        z-index: -2; 
+}
+
 .pixel-style {
     image-rendering: pixelated;
     /* 使图片在放大时保持像素风格 */
