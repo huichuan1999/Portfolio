@@ -166,16 +166,44 @@ input[type="submit"]:hover {
 }
 
 .backgroundImageGameDev {
-        background-image: url(../assets/images/WHITETREE\ BG01.png);
-        background-size: cover; /* 覆盖整个元素的背景区域 */
-        background-repeat: no-repeat;
-        background-position: center center; /* 图像居中显示 */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw; /* 视口的100%宽 */
-        height: 100vh; /* 视口的100%高 */
-        z-index: -2; 
+    background-image: url(../assets/images/WHITETREE\ BG01.png);
+    background-size: cover;
+    /* 覆盖整个元素的背景区域 */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 图像居中显示 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* 视口的100%宽 */
+    height: 100vh;
+    /* 视口的100%高 */
+    z-index: -2;
+}
+
+.backgroundImageNOAA {
+    background-image: url(../assets/images/NOAA/BG-NOAA.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay-NOAA {
+    background-color: rgba(91, 16, 2, 0.759);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .pixel-style {
@@ -284,7 +312,7 @@ p {
     font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
     font-size: 16px;
     line-height: 1.6em;
-    margin: 2em 0;
+    margin: 1.5em 0;
     /* font-family: Helvetica, sans-serif; */
 }
 
@@ -295,6 +323,8 @@ p {
     /* adjust this and the padding-top to change how big it is*/
     height: 0;
     padding-top: 57%;
+    margin-top: 3%;
+    margin-bottom: 5%;
     /* padding top is in reltation to the width of parent, it preserves aspect ratio*/
     /* margin: 0 auto; */
     /*this would center your video in the section container*/

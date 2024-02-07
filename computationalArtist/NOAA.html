@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
+    <script src="../JavaScripts/Butterfly.js"></script>
+    <script src="../JavaScripts/butterflySketch.js"></script>
+
+    <title>NOAA</title>
+
+    <!-- including for some global styling -->
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/p5.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .flex-item.text {
+            flex: 2;
+            /* 文字部分占用更多空间 */
+            padding: 7px;
+        }
+
+        .flex-item.video {
+            flex: 1;
+            /* 视频部分占用更多空间，您可以根据需要调整这个比例 */
+            padding: 7px;
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9的宽高比 */
+            height: 0;
+        }
+
+        .flex-item.video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- if you have sub-pages think about adding a simple back button -->
+    <div class="backgroundImageNOAA"></div>
+    <div class="overlay-NOAA"></div>
+    <!-- <nav>
+        <a href="../">HOME</a>
+    </nav> -->
+    <div class="nav">
+        <ul class="navlist">
+            <li class="btli"><a href="../index.html">HOME</a></li>
+            <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
+            <li class="btli"><a href="#">GRAPHIC DESIGN</a></li>
+            <li class="btli"><a href="#">EXHIBITIONS</a></li>
+            <li class="btli"><a href="#">CONTACT</a>
+                <ul class="droplist">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Wechat</a></li>
+                    <li><a href="#">Xiaohongshu/Red</a></li>
+                    <li><a href="#">X/tweeter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-container">
+        <section class="center-text">
+            <h1>Collaboration with artist Xin Liu: NOAA</h1>
+            <h1> <br> </h1>
+            <h3>
+                <br>
+                <br>
+                November 2023<br><br>
+                Creative Coding and Video Editing, Curation and Design of Window Decals<br><br>
+            </h3>
+            <a href="https://www.xinliu.art/#/noaa/">
+                <h4 style=color:azure;>Click here to XinLiu's webpage</h4>
+            </a>
+
+            <br>
+            <br>
+        </section>
+        <section>
+            <div class="responsive-video">
+                <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
+                <iframe
+                    src="https://player.vimeo.com/video/888791514?h=2678e1a68b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TangibleIllusions"></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </section>
+        <div class="flex-container flex-basis-third">
+            <div class="responsive-video flex-item video">
+                <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
+                <iframe
+                    src="https://player.vimeo.com/video/910836246?h=2678e1a68b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TangibleIllusions"></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+            <p class="flex-item text"style="margin-left:2em; padding-top:1em">
+                <br>
+                A commission by BMW at Westbund Shanghai 2023.
+                <br><br>
+                Exhibited at the BMW Lounge in Hall A of the West Bund Art Center in Shanghai, as part of Shanghai
+                Biennale,
+                at 9-Nov-2023.
+                <br><br>
+                Artist Xin Liu has been tracking several decommissioned satellites, “NOAA”, drifting in space since
+                2020.
+                She reinterprets the received data into audile signals and images to communicate with them. Like the
+                thought
+                experiments in Valentino Braitenberg’s Vehicles: Experiments in Synthetic Psychology, these vehicles
+                slowly
+                came to embody love, logic, manifestations of foresight, creative thinking, personality, and free
+                will
+                in
+                the eyes of the artist. In this BWM commission, the artist imagined a cosmic dance of countless
+                orbiting
+                vehicles in her dazzling installation.
+                <br><br>
+                I mainly handled the coding content displayed on the screen, video editing, and with grapic designer
+                Yidong,
+                making the design of the glass decals. From simple sketches and coding frameworks to the final
+                completion,
+                it's been a truly fulfilling experience.
+                <br>
+            </p>
+        </div>
+        <div class="flex-container flex-basis-third">
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/1.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/2.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/3.png" />
+            </div>
+        </div>
+        <p>The trajectory of the vehicles written in code</p>
+
+        <div class="flex-container flex-basis-third">
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/part1.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/part2.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/NOAA/part3.png" />
+            </div>
+        </div>
+        <p>Window sticker design with code drawing trajectories</p>
+        <img src="../assets/images/NOAA/mmexport.jpeg" style="padding: 7px;"/>
+        <p>
+            Working with Liu Xin has been an enlightening journey. I've learned a lot. Experiencing a regular work
+            rhythm in the London studio, along with a healthy approach to eating and drinking well, has significantly
+            improved my mental well-being.
+            <br>
+            Looking forward to the next journey :)
+        </p>
+
+    </div>
+</body>

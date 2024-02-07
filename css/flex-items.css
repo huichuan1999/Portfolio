@@ -121,6 +121,10 @@
     background-size: 120%;
 }
 
+.flex-item a.NOAA::before {
+    background-image: url(../assets/images/NOAA/flexNOAA.jpeg);
+}
+
 .flex-item a.ATripOfRoots::before {
     background-image: url(../assets/images/ATripOfRoots.png);
 }
