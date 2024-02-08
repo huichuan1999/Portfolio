@@ -227,20 +227,20 @@ input[type="submit"]:hover {
     z-index: -1;
     mix-blend-mode: multiply;
 }
-.backgroundAmoebas {
+
+/* .backgroundAmoebas {
     background-image: url(../assets/images/AmoebasPhoto/BG.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    /* filter: blur(3px); */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-.overlay-Amoebas {
+} */
+/* .overlay-Amoebas {
     background-color: rgba(33, 101, 93, 0.563);
     position: absolute;
     top: 0;
@@ -248,8 +248,7 @@ input[type="submit"]:hover {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* mix-blend-mode: multiply; */
-}
+} */
 
 .pixel-style {
     image-rendering: pixelated;
@@ -446,10 +445,10 @@ p {
     height: 100%; /* 图片高度自动调整以保持原始宽高比 */
     width: auto; /* 图片宽度自动调整以保持原始宽高比 */
     min-width: 100%; /* 确保图片至少和容器一样宽 */
-    animation: scrollBackground 60s linear infinite alternate;
+    animation: scrollBackgroundinBox 60s linear infinite alternate;
   }
   
-  @keyframes scrollBackground {
+  @keyframes scrollBackgroundinBox {
     from {
       transform: translateX(0);
     }
