@@ -121,6 +121,12 @@
     background-size: 120%;
 }
 
+.flex-item a.PetGloves::before {
+    background-image: url(../assets/images/graphicDesign/glovesSquare.png);
+}
+.flex-item a.FlyBook::before {
+    background-image: url(../assets/FlyingBooks/FINAL_Moment1.png);
+}
 .flex-item a.NOAA::before {
     background-image: url(../assets/images/NOAA/flexNOAA.jpeg);
 }

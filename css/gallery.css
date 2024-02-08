@@ -12,7 +12,7 @@ body {
 }
 
 .images img {
-    border: #aa3d5656 double 5px;
+    border: #ffffffe0 double 5px;
     max-width: 50vh;
     max-height: 50vh;
     transition: .5s;
@@ -20,7 +20,7 @@ body {
 
 .images:hover img {
     /* box-shadow: 0 10px 30px #aa3d5693; */
-    box-shadow: 10px 20px #aa3d5656;
+    box-shadow: 10px 20px #ffffff56;
     mix-blend-mode: multiply;
     transform: scale(1.5);
 }

@@ -195,7 +195,6 @@ input[type="submit"]:hover {
     height: 100%;
     z-index: -1;
 }
-
 .overlay-NOAA {
     background-color: rgba(91, 16, 2, 0.759);
     position: absolute;
@@ -204,6 +203,29 @@ input[type="submit"]:hover {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+.backgroundImageFlyingBook {
+    background-image: url(../assets/FlyingBooks/BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* filter: blur(3px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.overlay-FlyingBook {
+    background-color: rgba(129, 94, 72, 0.563);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
 }
 
 .pixel-style {
@@ -385,3 +407,31 @@ p {
     background: rgb(243, 255, 255);
     /* 滚动条滑块的悬停颜色 */
 }
+
+.scrolling-wrapper {
+    width: 100%; /* 容器宽度为100% */
+    height: 0; /* 初始高度设置为0 */
+    padding-top: 33.33%; /* 容器高度为宽度的1/3，实现3:1的宽高比 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    position: relative;
+  }
+  
+  .scrolling-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* 图片高度自动调整以保持原始宽高比 */
+    width: auto; /* 图片宽度自动调整以保持原始宽高比 */
+    min-width: 100%; /* 确保图片至少和容器一样宽 */
+    animation: scrollBackground 60s linear infinite alternate;
+  }
+  
+  @keyframes scrollBackground {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% + 100vw)); /* 图片向左移动自身宽度减去视口宽度的量 */
+    }
+  }
+  
