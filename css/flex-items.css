@@ -121,6 +121,9 @@
     background-size: 120%;
 }
 
+.flex-item a.BookPlate::before {
+    background-image: url(../assets/images/bookplate/0.jpg);
+}
 .flex-item a.GenkiForest::before {
     background-image: url(../assets/images/genkiForest/genkiForest.png);
 }
