@@ -121,6 +121,9 @@
     background-size: 120%;
 }
 
+.flex-item a.GenkiForest::before {
+    background-image: url(../assets/images/genkiForest/genkiForest.png);
+}
 .flex-item a.PetGloves::before {
     background-image: url(../assets/images/graphicDesign/glovesSquare.png);
 }
