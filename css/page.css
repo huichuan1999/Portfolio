@@ -227,6 +227,29 @@ input[type="submit"]:hover {
     z-index: -1;
     mix-blend-mode: multiply;
 }
+.backgroundAmoebas {
+    background-image: url(../assets/images/AmoebasPhoto/BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* filter: blur(3px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.overlay-Amoebas {
+    background-color: rgba(33, 101, 93, 0.563);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* mix-blend-mode: multiply; */
+}
 
 .pixel-style {
     image-rendering: pixelated;
