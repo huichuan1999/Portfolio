@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
+    <script src="../JavaScripts/Butterfly.js"></script>
+    <script src="../JavaScripts/butterflySketch.js"></script> -->
+
+    <title>Random Fractals</title>
+
+    <!-- including for some global styling -->
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/p5.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- if you have sub-pages think about adding a simple back button -->
+    <div class="backgroundRandomFractals"></div>
+    <div class="overlay-RandomFractals "></div>
+    <!-- <nav>
+        <a href="../">HOME</a>
+    </nav> -->
+    <div class="nav">
+        <ul class="navlist">
+            <li class="btli"><a href="../index.html">HOME</a></li>
+            <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
+            <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
+            <li class="btli"><a href="../exhibitions/enhibitions.html">EXHIBITIONS</a></li>
+            <li class="btli"><a href="../about/aboutMe.html">CONTACT</a>
+                <ul class="droplist">
+                    <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
+                    <li><a
+                            href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-container">
+
+        <h1>Computational From And Process:<br>
+            Random Fractal Generator and Virtual Plant Specimens</h1>
+        <h1> <br> </h1>
+        <h3>
+            <br>
+            <br>
+            <br><br>
+            April 2023<br><br>
+            Web Interation + 3D Pringting + Laser cutting<br><br>
+        </h3>
+        <a href="https://huichuan1999.github.io/OOP-Random-Fractals/ ">
+            <h4 style=color:azure;>Click here to play</h4>
+        </a>
+
+        <br>
+        <br>
+
+        <section>
+            <div class="responsive-video centered-content">
+                <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/644036051?h=b260a3b1b0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
+                <iframe
+                    src="https://player.vimeo.com/video/822936924?h=2678e1a68b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TangibleIllusions"></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </section>
+
+        <p>
+            Inspired by the Ediacaran biota fossils, I
+            employed fractal and recursive algorithms
+            in p5.js to generate a series of plantlike forms, which I then mapped to 3D
+            physical artifacts. In addition, I created
+            an audience-oriented web page, transforming
+            all the parameters needed to generate these
+            forms into an interactive GUI. I utilized
+            CSS to style and adjust their appearance,
+            and integrated all buttons, sliders, and
+            fractal branches as separate classes, paving
+            the way for further development. And with
+            responsive design using CSS, they look great
+            on mobile too.
+        </p>
+        <p>
+            Throughout this practice, I have gained a wealth of knowledge.
+            Initially, I had no experience with 3D modeling, which making my
+            starting point quite low. Over this month, I began learning how
+            to use Blender, starting with donuts tutorial and attempting to
+            generate complex and visually stunning large-scale 3D fractals using
+            intricate geometry nodes. However, due to time constraints and my
+            limited understanding, I failed a lot in accomplishing this task.
+        </p>
+        <p>Subsequently, I decided to return to my theoretical research focus,
+            which is the simulation of living organisms, and build upon my
+            existing skills. I modified the code for the fractal trees to retain
+            the last transformation for each iteration. This approach resulted
+            in a range of unpredictable yet rich and engaging effects as the
+            angle changed. These effects stemmed from the drawing state stacking
+            that occurred between each recursive call.
+        </p>
+
+        <br><br>
+        <div class="flex-container flex-basis-third">
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/1.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/2.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/3.png" />
+            </div>
+        </div><br><br>
+        <div class="flex-container flex-basis-third">
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/cuttings.jpg" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/ALL.png" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/RandomFractals/IMG_20230501_174517.png" />
+            </div>
+        </div><br><br>
+        <img src="../assets/images/RandomFractals/0.png" /><br><br>
+
+        <!-- <img src="../assets/images/RandomFractals/SVG Cutting1.png" /><br><br> -->
+
+        <h3><br>References</h3>
+        <p>
+            https://editor.p5js.org/huichuan1999/sketches/-KharT_UC
+            <br><br>
+            https://natureofcode.com/book/chapter-8-fractals/
+            <br><br>
+            https://thecodingtrain.com/challenges/15-object-oriented-fractal-trees
+            <br><br>
+            https://www.youtube.com/watch?v=zrBJ4PV3Bf4&list=LL&index=4
+            <br><br>
+            https://www.youtube.com/watch?v=tdbaIHjCKtA&list=LL&index=34
+            <br><br>
+            https://www.youtube.com/watch?v=587qclhguQg&list=LL&index=36
+        </p>
+
+    </div>
+</body>
