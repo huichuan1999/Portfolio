@@ -82,12 +82,13 @@ body {
     width: 100%;
     height: calc(100vh - 60px);
     overflow: auto;
+    visibility: hidden; /* 隐藏画廊容器，直到图片加载完成 */
   }
 
   .gallery {
     position: relative;
     width: 200vw;
-    height: 200vh;
+    height: 300vh;
   }
 
   .gallery-image {
@@ -128,3 +129,38 @@ body {
     background: white;
     /* 滚动条滑块的悬停颜色 */
   }
+
+  #loading-screen {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #loading-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #progress-bar-container {
+    width: 80%;
+    height: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #progress-bar {
+    width: 0;
+    height: 100%;
+    background: #4caf50;
+    border-radius: 10px;
+  }
+  
