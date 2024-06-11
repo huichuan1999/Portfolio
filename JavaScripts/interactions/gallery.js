@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     images.forEach(image => {
       // Set random width between 100 and 400 pixels
-      const randomWidth = Math.floor(Math.random() * (400 - 200 + 1)) + 200;
+      const randomWidth = Math.floor(Math.random() * (300 - 150 + 1)) + 150;
       image.style.width = `${randomWidth}px`;
       image.style.height = 'auto';
   

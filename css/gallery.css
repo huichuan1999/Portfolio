@@ -30,7 +30,7 @@ input[type="submit"]:hover {
 }
 
 body {
-    background-color: whitesmoke !important;
+    background-color: white;
     overflow: hidden;
     font-family: 'MyPixelFont';
     color: black;
@@ -91,6 +91,7 @@ body {
 
   .gallery-image {
     position: absolute;
+    mix-blend-mode: multiply;
     transition: transform 0.3s ease;
   }
 
