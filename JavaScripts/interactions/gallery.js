@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     while (attempts < 100 && !positionFound) {
       const maxWidth = window.innerWidth * 2 - randomWidth; // Gallery is twice the viewport width
-      const maxHeight = (window.innerHeight * 2 - 60) - image.naturalHeight * (randomWidth / image.naturalWidth); // Gallery is twice the viewport height, minus nav bar
+      const maxHeight = (window.innerHeight * 3 - 60) - image.naturalHeight * (randomWidth / image.naturalWidth); // Gallery is third the viewport height, minus nav bar
       const randomX = Math.floor(Math.random() * maxWidth);
       const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
 
