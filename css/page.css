@@ -81,12 +81,12 @@ input[type="submit"]:hover {
 }
 
 .backgroundImage {
-    background-image: url(../assets/images/BGJPEG.jpg);
+    background-image: url(../assets/images/BGJPEGsmall.jpg);
     background-size: 100% auto;
     /* 调整背景大小以使背景高度适应内容 */
     background-repeat: no-repeat;
     background-position: top;
-    filter: blur(2px);
+    filter: blur(10px);
     position: absolute;
     margin: 0;
     padding: 0;
