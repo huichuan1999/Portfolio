@@ -1,130 +1,128 @@
+@font-face {
+    font-family: 'MyPixelFont';
+    src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
+    /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+}
 
-/* CSS部分 */
-* {
-    box-sizing: border-box;
+@font-face {
+    font-family: 'MyPixelFont';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TextContent';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 当鼠标悬停在可点击的元素上时，将鼠标更改图形 */
+a:hover,
+button:hover,
+input[type="submit"]:hover {
+    cursor: url('../assets/images/cursor/cursor-point.png'), auto;
 }
 
 body {
-    /* 渐变效果 */
-    background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+    background-color: whitesmoke !important;
     overflow: hidden;
-    height: 100vh;
-}
-
-.images img {
-    border: #ffffffe0 double 5px;
-    max-width: 50vh;
-    max-height: 50vh;
-    transition: .5s;
-}
-
-.images:hover img {
-    /* box-shadow: 0 10px 30px #aa3d5693; */
-    box-shadow: 10px 20px #ffffff56;
-    mix-blend-mode: multiply;
-    transform: scale(1.5);
-}
-
-/* 创建一个水平滚动的包裹容器，用于展示内容 */
-.shell {
-    display: flex;
-    padding:5%;
-    flex-direction: column;
-    align-items: center;
-    width: 100vh;
-    /*旋转90度，向上平移一个视口高度的距离 */
-    transform: rotate(-90deg) translate3d(0, -100vh, 0);
-    /* 设置变换的原点为右上角 */
-    transform-origin: right top;
-    overflow-x: auto;
-    height: 100vw;
-    /* 设置3D透视效果 */
-    perspective: 1px;
-    transform-style: preserve-3d;
-}
-
-/* 创建一个图片容器，用于展示图片 */
-.images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 设置最小高度为视口高度的40% */
-    min-height: 40vh;
-    /* 设置变换的原点为中心点 */
-    transform-origin: 50% 50%;
-    /* 旋转90度，向前平移0.1px，放大1.1倍，向右平移0px，向下平移2vh */
-    transform: rotate(90deg) translateZ(.1px) scale(1.1) translateX(0px) translateY(2vh);
-    transition: 1s;
-    /* 增加图片之间的间距 */
-    margin:20%;
-}
-
-.slower {
-    transform: rotate(90deg) translateZ(-.12px) scale(1.3) translateX(0%) translateY(-8vh);
-}
-
-.slower1 {
-    transform: rotate(90deg) translateZ(-.25px) scale(1.4) translateX(0%) translateY(2vh);
-}
-
-.slower-down {
-    transform: rotate(90deg) translateZ(-.1px) scale(1) translateX(0%) translateY(16vh);
-}
-
-.faster {
-    transform: rotate(90deg) translateZ(-.05px) scale(1.1) translateX(0%) translateY(12vh);
-}
-
-.faster1 {
-    transform: rotate(90deg) translateZ(.05px) scale(1.4) translateX(0%) translateY(10vh);
-}
-
-.fastest {
-    transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
-}
-
-.vertical {
-    transform: rotate(90deg) translateZ(-.1px) scale(1.6) translateX(0%) translateY(-3vh);
-}
-
-/* 滚动背景图 */
-@keyframes scrollBackground-illustrations {
-    0%, 100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0; /* 滚动到最右边 */
-    }
-}
-
-
-.backgroundImage-illustrations {
-    background-image: url(../assets/illustrations/lighthouse-of-the-stars-small.jpg);
-    background-size: auto 100%; /* 使背景高度适应视口，宽度自动调整 */
-    background-repeat: no-repeat;
-    background-position: top left; /* 从顶部左侧开始显示 */
-    filter: blur(6px);
-    position: absolute;
+    font-family: 'MyPixelFont';
+    color: black;
+    overflow: hidden;
     margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 100vw; /* 视口的100%宽 */
-    height: 100vh; /* 视口的100%高 */
-    z-index: -2;
-    animation: scrollBackground-illustrations 240s linear infinite;
-}
+    height: 100vh;
+    width: 100vw;
+    cursor: url('../assets/images/cursor/cursor-white.png'), auto;
+  }
 
+  body:active {
+    cursor: url('../assets/images/cursor/grab.png'), auto;
+  }
 
-.overlay-illustrations {
-    background-color: rgba(167, 160, 165, 0.584);
-    position: absolute;
+  .nav {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    mix-blend-mode: multiply; 
-}
+    background: white;
+    z-index: 1000;
+  }
 
+  .navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    flex-wrap: nowrap;
+  }
 
+  .navlist a {
+    color: black;
+    display: block;
+    padding: 0 25px;
+  }
+
+  .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+    transition: opacity 2s;
+  }
+
+  .gallery-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+  }
+
+  .gallery {
+    position: relative;
+    width: 200vw;
+    height: 200vh;
+  }
+
+  .gallery-image {
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.5);
+  }
+
+  /* 自定义滚动条样式 */
+  /* 滚动条的整体样式 */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    /* 控制滚动条的宽度 */
+  }
+
+  /* 滚动条轨道的样式 */
+  ::-webkit-scrollbar-track {
+    background: whitesmoke;
+    /* 深蓝色背景 */
+    mix-blend-mode: multiply;
+  }
+
+  /* 滚动条滑块的样式 */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    /* 浅蓝色滚动条 */
+    border-radius: 2px;
+    /* 滚动条滑块的圆角边 */
+  }
+
+  /* 当鼠标悬停在滚动条滑块上时 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+    /* 滚动条滑块的悬停颜色 */
+  }

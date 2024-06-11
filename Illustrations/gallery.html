@@ -2,104 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="../css/gallery.css">
-    <link rel="stylesheet" href="../css/page.css">
-    <link rel="stylesheet" href="../css/nav.css">
-
-    <style>
-        /* 滚动条轨道的样式 */
-        ::-webkit-scrollbar-track {
-            background: #803daa22;
-            /* 深蓝色背景 */
-        }
-
-        /* 滚动条滑块的样式 */
-        ::-webkit-scrollbar-thumb {
-            background: rgb(220, 65, 65);
-            /* 浅蓝色滚动条 */
-            border-radius: 2px;
-            /* 滚动条滑块的圆角边 */
-        }
-
-        /* 当鼠标悬停在滚动条滑块上时 */
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgb(243, 255, 255);
-            /* 滚动条滑块的悬停颜色 */
-        }
-
-        .nav {
-            background: #803daa22;
-            /* mix-blend-mode: multiply; */
-        }
-
-        .navlist a:hover {
-            background: #aa3d5693 !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="../css/gallery.css">
+  <!-- <link rel="stylesheet" href="../css/page.css"> -->
+  <link rel="stylesheet" href="../css/nav.css">
+  <script defer src="../JavaScripts/interactions/gallery.js"></script>
 </head>
+<style>
+  body {
+    background-color: whitesmoke;
+    overflow: hidden;
+    color: black;
+  }
+
+  .nav {
+    background: white;
+  }
+
+  .navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    flex-wrap: nowrap;
+  }
+
+  .navlist a {
+    color: black;
+  }
+
+  .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+    transition: opacity 2s;
+  }
+</style>
 
 <body>
-    <div class="backgroundImage-illustrations"></div>
-    <div class="overlay-illustrations"></div>
-    <div class="nav">
-        <ul class="navlist">
-            <li class="btli"><a href="../index.html">HOME</a></li>
-            <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
-            <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
-            <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
-            <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
-            <!-- <li class="btli"><a href="../exhibitions/enhibitions.html">EXHIBITIONS</a></li> -->
-            <li class="btli"><a href="../about/aboutMe.html">CONTACT</a>
-                <ul class="droplist">
-                    <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
-                    <li><a href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a></li>
-                </ul>
-            </li>
+  <div class="nav">
+    <ul class="navlist">
+      <li class="btli"><a href="../index.html">HOME</a></li>
+      <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+      <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+      <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
+      <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
+      <li class="btli"><a href="../about/aboutMe.html">CONTACT</a>
+        <ul class="droplist">
+          <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
+          <li><a
+              href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a>
+          </li>
         </ul>
-    </div>
+      </li>
+    </ul>
+  </div>
 
-    <div class="shell">
-        <div class="images slower" style="scale:1.3">
-            <!-- 在新的标签页里打开图片 -->
-            <a href="SlientCalcite.html" target="_blank">
-                <img src="../assets/illustrations/00161.png">
-            </a>
-        </div>
-        <div class="images faster">
-            <img src="../assets/illustrations/IMG_20191025_173027.jpg">
-        </div>
-        <div class="images vertical">
-            <img src="../assets/illustrations/IMG_20200420_103131.png">
-        </div>
-        <div class="images slower-down">
-            <img src="../assets/illustrations/IMG_20201023_110207.png">
-        </div>
-        <div class="images slower1">
-            <img src="../assets/illustrations/IMG_20200331_002605.jpg">
-        </div>
-        <div class="images slower" style="scale:1.3">
-            <img src="../assets/illustrations/WEIGHTLESSNESS0.png">
-        </div>
-        <div class="images faster1">
-            <img src="../assets/illustrations/cast glass young human.png">
-        </div>
-        <div class="images slower1">
-            <img src="../assets/illustrations/Expired milk flows in the river.png">
-        </div>
-        <div class="images">
-            <img src="../assets/illustrations/IMG_20221023_22495311.png">
-        </div>
-        <div class="images slower">
-            <img src="../assets/illustrations/cuted trees.png">
-        </div>
-        <div class="images faster">
-            <img src="../assets/illustrations/20221126212035.png">
-        </div>
+  <div class="gallery-container">
+    <div class="gallery">
+      <p>
+        ___drag to view entire page
+      </p>
+      <img src="../assets/illustrations/IMG_20191025_173027.jpg" alt="Image 1" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20200420_103131.png" alt="Image 2" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20201023_110207.png" alt="Image 3" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20200331_002605.jpg" alt="Image 4" class="gallery-image">
+      <img src="../assets/illustrations/WEIGHTLESSNESS0.png" alt="Image 5" class="gallery-image">
+      <img src="../assets/illustrations/cast glass young human.png" alt="Image 6" class="gallery-image">
+      <img src="../assets/illustrations/Expired milk flows in the river.png" alt="Image 7" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20221023_22495311.png" alt="Image 8" class="gallery-image">
+      <img src="../assets/illustrations/cuted trees.png" alt="Image 9" class="gallery-image">
+      <img src="../assets/illustrations/20221126212035.png" alt="Image 10" class="gallery-image">
+
+      <a href="SlientCalcite.html" target="_blank">
+        <img src="../assets/illustrations/00161.png" alt="Image 11" class="gallery-image">
+      </a>
+      <img src="../assets/illustrations/lighthouse-of-the-stars-small.jpg" alt="Image 11" class="gallery-image">
+      <img src="../assets/illustrations/微信图片_202405202209143.jpg" alt="Image 12" class="gallery-image">
+      <img src="../assets/illustrations/微信图片_202405202209281.jpg" alt="Image 12" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20240204_1031730.png" alt="Image 12" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20240521_134929.png" alt="Image 12" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20240521_135147.png" alt="Image 12" class="gallery-image">
+      <img src="../assets/illustrations/IMG_20240521_144219.png" alt="Image 12" class="gallery-image">
     </div>
+  </div>
 </body>
 
 </html>
