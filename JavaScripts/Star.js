@@ -35,7 +35,7 @@ class Star {
         physics.addParticle(this.points[this.points.length - 1]);
 
         //加上尾巴
-        const startPosition = new Vec2D(random(width),random(height));
+        const startPosition = new Vec2D(centerX, centerY);
         const stepDirection = new Vec2D(1, 0).normalizeTo(40);
         const numParticles = random(10, 20);
         const strength = 0.003;

@@ -28,7 +28,7 @@ function setup() {
     // tailPhysics.addBehavior(gb);
     // tailPhysics.setDrag(0.01);
 
-    jellyfish = new Star(width- width / 3, height / 3, 10, 60, 120);
+    jellyfish = new Star(width- width / 3, height / 3, 9, 60, 120);
 
 }
 
