@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBar = document.getElementById('progress-bar');
   const galleryContainer = document.querySelector('.gallery-container');
   const placedImages = [];
-  
+
   images.forEach(image => {
-    // Set random width between 100 and 400 pixels
-    const randomWidth = Math.floor(Math.random() * (300 - 150 + 1)) + 150;
-    image.style.width = `${randomWidth}px`;
-    image.style.height = 'auto';
+    // Set random height between 150 and 300 pixels
+    const randomHeight = Math.floor(Math.random() * (300 - 150 + 1)) + 150;
+    image.style.height = `${randomHeight}px`;
+    image.style.width = 'auto';
 
     // Attempt to place the image without overlapping
     let attempts = 0;
     let positionFound = false;
 
     while (attempts < 100 && !positionFound) {
-      const maxWidth = window.innerWidth * 2 - randomWidth; // Gallery is twice the viewport width
-      const maxHeight = (window.innerHeight * 3 - 60) - image.naturalHeight * (randomWidth / image.naturalWidth); // Gallery is third the viewport height, minus nav bar
+      const maxWidth = window.innerWidth * 2 - image.clientWidth; // Gallery is twice the viewport width
+      const maxHeight = (window.innerHeight * 3 - 60) - randomHeight; // Gallery is three times the viewport height, minus nav bar
       const randomX = Math.floor(Math.random() * maxWidth);
       const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
 

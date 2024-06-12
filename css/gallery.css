@@ -98,7 +98,7 @@ body {
   }
 
   .gallery-image:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 
   /* 自定义滚动条样式 */
@@ -126,7 +126,7 @@ body {
 
   /* 当鼠标悬停在滚动条滑块上时 */
   ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: grey;
     /* 滚动条滑块的悬停颜色 */
   }
 
