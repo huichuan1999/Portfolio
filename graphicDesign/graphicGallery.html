@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="../css/gallery.css">
+  <!-- <link rel="stylesheet" href="../css/page.css"> -->
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/loading.css">
+  <script defer src="../JavaScripts/interactions/gallery.js"></script>
+</head>
+<style>
+  body {
+    background-color: white;
+    overflow: hidden;
+    color: black;
+  }
+
+  .nav {
+    background: white;
+  }
+
+  .navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    flex-wrap: nowrap;
+  }
+
+  .navlist a {
+    color: black;
+  }
+
+  .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+    transition: opacity 2s;
+  }
+</style>
+
+<body>
+  <div class="nav">
+    <ul class="navlist">
+      <li class="btli"><a href="../index.html">HOME</a></li>
+      <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+      <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
+      <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a>
+        <ul class="droplist">
+            <li><a href="https://huichuan-wang.itch.io/">Itch.io</a></li>
+        </ul>
+    </li>
+      <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
+      <li class="btli"><a href="../about/aboutMe.html">CONTACT</a>
+        <ul class="droplist">
+          <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
+          <li><a
+              href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div id="loading-screen">
+    <div id="loading-text">Loading...</div>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <p>
+        ___drag to view entire page<br><br>
+        ___refresh to reset the layout
+      </p>
+      <img src="../assets/illustrations/IMG_20191025_173027.jpg" alt="Image 1" class="gallery-image">
+      
+    </div>
+  </div>
+</body>
+
+</html>
