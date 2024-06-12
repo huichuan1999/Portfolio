@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let positionFound = false;
 
     while (attempts < 100 && !positionFound) {
-      const maxWidth = window.innerWidth * 3 - image.clientWidth; // Gallery is twice the viewport width
+      const maxWidth = window.innerWidth * 2 - image.clientWidth; // Gallery is twice the viewport width
       const maxHeight = (window.innerHeight * 3 - 60) - randomHeight; // Gallery is three times the viewport height, minus nav bar
       const randomX = Math.floor(Math.random() * maxWidth);
       const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
@@ -72,6 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set the image src to trigger the loading event
     const src = image.getAttribute('src');
     image.src = src;
+
+    // Add click event to toggle the clicked class
+    image.addEventListener('click', () => {
+      if (image.classList.contains('clicked')) {
+        image.classList.remove('clicked');
+      } else {
+        images.forEach(img => img.classList.remove('clicked')); // Remove 'clicked' class from all images
+        image.classList.add('clicked');
+      }
+    });
   });
 });
 

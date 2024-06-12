@@ -98,7 +98,12 @@ body {
   }
 
   .gallery-image:hover {
-    transform: scale(2);
+    transform: scale(1.05);
+  }
+
+  .gallery-image.clicked {
+    transform: scale(3); /* 点击时放大3倍 */
+    z-index: 1000; /* 确保放大后的图片在最上层 */
   }
 
   /* 自定义滚动条样式 */
