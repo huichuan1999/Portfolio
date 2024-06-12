@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
@@ -15,41 +12,31 @@
     <script src="./JavaScripts/ParticleNetwork.js"></script>
     <script src="./JavaScripts/Star.js"></script>
     <script src="./JavaScripts/jellyfishSketch.js"></script>
-
     <title>Huichuan Wang Portfolio</title>
-
     <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/flex-items.css">
     <link rel="stylesheet" href="./css/meida-Queries.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/p5.css">
+    <link rel="stylesheet" href="../css/loading.css">
     <style>
         body {
             overflow: hidden;
+        }
+
+        main {
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <!-- <header> -->
+    <div id="loading-screen">
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
 
-    <!-- <section class="centered-content"> -->
-    <!-- <h1><b>Huichuan Wang (RIVER)</b></h1> -->
-    <!-- <h2>
-                <ul class="custom-list">
-                    <li><b>Computational Artist</b></li><br>
-                    <a href="./Tangible Illusions/tangibleIllusions.html " class="TangibleIllusions">
-                        <li><b>Visual Artist / Designer</b></li><br>
-                    </a>
-                    <li><b>Illustrator</b></li><br>
-                    <li><b>Curator</b></li><br>
-                </ul>
-            </h2> -->
-    <!-- </section> -->
-
-    <!-- <div id="top-right-buttons"> -->
-    <!-- </div> -->
-    <!-- </header> -->
     <main>
         <div class="backgroundImage"></div>
         <div class="overlay"></div>
@@ -64,33 +51,62 @@
                     </ul>
                 </li>
                 <li class="btli"><a href="./graphicDesign/graphicDesign.html">GRAPHIC DESIGN</a></li>
-                <!-- <li class="btli"><a href="./exhibitions/enhibitions.html">EXHIBITIONS</a></li> -->
                 <li class="btli"><a href="./about/aboutMe.html">ABOUT</a>
                     <ul class="droplist">
                         <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
-                        <li><a
-                                href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a>
-                        </li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <a href="./about/aboutMe.html">
-            <img src="./assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style"
-                id="huichuan-wangCN" alt="Huichuan">
+            <img src="./assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN" alt="Huichuan">
         </a>
-        <!-- <img src="./assets/images/HuichuanWang/Huichuan.png" class="pixel-style" id="huichuan-wangEN"
-            alt="Huichuan"> -->
         <a href="./about/aboutMe.html">
             <img src="./assets/images/HuichuanWang/ekawa.png" class="pixel-style" id="ekawa" alt="ekawa">
         </a>
-        <!-- <div id="p5-mergeCircles"></div> -->
         <div id="p5-Jellyfish"></div>
-
     </main>
-    <!-- <footer>
-    </footer> -->
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll('img');
+            const totalImages = images.length;
+            let loadedImages = 0;
+
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressBar = document.getElementById('progress-bar');
+            const mainContent = document.querySelector('main');
+
+            images.forEach(image => {
+                image.onload = () => {
+                    loadedImages++;
+                    const progress = (loadedImages / totalImages) * 100;
+                    progressBar.style.width = `${progress}%`;
+
+                    if (loadedImages === totalImages) {
+                        loadingScreen.style.display = 'none';
+                        mainContent.style.display = 'block';
+                    }
+                };
+
+                image.onerror = () => {
+                    loadedImages++;
+                    const progress = (loadedImages / totalImages) * 100;
+                    progressBar.style.width = `${progress}%`;
+
+                    if (loadedImages === totalImages) {
+                        loadingScreen.style.display = 'none';
+                        mainContent.style.display = 'block';
+                    }
+                };
+
+                // Trigger image load event
+                const src = image.getAttribute('src');
+                image.src = src;
+            });
+        });
+    </script>
 </body>
 
 </html>
