@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const placedImages = [];
 
   images.forEach(image => {
-    // Set random height between 150 and 300 pixels
-    const randomHeight = Math.floor(Math.random() * (300 - 150 + 1)) + 150;
+    // Set random height between 16% and 32% of the viewport height
+    const randomHeightPercentage = Math.floor(Math.random() * (32 - 16 + 1)) + 16;
+    const randomHeight = (randomHeightPercentage / 100) * window.innerHeight;
     image.style.height = `${randomHeight}px`;
     image.style.width = 'auto';
 
