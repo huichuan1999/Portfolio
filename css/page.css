@@ -531,7 +531,7 @@ p {
 
 .scrolling-wrapper-Vertical {
     width: 100%; /* 容器宽度为100% */
-    height: 80vh; /* 正方形容器的高度等于视口高度 */
+    height: 100%; /* 正方形容器的高度等于视口高度 */
     /* padding:10% 0; */
     margin:10% 0;
     overflow-y: auto; /* 允许垂直滚动 */
