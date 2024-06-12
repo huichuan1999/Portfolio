@@ -121,6 +121,10 @@
     background-size: 120%;
 }
 
+.flex-item a.TheLensOfAI::before {
+    background-image: url(../assets/images/TheLensOfAI.jpg);
+}
+
 .flex-item a.BookPlate::before {
     background-image: url(../assets/images/bookplate/0.jpg);
 }
