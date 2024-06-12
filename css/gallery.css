@@ -94,7 +94,7 @@ body {
   .gallery-image {
     position: absolute;
     mix-blend-mode: multiply;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
   }
 
   .gallery-image:hover {
