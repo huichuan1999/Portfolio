@@ -392,21 +392,21 @@ input[type="submit"]:hover {
 }
 
 #huichuan-wangCN {
-    position: absolute;
-    top: 75%;
-    left: 5%;
+    position:inherit;
     width: 10vw;
     z-index: 100;
     animation: float2 3s ease-in-out infinite;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 #ekawa {
-    position: absolute;
-    top: 75%;
-    left: 17%;
+    position:inherit;
     width: 14vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 #top-right-buttons {
@@ -615,4 +615,24 @@ p {
 
 .larger-text {
     font-size: 1.7em; /* Adjust the size as needed */
+}
+
+.return-to-top {
+    display: none; /* Hidden by default */
+    font-family: 'MyPixelFont';
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #00000000;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+.return-to-top:hover {
+    background-color: rgba(255, 255, 255, 0.294);
 }
