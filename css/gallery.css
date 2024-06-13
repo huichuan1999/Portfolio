@@ -1,136 +1,163 @@
 @font-face {
-    font-family: 'MyPixelFont';
-    src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
-    /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'MyPixelFont';
+  src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
+  /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'MyPixelFont';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
-    src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'MyPixelFont';
+  /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+  src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'TextContent';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
-    src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TextContent';
+  /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+  src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* 当鼠标悬停在可点击的元素上时，将鼠标更改图形 */
 a:hover,
 button:hover,
 input[type="submit"]:hover {
-    cursor: url('../assets/images/cursor/cursor-point.png'), auto;
+  cursor: url('../assets/images/cursor/cursor-point.png'), auto;
 }
 
 body {
-    background-color: white;
-    overflow: hidden;
-    font-family: 'MyPixelFont';
-    color: black;
-    overflow: hidden;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    cursor: url('../assets/images/cursor/cursor-white.png'), auto;
-    user-select: none; /* 禁止用户选择文本 */
-  }
+  background-color: white;
+  overflow: hidden;
+  font-family: 'MyPixelFont';
+  color: black;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  cursor: url('../assets/images/cursor/cursor-white.png'), auto;
+  user-select: none;
+  /* 禁止用户选择文本 */
+}
 
-  body:active {
-    cursor: url('../assets/images/cursor/grab.png'), auto;
-  }
+body:active {
+  cursor: url('../assets/images/cursor/grab.png'), auto;
+}
 
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: white;
-    z-index: 1000;
-  }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
 
-  .navlist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    flex-wrap: nowrap;
-  }
+.navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  flex-wrap: nowrap;
+}
 
-  .navlist a {
-    color: black;
-    display: block;
-    padding: 0 25px;
-  }
+.navlist a {
+  color: black;
+  display: block;
+  padding: 0 25px;
+}
 
-  .navlist a:hover {
-    background: gainsboro;
-    border: 2px solid black;
-    transition: opacity 2s;
-  }
+.navlist a:hover {
+  background: gainsboro;
+  border: 2px solid black;
+  transition: opacity 2s;
+}
 
-  .gallery-container {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 60px);
-    overflow: auto;
-    visibility: hidden; /* 隐藏画廊容器，直到图片加载完成 */
-  }
+.gallery-container {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: auto;
+  visibility: hidden;
+  /* 隐藏画廊容器，直到图片加载完成 */
+}
 
-  .gallery {
-    position: relative;
-    width: 200vw;
-    height: 300vh;
-  }
+.gallery {
+  position: relative;
+  width: 200vw;
+  height: 300vh;
+}
 
-  .gallery-image {
-    position: absolute;
-    mix-blend-mode: multiply;
-    transition: transform 0.1s ease;
-  }
+.gallery-image {
+  position: absolute;
+  mix-blend-mode: multiply;
+  transition: transform 0.1s ease;
+}
 
-  .gallery-image:hover {
-    transform: scale(1.05);
-  }
+.gallery-image:hover {
+  transform: scale(1.05);
+}
 
-  .gallery-image.clicked {
-    transform: scale(3); /* 点击时放大3倍 */
-    z-index: 1000; /* 确保放大后的图片在最上层 */
-  }
+.gallery-image.clicked {
+  transform: scale(3);
+  /* 点击时放大3倍 */
+  z-index: 1000;
+  /* 确保放大后的图片在最上层 */
+}
 
-  /* 自定义滚动条样式 */
-  /* 滚动条的整体样式 */
-  ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-    /* 控制滚动条的宽度 */
-  }
+/* 自定义滚动条样式 */
+/* 滚动条的整体样式 */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  /* 控制滚动条的宽度 */
+}
 
-  /* 滚动条轨道的样式 */
-  ::-webkit-scrollbar-track {
-    background: whitesmoke;
-    /* 深蓝色背景 */
-    mix-blend-mode: multiply;
-  }
+/* 滚动条轨道的样式 */
+::-webkit-scrollbar-track {
+  background: whitesmoke;
+  /* 深蓝色背景 */
+  mix-blend-mode: multiply;
+}
 
-  /* 滚动条滑块的样式 */
-  ::-webkit-scrollbar-thumb {
-    background: black;
-    /* 浅蓝色滚动条 */
-    border-radius: 2px;
-    /* 滚动条滑块的圆角边 */
-  }
+/* 滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background: black;
+  /* 浅蓝色滚动条 */
+  border-radius: 2px;
+  /* 滚动条滑块的圆角边 */
+}
 
-  /* 当鼠标悬停在滚动条滑块上时 */
-  ::-webkit-scrollbar-thumb:hover {
-    background: grey;
-    /* 滚动条滑块的悬停颜色 */
-  }
+/* 当鼠标悬停在滚动条滑块上时 */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+  /* 滚动条滑块的悬停颜色 */
+}
+
+.backgroundImagegraphicDesigns {
+  background-image: url(../assets/graphicDesigns/DSC_0155.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(16px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.overlay {
+  background-color: rgba(89, 102, 117, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
