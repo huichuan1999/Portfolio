@@ -172,7 +172,7 @@
 }
 
 .flex-item a.PhysicalFractal::before {
-    background-image: url(../assets/images/PhysicFractal.png);
+    background-image: url(../assets/images/PhysicFractal.jpg);
 }
 
 .flex-item a.Theory::before {
@@ -180,7 +180,7 @@
 }
 
 .flex-item a.imageTheoryCreatures::before {
-    background-image: url(../assets/images/TheoryCreatures.png);
+    background-image: url(../assets/images/TheoryCreatures.jpg);
 }
 
 .flex-item a.Amoebas::before {
