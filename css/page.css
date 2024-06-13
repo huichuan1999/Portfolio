@@ -603,7 +603,7 @@ p {
     }
 }
 
-.floatingWords {
+#floatingWords {
     position: absolute;
     /* font-family: 'CN-Font'; */
     letter-spacing: 0.05em;

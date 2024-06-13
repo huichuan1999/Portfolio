@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
-  <title>Gallery</title>
+  <title>Graphic Gallery</title>
   <link rel="stylesheet" href="../css/gallery.css">
   <!-- <link rel="stylesheet" href="../css/page.css"> -->
   <link rel="stylesheet" href="../css/nav.css">
@@ -21,19 +21,24 @@
     z-index: -2;
     text-decoration: none;
     overflow: hidden;
-  }  
+  }
+
   #loading-screen {
     background: rgb(58, 63, 79);
   }
+
   a {
     text-decoration: none;
     /* 去除下划线 */
     color: inherit;
     /* 颜色继承父元素 */
-}
-.gallery-image.clicked {
-    transform: scale(2); /* 点击时放大3倍 */
   }
+
+  .gallery-image.clicked {
+    transform: scale(2);
+    /* 点击时放大3倍 */
+  }
+
   .gallery-container {
     overflow: hidden;
   }
@@ -111,14 +116,15 @@
     <div class="gallery">
       <div class="backgroundImagegraphicDesigns"></div>
       <div class="overlay"></div>
-      <p>
+
+      <p style=" letter-spacing: 0.05em; line-height: 2;">
         __drag to view entire page<br>
-        __refresh to reset the layout<br><br>
+        __refresh to reset the layout<br>
 
         <a href="./petGloves.html "><b>____> Pet bathing gloves packaging ></b></a>
-        
+
         <a href="./genkiForest.html"><b>____> GenkiForest ></b></a>
-        
+
         <a href="./bookplate.html"><b>____> BookPlate ></b></a>
         <br><br>
       </p>
