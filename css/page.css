@@ -22,6 +22,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'CN-BoldFont';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('../assets/fonts/Uranus_Pixel_11Px.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CN-Font';
+    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
+    src: url('../assets/fonts/Silver.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 main,
 header {
     margin: 0;
@@ -303,7 +319,7 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
-.backgroundTheLensOfAI{
+.backgroundTheLensOfAI {
     position: absolute;
     background-image: url(../assets/images/TheLensOfAIBG.jpg);
     filter: blur(10px);
@@ -317,6 +333,7 @@ input[type="submit"]:hover {
     height: 100%;
     z-index: -1;
 }
+
 .overlay-TheLensOfAI {
     background-color: rgba(43, 40, 37, 0.67);
     position: absolute;
@@ -383,11 +400,11 @@ input[type="submit"]:hover {
     animation: float2 3s ease-in-out infinite;
 }
 
-#ekawa{
+#ekawa {
     position: absolute;
     top: 75%;
     left: 17%;
-    width:14vw;
+    width: 14vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
 }
@@ -548,31 +565,54 @@ p {
 }
 
 .scrolling-wrapper-Vertical {
-    width: 100%; /* 容器宽度为100% */
-    height: 100%; /* 正方形容器的高度等于视口高度 */
+    width: 100%;
+    /* 容器宽度为100% */
+    height: 100%;
+    /* 正方形容器的高度等于视口高度 */
     /* padding:10% 0; */
-    margin:10% 0;
-    overflow-y: auto; /* 允许垂直滚动 */
-    overflow-x: hidden; /* 隐藏水平滚动条 */
+    margin: 10% 0;
+    overflow-y: auto;
+    /* 允许垂直滚动 */
+    overflow-x: hidden;
+    /* 隐藏水平滚动条 */
     position: relative;
-    box-sizing: border-box; /* 包括padding和border在内的总宽度 */
+    box-sizing: border-box;
+    /* 包括padding和border在内的总宽度 */
 }
 
 .scrolling-image-Vertical {
-    display: block; /* 块级元素，确保正确显示 */
-    width: 100%; /* 图片宽度自动调整以保持原始宽高比 */
-    max-width: none; /* 允许图片宽度超过其父元素的宽度 */
+    display: block;
+    /* 块级元素，确保正确显示 */
+    width: 100%;
+    /* 图片宽度自动调整以保持原始宽高比 */
+    max-width: none;
+    /* 允许图片宽度超过其父元素的宽度 */
     /* animation: scrollBackgroundinBox-Vertical 240s linear infinite; */
 }
 
 
 @keyframes scrollBackgroundinBox-Vertical {
     from {
-        transform: translateY(0);  /* 从顶部开始 */
+        transform: translateY(0);
+        /* 从顶部开始 */
     }
+
     to {
-        transform: translateY(calc(-100% + 100vh)); /* 向上移动图片高度的100% */
+        transform: translateY(calc(-100% + 100vh));
+        /* 向上移动图片高度的100% */
     }
 }
 
+.floatingWords {
+    position: absolute;
+    /* font-family: 'CN-Font'; */
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    bottom: 10vh;
+    left: 0%;
+    line-height: 2;
+}
 
+.larger-text {
+    font-size: 1.7em; /* Adjust the size as needed */
+}

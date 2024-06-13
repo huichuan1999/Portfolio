@@ -19,14 +19,10 @@
     <link rel="stylesheet" href="./css/meida-Queries.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/p5.css">
-    <link rel="stylesheet" href="../css/loading.css">
+    <!-- <link rel="stylesheet" href="../css/loading.css"> -->
     <style>
         body {
             overflow: hidden;
-        }
-
-        main {
-            display: none;
         }
     </style>
 </head>
@@ -61,54 +57,29 @@
                 </li>
             </ul>
         </div>
-        <a href="./about/aboutMe.html">
+
+        <!-- <a href="./about/aboutMe.html">
             <img src="./assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN" alt="Huichuan">
-        </a>
-        <a href="./about/aboutMe.html">
+        </a> -->
+        <!-- <a href="./about/aboutMe.html">
             <img src="./assets/images/HuichuanWang/ekawa.png" class="pixel-style" id="ekawa" alt="ekawa">
-        </a>
+        </a> -->
+        
         <div id="p5-Jellyfish"></div>
+        <div class="floatingWords">
+            ■ hello and welcome! :)  
+            <br>■ you can call me >>>>>>><br>
+            <a href="./about/aboutMe.html">____> <span class="larger-text" style="font-family: 'CN-BoldFont';">绘川</span> >></a>
+            <a href="./about/aboutMe.html"><b>__or__> <span class="larger-text">huichuan</span> >></b></a>
+            <a href="./about/aboutMe.html"><b>__or__> <span class="larger-text">ekawa</span> >></b></a>
+            <br>■ I am a ...
+            <br>__ > <a href="./computationalArtist/computationalArt.html"><b>Computational Artist</b></a> 
+            >>____ > <a href="./Illustrations/gallery.html"><b>Illustrator</b></a> 
+            >>____ > <a href="./graphicDesign/graphicDesign.html"><b>Designer</b></a> 
+            >>____ > <a href="./about/aboutMe.html"><b>Curator</b></a> >>
+            
+        </div>
     </main>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const images = document.querySelectorAll('img');
-            const totalImages = images.length;
-            let loadedImages = 0;
-
-            const loadingScreen = document.getElementById('loading-screen');
-            const progressBar = document.getElementById('progress-bar');
-            const mainContent = document.querySelector('main');
-
-            images.forEach(image => {
-                image.onload = () => {
-                    loadedImages++;
-                    const progress = (loadedImages / totalImages) * 100;
-                    progressBar.style.width = `${progress}%`;
-
-                    if (loadedImages === totalImages) {
-                        loadingScreen.style.display = 'none';
-                        mainContent.style.display = 'block';
-                    }
-                };
-
-                image.onerror = () => {
-                    loadedImages++;
-                    const progress = (loadedImages / totalImages) * 100;
-                    progressBar.style.width = `${progress}%`;
-
-                    if (loadedImages === totalImages) {
-                        loadingScreen.style.display = 'none';
-                        mainContent.style.display = 'block';
-                    }
-                };
-
-                // Trigger image load event
-                const src = image.getAttribute('src');
-                image.src = src;
-            });
-        });
-    </script>
 </body>
 
 </html>
