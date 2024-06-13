@@ -120,12 +120,8 @@ input[type="submit"]:hover {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
-    padding: 0;
-    width: 200vw;
-    height: 200vh;
-    background-size: cover;
-    background-position: center center;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
@@ -180,10 +176,8 @@ input[type="submit"]:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    /* 视口的100%宽 */
-    height: 100vh;
-    /* 视口的100%高 */
+    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
