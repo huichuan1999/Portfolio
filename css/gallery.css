@@ -161,3 +161,10 @@ body:active {
   height: 100%;
   z-index: -1;
 }
+
+#graphicGalleryWords{
+  position: absolute;
+  text-align:right;
+  right:0vw;
+  bottom:2vh
+}
