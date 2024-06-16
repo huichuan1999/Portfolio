@@ -39,10 +39,11 @@
     color:#f3ffff;
     display:block;
     padding:0 25px;
+    border: 2px solid rgba(0, 0, 0, 0);
 }
 .navlist a:hover{
     background: #3c8dab93;
-    border: 2px solid #f3ffff; 
+    border: 2px solid #f3ffff;
     transition: opacity 2s;
 }
 .droplist{
@@ -51,16 +52,16 @@
     /* background:#c41411; */
     /* box-shadow: 0 1px 2px rgb(111, 102, 129); */
     display:none;
-    position: absolute; 
-    left: 0; 
-    top: 100%; 
+    position: absolute;
+    left: 0;
+    top: 100%;
     text-align: left;
     /* border-radius: 6px; */
     z-index:10;
     padding:8px
 }
 .btli:hover .droplist{
-    display:block; 
+    display:block;
     /* background: #c41411; */
 }
 
@@ -86,7 +87,7 @@
     background-color: rgb(243, 255, 255); /* 正方形的颜色 */
 }
 
-/* 
+/*
 nav{
     padding:10px 3%;
 }
