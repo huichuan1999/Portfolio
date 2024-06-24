@@ -1,22 +1,19 @@
 @font-face {
     font-family: 'MyPixelFont';
-    src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
-    /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
+    src: url('../assets/fonts/Pixel_Georgia.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MyPixelFont';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
-    src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Pixel_Georgia_Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TextContent';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -24,7 +21,6 @@
 
 @font-face {
     font-family: 'CN-BoldFont';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/Uranus_Pixel_11Px.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -32,7 +28,6 @@
 
 @font-face {
     font-family: 'CN-Font';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/Silver.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -182,7 +177,7 @@ input[type="submit"]:hover {
 }
 
 .backgroundImageGameDev {
-    background-image: url(../assets/images/WHITETREE\ BG01.png);
+    background-image: url(../assets/images/WHITETREE_BG01.png);
     background-size: cover;
     /* 覆盖整个元素的背景区域 */
     background-repeat: no-repeat;
@@ -650,4 +645,3 @@ p {
 .return-to-top:hover {
     background-color: rgba(255, 255, 255, 0.294);
 }
-
