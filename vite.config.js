@@ -13,7 +13,16 @@ export default defineConfig({
                 noaa: './computationalArtist/NOAA.html',
                 randomFractals: './computationalArtist/RandomFractals.html',
                 theLensOfAi: './computationalArtist/TheLensOfAI.html',
-                about: "./about/aboutMe.html"
+                about: "./about/aboutMe.html",
+                exhibition: "./exhibitions/exhibitions.html",
+                gameDev: "./gameDev/gamedevelopment.html",
+                blushingStars: "./graphicDesign/BlushingStars.html",
+                bookplate: "./graphicDesign/bookplate.html",
+                genkiForest: "./graphicDesign/genkiForest.html",
+                graphicDesign: "./graphicDesign/graphicDesign.html",
+                petGloves: "./graphicDesign/petGloves.html",
+                gallery: "./Illustrations/gallery.html",
+                silentCalcite: "./Illustrations/SilentCalcite.html"
             }
         },
         outDir: "dist",
