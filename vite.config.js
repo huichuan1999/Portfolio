@@ -22,7 +22,9 @@ export default defineConfig({
                 graphicDesign: "./graphicDesign/graphicDesign.html",
                 petGloves: "./graphicDesign/petGloves.html",
                 gallery: "./Illustrations/gallery.html",
-                silentCalcite: "./Illustrations/SilentCalcite.html"
+                silentCalcite: "./Illustrations/SilentCalcite.html",
+                tangibleIllusions: "./TangibleIllusions/tangibleIllusions.html",
+                weeklyBlog: "./WeeklyBlog/weeklyBlog.html"
             }
         },
         outDir: "dist",
