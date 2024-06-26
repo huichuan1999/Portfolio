@@ -1,8 +1,10 @@
+const { VerletParticle2D, VerletSpring2D } = toxi.physics2d;
 
-class ParticleNetwork {
-  constructor(physics, startPosition, stepDirection, numParticles, strength, damping) {
+export default class ParticleNetwork {
+  constructor(physics, startPosition, stepDirection, numParticles, strength, damping, p) {
     this.particles = [];
     this.springs = [];
+    this.p = p;
 
     for (let i = 0; i < numParticles; i++) {
       const particle = new VerletParticle2D(startPosition.add(stepDirection.scale(i)));
@@ -32,33 +34,33 @@ class ParticleNetwork {
   }
 
   display() {
-    stroke(255, 80);
-    strokeWeight(2);
-    noFill();
+    this.p.stroke(255, 80);
+    this.p.strokeWeight(2);
+    this.p.noFill();
 
-    beginShape();
+    this.p.beginShape();
     for (const particle of this.particles) {
-      vertex(particle.x, particle.y);
+      this.p.vertex(particle.x, particle.y);
     }
-    endShape();
+    this.p.endShape();
 
     for (const spring of this.springs) {
       //stroke(255, 50);
-      strokeWeight(1);
-      line(spring.a.x, spring.a.y, spring.b.x, spring.b.y);
+      this.p.strokeWeight(1);
+      this.p.line(spring.a.x, spring.a.y, spring.b.x, spring.b.y);
       if (spring.b !== this.particles[this.particles.indexOf(spring.a) + 1]) {
-        stroke(255,50);
-        strokeWeight(3);
-        fill(255,50);
+        this.p.stroke(255,50);
+        this.p.strokeWeight(3);
+        this.p.fill(255,50);
         // rectMode(CENTER);
         // rect(spring.b.x, spring.b.y, 16,16);
-        circle(spring.b.x, spring.b.y, 16);
+        this.p.circle(spring.b.x, spring.b.y, 16);
       }
     }
 
     for (const particle of this.particles) {
-      stroke(255,100);
-      ellipse(particle.x, particle.y, 3, 3);
+      this.p.stroke(255,100);
+      this.p.ellipse(particle.x, particle.y, 3, 3);
     }
   }
 }

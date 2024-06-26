@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
-    <script src="../JavaScripts/Butterfly.js"></script>
-    <script src="../JavaScripts/butterflySketch.js"></script>
+    <script type="module" src="../JavaScripts/Butterfly.js"></script>
+    <script type="module" src="../JavaScripts/butterflySketch.js"></script>
 
     <title>Info</title>
 
@@ -34,131 +34,94 @@
     <div class="backgroundImageThePool"></div>
     <div class="overlay"></div>
 
-    <!DOCTYPE html>
-    <html>
+    <div class="nav">
+        <ul class="navlist">
+            <li class="btli"><a href="/index.html">HOME</a></li>
+            <li class="btli"><a href="/computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
+            <li class="btli"><a href="/Illustrations/gallery.html">IllUSTRATIONS</a></li>
+            <li class="btli"><a href="/gameDev/gamedevelopment.html">GAME DEV</a></li>
+            <li class="btli"><a href="/graphicDesign/graphicDesign.html">GRAPHICS</a></li>
+            <!-- <li class="btli"><a href="/exhibitions/enhibitions.html">EXHIBITIONS</a></li> -->
+            <li class="btli"><a href="/about/aboutMe.html">INFO</a>
+                <ul class="droplist">
+                    <li><a href="mailto:wanghuichuanart@163.com">E-mail me!</a></li>
+                    <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
+                    <li><a href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a></li>
+                    <li><a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-    <head>
-        <meta charset="UTF-8">
+    <div class="page-container">
 
-        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <img src="../assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN" alt="Huichuan">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
-        <script src="../JavaScripts/Butterfly.js"></script>
-        <script src="../JavaScripts/butterflySketch.js"></script>
+        <img src="../assets/images/HuichuanWang/ekawa.png" class="pixel-style" id="ekawa" alt="ekawa">
 
-        <title>About</title>
+        <h3><br><br>Bio</h3>
+        <p>
+            Huichuan Wang(ekawa) is a computational artist, visual designer, illustrator, and curator who graduated in 2021
+            from the Central Academy of Fine Arts with BA degree, Currently, she is a second-year student in the
+            Computational Arts MFA program at Goldsmiths.
+        </p>
+        <p>
+            Her portfolio spans diverse mediums, including mixed-material paintings on paper, installations, and
+            real-time code computations. As an illustrator, her work is often from a sensitive female perspective,
+            full of flowing consciousness, warm temperature and imagination. Merging her fine art background with
+            computational technology, her work delves into themes of life, biology, and the natural sciences,
+            drawing inspiration from nature's laws and forms. She integrates programming languages into art,
+            crafting pieces that showcase her unique visual style and a keen sense of vibrant vitality.
+        </p>
+        <p>
+            Her works have been exhibited in cities such as Paris, London, Beijing, Shanghai, Chengdu. During her
+            engagements with various exhibitions, she also fulfills the responsibilities of visual designer and
+            curator.
+        </p>
+        <br>
+        <p>Currently open to work!<br>
+        welcome DM me through e-mail or instagram:)</p>
 
-        <!-- including for some global styling -->
-        <link rel="stylesheet" href="../css/page.css">
-        <link rel="stylesheet" href="../css/p5.css">
-        <link rel="stylesheet" href="../css/nav.css">
-        <link rel="stylesheet" href="../css/flex-items.css">
-        <link rel="stylesheet" href="../css/meida-Queries.css">
-        <style>
-            body {
-                overflow-x: hidden;
-            }
-        </style>
-    </head>
+        <h3><br><br>Exhibitions:</h3>
+        <p>
+            May 24 - June 8, 2024 - Beijing, Park Art Space, 'Underground and Contemporary Shelters', as Artist,
+            Designer and Curator.
+            <br><br>
+            March 27 - 28, 2024 - Paris, British Embassy in France, "The Great Campaign Alumni Award Celebration,"
+            as a representative of Goldsmiths Computational Arts.
+            <br><br>
+            Nov 17 - Dec 20, 2023 - Beijing Smart e-Sport event Center“DADU DONGNAN” Science and Technology Art
+            Exhibition.
+            <br><br>
+            Nov 9 - 12, 2023 - Shanghai Biennale at West Bund Art Center - Collaborated with artist Xin Liu on the
+            work "NOAA".
+            <br><br>
+            Sep22 - 24, 2023 - London Design Festival - V&A Digital Design Weekend at the V&A Museum.
+            <br><br>
+            Aug 30 - Sep 3, 2023 - London, St James Hatcham Church, “Symbiosis”, Goldsmiths Computational Arts
+            MA/MFA Degree Show, as Artist and Designer.
+            <br><br>
+            Aug 5 - Oct 6, 2023 - Chengdu, Raffles City, 2023 Yako Art Graduation Season "Iterative Generation -
+            Life, Virtual, Potential", as Designer and Curator.
+            <br><br>
+            July 12- 14, 2023 - BCS London Office, Electronic and Visualization and the Arts (EVA London
+            Conference), as a representative of Goldsmiths Computational Arts.
+            <br><br>
+            July 26 - Aug 28, 2022 - Chengdu, Wink Art Space, “3.27% CAFA Graduates Spontaneous Offline Group
+            Exhibition”, as Artist and Curator.
+            <br><br>
+            June 9-20, 2021 - Beijing, CAFA Museum, “Ready to boom” Central Academy of Fine Arts Undergraduate
+            Degree Show.
+        </p>
 
-    <body>
+        <h3><br><br>Contact:</h3>
+        <p>
+            E-mail: wanghuichuanart@163.com<br>
+            <a href="https://www.instagram.com/huichuan_/ ">Instagram: @huichuan_</a><br>
+            <a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin: huichuan-ekawa </a>
+        </p>
 
-        <!-- if you have sub-pages think about adding a simple back button -->
-        <div class="backgroundImageThePool"></div>
-        <div class="overlay"></div>
-
-        <div class="nav">
-            <ul class="navlist">
-                <li class="btli"><a href="../index.html">HOME</a></li>
-                <li class="btli"><a href="../computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
-                <li class="btli"><a href="../Illustrations/gallery.html">IllUSTRATIONS</a></li>
-                <li class="btli"><a href="../gameDev/gamedevelopment.html">GAME DEV</a></li>
-                <li class="btli"><a href="../graphicDesign/graphicDesign.html">GRAPHICS</a></li>
-                <!-- <li class="btli"><a href="../exhibitions/enhibitions.html">EXHIBITIONS</a></li> -->
-                <li class="btli"><a href="../about/aboutMe.html">INFO</a>
-                    <ul class="droplist">
-                        <li><a href="mailto:wanghuichuanart@163.com">E-mail me!</a></li>
-                        <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
-                        <li><a href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a></li>
-                        <li><a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="page-container">
-
-            <img src="../assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN" alt="Huichuan">
-
-            <img src="../assets/images/HuichuanWang/ekawa.png" class="pixel-style" id="ekawa" alt="ekawa">
-        
-            <h3><br><br>Bio</h3>
-            <p>
-                Huichuan Wang(ekawa) is a computational artist, visual designer, illustrator, and curator who graduated in 2021
-                from the Central Academy of Fine Arts with BA degree, Currently, she is a second-year student in the
-                Computational Arts MFA program at Goldsmiths.
-            </p>
-            <p>
-                Her portfolio spans diverse mediums, including mixed-material paintings on paper, installations, and
-                real-time code computations. As an illustrator, her work is often from a sensitive female perspective,
-                full of flowing consciousness, warm temperature and imagination. Merging her fine art background with
-                computational technology, her work delves into themes of life, biology, and the natural sciences,
-                drawing inspiration from nature's laws and forms. She integrates programming languages into art,
-                crafting pieces that showcase her unique visual style and a keen sense of vibrant vitality.
-            </p>
-            <p>
-                Her works have been exhibited in cities such as Paris, London, Beijing, Shanghai, Chengdu. During her
-                engagements with various exhibitions, she also fulfills the responsibilities of visual designer and
-                curator.
-            </p>
-            <br>
-            <p>Currently open to work!<br>
-            welcome DM me through e-mail or instagram:)</p>
-
-            <h3><br><br>Exhibitions:</h3>
-            <p>
-                May 24 - June 8, 2024 - Beijing, Park Art Space, 'Underground and Contemporary Shelters', as Artist,
-                Designer and Curator.
-                <br><br>
-                March 27 - 28, 2024 - Paris, British Embassy in France, "The Great Campaign Alumni Award Celebration,"
-                as a representative of Goldsmiths Computational Arts.
-                <br><br>
-                Nov 17 - Dec 20, 2023 - Beijing Smart e-Sport event Center“DADU DONGNAN” Science and Technology Art
-                Exhibition.
-                <br><br>
-                Nov 9 - 12, 2023 - Shanghai Biennale at West Bund Art Center - Collaborated with artist Xin Liu on the
-                work "NOAA".
-                <br><br>
-                Sep22 - 24, 2023 - London Design Festival - V&A Digital Design Weekend at the V&A Museum.
-                <br><br>
-                Aug 30 - Sep 3, 2023 - London, St James Hatcham Church, “Symbiosis”, Goldsmiths Computational Arts
-                MA/MFA Degree Show, as Artist and Designer.
-                <br><br>
-                Aug 5 - Oct 6, 2023 - Chengdu, Raffles City, 2023 Yako Art Graduation Season "Iterative Generation -
-                Life, Virtual, Potential", as Designer and Curator.
-                <br><br>
-                July 12- 14, 2023 - BCS London Office, Electronic and Visualization and the Arts (EVA London
-                Conference), as a representative of Goldsmiths Computational Arts.
-                <br><br>
-                July 26 - Aug 28, 2022 - Chengdu, Wink Art Space, “3.27% CAFA Graduates Spontaneous Offline Group
-                Exhibition”, as Artist and Curator.
-                <br><br>
-                June 9-20, 2021 - Beijing, CAFA Museum, “Ready to boom” Central Academy of Fine Arts Undergraduate
-                Degree Show.
-            </p>
-
-            <h3><br><br>Contact:</h3>
-            <p>
-                E-mail: wanghuichuanart@163.com<br>
-                <a href="https://www.instagram.com/huichuan_/ ">Instagram: @huichuan_</a><br>
-                <a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin: huichuan-ekawa </a>
-            </p>
-
-            <button id="return-to-top" class="return-to-top">▲ back<br>to top</button>
-            <script src="../JavaScripts/interactions/return_to_top.js"></script>
-        </div>
-    </body>
+        <button id="return-to-top" class="return-to-top">▲ back<br>to top</button>
+        <script type="module" src="../JavaScripts/interactions/return_to_top.js"></script>
+    </div>
 </body>

@@ -1,22 +1,19 @@
 @font-face {
     font-family: 'MyPixelFont';
-    src: url('../assets/fonts/Pixel\ Georgia.ttf') format('truetype');
-    /* src: url('/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype'); */
+    src: url('../assets/fonts/Pixel_Georgia.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MyPixelFont';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
-    src: url('../assets/fonts/Pixel\ Georgia\ Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Pixel_Georgia_Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TextContent';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -24,7 +21,6 @@
 
 @font-face {
     font-family: 'CN-BoldFont';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/Uranus_Pixel_11Px.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -32,7 +28,6 @@
 
 @font-face {
     font-family: 'CN-Font';
-    /* src: url('/fonts/Pixel\ Georgia.ttf') format('truetype'); */
     src: url('../assets/fonts/Silver.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -48,7 +43,6 @@ body {
     /* font-family: Verdana, sans-serif; */
     /* font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace; */
     position: relative;
-    height: 100%;
     font-family: 'MyPixelFont';
     margin: 0;
     /* background-color:#fdf4e5;
@@ -103,13 +97,13 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: top;
     filter: blur(10px);
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     top: 0;
     left: -2.5%;
     width: 105vw;
-    height: 100%;
+    height: 100vh;
     z-index: -2;
     animation: scrollBackground 720s linear infinite;
     /* 应用动画, 改速度就是改持续时间*/
@@ -117,11 +111,11 @@ input[type="submit"]:hover {
 
 .overlay {
     background-color: rgba(0, 45, 62, 0.759);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -131,11 +125,11 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     filter: blur(6px);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -145,11 +139,11 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     filter: blur(6px);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -159,11 +153,11 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     filter: blur(3px);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -173,22 +167,22 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     filter: blur(6px);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .backgroundImageGameDev {
-    background-image: url(../assets/images/WHITETREE\ BG01.png);
+    background-image: url(../assets/images/WHITETREE_BG01.png);
     background-size: cover;
     /* 覆盖整个元素的背景区域 */
     background-repeat: no-repeat;
     background-position: center center;
     /* 图像居中显示 */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -204,21 +198,21 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     filter: blur(6px);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .overlay-NOAA {
     background-color: rgba(91, 16, 2, 0.759);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -228,21 +222,21 @@ input[type="submit"]:hover {
     background-repeat: no-repeat;
     background-position: center center;
     /* filter: blur(6px); */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .overlay-FlyingBook {
     background-color: rgba(129, 94, 72, 0.563);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
     mix-blend-mode: multiply;
 }
@@ -252,21 +246,21 @@ input[type="submit"]:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .overlay-Amoebas {
     background-color: rgba(33, 101, 93, 0.563);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -275,87 +269,84 @@ input[type="submit"]:hover {
     background-size: cover;
     background-repeat: repeat;
     background-position: center center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .backgroundGrphicDesign {
-    position: absolute;
+    position: fixed;
     background-image: linear-gradient(-225deg, #767965 0%, #525642 48%, #555944 100%);
     background-position: center center;
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     height: 100vh;
     z-index: -1;
 }
 
 .backgroundRandomFractals {
-    position: absolute;
     background-image: url(../assets/images/RandomFractals/BG.jpg);
     background-position: center center;
-    position: absolute;
+    position: fixed;
     filter: blur(10px);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .overlay-RandomFractals {
     background-color: rgba(0, 0, 0, 0.435);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .backgroundTheLensOfAI {
-    position: absolute;
+    position: fixed;
     background-image: url(../assets/images/TheLensOfAIBG.jpg);
     filter: blur(10px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .overlay-TheLensOfAI {
     background-color: rgba(43, 40, 37, 0.67);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
 .blushingStarsBG{
-    position: absolute;
+    position: fixed;
     background-color: #ede7e7;
     /* filter: blur(10px); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -650,4 +641,3 @@ p {
 .return-to-top:hover {
     background-color: rgba(255, 255, 255, 0.294);
 }
-
