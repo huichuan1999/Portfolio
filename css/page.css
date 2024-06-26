@@ -641,3 +641,7 @@ p {
 .return-to-top:hover {
     background-color: rgba(255, 255, 255, 0.294);
 }
+
+.brown-text{
+    color:brown;
+}
