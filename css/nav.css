@@ -27,7 +27,7 @@
     position: relative;
     line-height: 40px;
     font-weight: bold;
-    padding: 5px; /* 添加一些内边距，使文本与边框有间隔 */
+    padding: 5px; 
     margin-left: 8px;
     margin-right: 8px;
 
@@ -46,6 +46,21 @@
     border: 2px solid #f3ffff;
     transition: opacity 2s;
 }
+
+.navlist.brown {
+    background: #f1efeb;
+    border: 2px solid brown;
+}
+
+.navlist.brown a:hover {
+    background: #e7d8d8;
+    border: 2px solid brown;
+}
+
+.navlist.brown a {
+    color: brown;
+}
+
 .droplist{
     font-weight: 300;
     font-size: 0.8em;
@@ -58,7 +73,7 @@
     text-align: left;
     /* border-radius: 6px; */
     z-index:10;
-    padding:8px
+    padding:5px
 }
 .btli:hover .droplist{
     display:block;
@@ -86,27 +101,3 @@
     height: 0.9em;
     background-color: rgb(243, 255, 255); /* 正方形的颜色 */
 }
-
-/*
-nav{
-    padding:10px 3%;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-}
-nav a:hover{
-    color: rgb(243, 255, 255);
-}
-
-.center-text{
-    text-align: center;
-}
-.centered-content{
-   margin: 50px;
-}
-
-img{
-    width: 100%;
-} */
