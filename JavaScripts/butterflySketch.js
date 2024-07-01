@@ -1,3 +1,5 @@
+import Butterfly from './Butterfly';
+
 var sketch = function(p) {
   let physics;
   let butterfly;
