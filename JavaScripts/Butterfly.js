@@ -1,4 +1,4 @@
-class Butterfly {
+export default class Butterfly {
   constructor(x, y, size, p, physics) {
     this.p = p;
     this.physics = physics;
