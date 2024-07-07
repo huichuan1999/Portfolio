@@ -162,9 +162,16 @@ body:active {
   z-index: -1;
 }
 
-#graphicGalleryWords{
+.graphicGalleryWords{
   position: absolute;
   text-align:right;
   right:0vw;
   bottom:2vh
+}
+
+.text-container {
+  position: absolute;
+  z-index: 1000; /* Ensure text is above images */
+  letter-spacing: 0.05em; 
+  line-height: 2;
 }

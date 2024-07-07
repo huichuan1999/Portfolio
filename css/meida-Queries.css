@@ -1,13 +1,9 @@
 
-/* Media Queries for responsive design */
-
-/* Un-comment the body background-colors to see bold debug color change between screen sizes */
-
 /* Extra large */
 @media screen and (max-width: 1200px) {
-    /* body {
-      background-color: rgb(0, 255, 162);
-    } */
+    .navlist {
+        flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+    }
 
     .flex-item{
         flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
