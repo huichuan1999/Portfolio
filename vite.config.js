@@ -21,6 +21,7 @@ export default defineConfig({
                 genkiForest: "./graphicDesign/genkiForest.html",
                 graphicDesign: "./graphicDesign/graphicDesign.html",
                 petGloves: "./graphicDesign/petGloves.html",
+                underGroundShelters: ".//graphicDesign/UndergroundShelters.html",
                 gallery: "./Illustrations/gallery.html",
                 silentCalcite: "./Illustrations/SilentCalcite.html",
                 tangibleIllusions: "./TangibleIllusions/tangibleIllusions.html",
