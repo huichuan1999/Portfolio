@@ -1,0 +1,33 @@
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100vw; }
+}
+
+@keyframes blinking-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.typingAnimation {
+    position: relative;
+    z-index: 10000;
+    font-weight: 100;
+    text-align: left;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /*border-right: .17em solid rgb(255, 255, 255);  The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .12em; /* Adjust as needed */
+    /* animation: typing 3s steps(60, end) forwards, blinking-cursor .5s step-end infinite; */
+    animation: typing 3s steps(60, end) forwards, step-end infinite;
+    width: 0; /* Initial width for typing effect */
+}

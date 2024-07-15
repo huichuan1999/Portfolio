@@ -346,7 +346,7 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
-.blushingStarsBG{
+.blushingStarsBG {
     position: fixed;
     background-color: #ede7e7;
     /* filter: blur(10px); */
@@ -407,7 +407,7 @@ input[type="submit"]:hover {
 }
 
 #huichuan-wangCN {
-    position:inherit;
+    position: inherit;
     width: 10vw;
     z-index: 100;
     animation: float2 3s ease-in-out infinite;
@@ -416,7 +416,7 @@ input[type="submit"]:hover {
 }
 
 #ekawa {
-    position:inherit;
+    position: inherit;
     width: 14vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
@@ -618,22 +618,14 @@ p {
     }
 }
 
-#floatingWords {
-    position: absolute;
-    /* font-family: 'CN-Font'; */
-    letter-spacing: 0.05em;
-    font-size: 16px;
-    bottom: 5vh;
-    left: 0%;
-    line-height: 2;
-}
-
 .larger-text {
-    font-size: 1.7em; /* Adjust the size as needed */
+    font-size: 1.7em;
+    /* Adjust the size as needed */
 }
 
 .return-to-top {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     font-family: 'MyPixelFont';
     position: fixed;
     bottom: 20px;
@@ -652,6 +644,20 @@ p {
     background-color: rgba(255, 255, 255, 0.294);
 }
 
-.brown-text{
-    color:brown;
+.brown-text {
+    color: brown;
+}
+
+.typingAnimation:last-of-type {
+    border-right: none; /* Remove cursor from the last line */
+}
+
+#floatingWords {
+    position: absolute;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    bottom: 5vh;
+    left: 0%;
+    line-height: 2;
+    white-space: normal; /* Allowing the content to wrap */
 }

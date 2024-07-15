@@ -8,6 +8,7 @@
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
   <title>Gallery</title>
   <link rel="stylesheet" href="../css/gallery.css">
+  <link rel="stylesheet" href="../css/animation.css">
   <!-- <link rel="stylesheet" href="../css/page.css"> -->
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/loading.css">
@@ -79,11 +80,11 @@
 
   <div class="gallery-container">
     <div class="gallery">
-
-      <p style=" letter-spacing: 0.05em; line-height: 2;">
-        ___drag to view entire page<br>
-        ___refresh to reset the layout
-      </p>
+        <p style=" letter-spacing: 0.05em; line-height: 2;">
+          <div class="typingAnimation" style="animation-delay: 0.5s;">___drag to view entire page<br></div>
+          <div class="typingAnimation" style="animation-delay: 1s;">___refresh to reset the layout</div>
+        </p>
+      
 
       <img src="../assets/illustrations/IMG_20191025_173027.jpg" alt="Image 1" class="gallery-image">
       <img src="../assets/illustrations/IMG_20200420_103131.jpg" alt="Image 2" class="gallery-image">
