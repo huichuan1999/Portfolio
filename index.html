@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
-    <script type="module" src="./JavaScripts/interactions/overlays.js"></script>
-    <!-- <script type="module" src="./JavaScripts/mergeCircles.js"></script> -->
     <script type="module" src="./JavaScripts/ParticleNetwork.js"></script>
     <script type="module" src="./JavaScripts/Star.js"></script>
     <script type="module" src="./JavaScripts/jellyfishSketch.js"></script>
+    <script type="module" src="./JavaScripts/butterflySketchMobile.js"></script>
+    <script type="module" src="./JavaScripts/MobileInteractions/disableTouchmove.js"></script>
     <title>Huichuan Wang (ekawa)</title>
     <link rel="stylesheet" href="./css/page.css">
     <link rel="stylesheet" href="./css/flex-items.css">
@@ -60,7 +60,7 @@
         </div>
 
         <div id="p5-Jellyfish"></div>
-        <!-- <div id="p5-ButterflyMobile"></div> -->
+        <div id="p5-ButterflyMobile"></div>
         <div id="floatingWords">
             ▶ hello and welcome! :)
             <br>▶ you can call me >>>>>>><br>
@@ -77,6 +77,7 @@
             <br><br>▶ all right reserved Huichuan Wang
         </div>
     </main>
+    <script type="module" src="./JavaScripts/MobileInteractions/handleResizeP5.js"></script>
 </body>
 
 </html>

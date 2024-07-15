@@ -85,6 +85,8 @@ export default class Butterfly {
   }
 
   display() {
+    this.p.strokeWeight(3);
+
     // 让中心的 particle 跟随鼠标
     this.centerParticle.set(this.p.mouseX, this.p.mouseY);
 
@@ -110,8 +112,8 @@ export default class Butterfly {
     }
 
     // 绘制蝴蝶的每个粒子
-    for (let p of this.particles) {
-      this.p.circle(p.x, p.y, 20);
+    for (let c of this.particles) {
+      this.p.circle(c.x, c.y, 20);
     }
   }
 }

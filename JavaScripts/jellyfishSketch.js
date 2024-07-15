@@ -3,7 +3,7 @@ import Star from './Star';
 const { VerletPhysics2D } = toxi.physics2d;
 const { Rect } = toxi.geom;
 
-const sketch = (p) => {
+const jellyfishSketch = (p) => {
 
     let physics;
     let jellyfish;
@@ -31,7 +31,7 @@ const sketch = (p) => {
         // tailPhysics.addBehavior(gb);
         // tailPhysics.setDrag(0.01);
 
-        jellyfish = new Star(p.width- p.width / 3, p.height / 3, 9, 60, 120, p, physics, tailPhysics);
+        jellyfish = new Star(p.width - p.width / 3, p.height / 3, 9, 60, 120, p, physics, tailPhysics);
 
     }
 
@@ -92,6 +92,18 @@ const sketch = (p) => {
     p.windowResized = () => {
         p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
+    
+    p.touchStarted = () => {
+        p.mousePressed();
+    };
+
+    p.touchMoved = () => {
+        p.mouseDragged();
+    };
+
+    p.touchEnded = () => {
+        p.mouseReleased();
+    };
 }
 
-new p5(sketch);
+new p5(jellyfishSketch);
