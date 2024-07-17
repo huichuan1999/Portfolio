@@ -13,6 +13,7 @@ export default defineConfig({
                 noaa: './computationalArtist/NOAA.html',
                 randomFractals: './computationalArtist/RandomFractals.html',
                 theLensOfAi: './computationalArtist/TheLensOfAI.html',
+                thePool:'./computationalArtist/thePool.html',
                 about: "./about/aboutMe.html",
                 exhibition: "./exhibitions/exhibitions.html",
                 gameDev: "./gameDev/gamedevelopment.html",
