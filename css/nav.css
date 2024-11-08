@@ -8,40 +8,47 @@
 .nav {
     font-size: 16px;
     /* display: flex;  */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中（如果需要） */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中（如果需要） */
     flex-direction: row;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
-.navlist{
-    display: flex; /* 设置为 Flex 容器 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中（如果需要） */
+.navlist {
+    display: flex;
+    /* 设置为 Flex 容器 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中（如果需要） */
     border: 2px solid #f3ffff;
     /* width: 100vw; */
-    flex-wrap: nowrap; /* 默认情况下不换行 */
+    flex-wrap: nowrap;
+    /* 默认情况下不换行 */
 }
 
 .btli {
     position: relative;
     line-height: 40px;
     font-weight: bold;
-    padding: 5px; 
+    padding: 5px;
     margin-left: 8px;
     margin-right: 8px;
 
     /* flex-basis: 25%; */
-     /*width of the box, take up a quarter of the parent's size*/
+    /*width of the box, take up a quarter of the parent's size*/
 }
 
-.navlist a{
-    color:#f3ffff;
-    display:block;
-    padding:0 25px;
+.navlist a {
+    color: #f3ffff;
+    display: block;
+    padding: 0 25px;
     border: 2px solid rgba(0, 0, 0, 0);
 }
-.navlist a:hover{
+
+.navlist a:hover {
     background: #3c8dab93;
     border: 2px solid #f3ffff;
     transition: opacity 2s;
@@ -61,43 +68,77 @@
     color: brown;
 }
 
-.droplist{
+
+.navlist.darkBlue {
+    background: #f1efeb;
+    border: 2px solid rgb(42, 38, 103);
+}
+
+.navlist.darkBlue a {
+    color: rgb(42, 38, 103);
+    text-decoration: none;
+    padding: 8px;
+}
+
+
+.navlist.darkBlue a:hover {
+    background: #fff5eb;
+    border: 2px solid rgb(42, 38, 103);
+}
+
+.darkblueText {
+    color: rgb(42, 38, 103);
+}
+
+.droplist {
     font-weight: 300;
     font-size: 0.8em;
     /* background:#c41411; */
     /* box-shadow: 0 1px 2px rgb(111, 102, 129); */
-    display:none;
+    display: none;
     position: absolute;
     left: 0;
     top: 100%;
     text-align: left;
     /* border-radius: 6px; */
-    z-index:10;
-    padding:5px
+    z-index: 10;
+    padding: 5px
 }
-.btli:hover .droplist{
-    display:block;
+
+.btli:hover .droplist {
+    display: block;
     /* background: #c41411; */
 }
 
 .custom-list {
-    list-style: none; /* 移除默认列表样式 */
-    padding: 0; /* 移除左侧内边距 */
-    margin-left: 1.5em; /* 增加左侧外边距以使文本与其他内容对齐 */
+    list-style: none;
+    /* 移除默认列表样式 */
+    padding: 0;
+    /* 移除左侧内边距 */
+    margin-left: 1.5em;
+    /* 增加左侧外边距以使文本与其他内容对齐 */
 }
 
 .custom-list li {
-    position: relative; /* 为伪元素定位 */
-    font-size: inherit; /* 继承字体大小 */
-    line-height: inherit; /* 继承行高 */
+    position: relative;
+    /* 为伪元素定位 */
+    font-size: inherit;
+    /* 继承字体大小 */
+    line-height: inherit;
+    /* 继承行高 */
 }
 
 .custom-list li::before {
-    content: ''; /* 伪元素的内容 */
-    position: absolute; /* 定位伪元素 */
-    left: -1.5em; /* 根据需要调整位置 */
+    content: '';
+    /* 伪元素的内容 */
+    position: absolute;
+    /* 定位伪元素 */
+    left: -1.5em;
+    /* 根据需要调整位置 */
     top: 0;
-    width: 0.9em; /* 正方形的大小 */
+    width: 0.9em;
+    /* 正方形的大小 */
     height: 0.9em;
-    background-color: rgb(243, 255, 255); /* 正方形的颜色 */
+    background-color: rgb(243, 255, 255);
+    /* 正方形的颜色 */
 }

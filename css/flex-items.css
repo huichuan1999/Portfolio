@@ -28,6 +28,12 @@
     padding: 7px;
 }
 
+.flex-container.flex-basis-five .flex-item {
+    flex: 1 0 20%; /* 每个项目占20%的宽度 */
+    box-sizing: border-box;
+    padding: 7px;
+}
+
 .flex-basis-forth .flex-item {
     flex-basis: 25%;
 }
@@ -125,6 +131,10 @@
 .flex-item a:hover::before {
     filter: blur(6px);
     background-size: 120%;
+}
+
+.flex-item a.PixelOfTheSea::before {
+    background-image: url(../assets/images//PIXELOFTHESEA.jpg);
 }
 
 .flex-item a.Nights1001::before {

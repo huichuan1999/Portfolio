@@ -156,6 +156,28 @@ input[type="submit"]:hover {
     height: 100vh;
     z-index: -1;
 }
+.backgroundImagePixelOfTheSea {
+    background-image: url(../assets/images/PixelOfTheSea/20240901185804BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.overlayPixelOfTheSea{
+    background-color: rgba(237, 233, 225, 0.737);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
 
 .backgroundImageCodeInCode {
     background-image: url(../assets/images/codeInCode/BG-CodeInCode.png);
