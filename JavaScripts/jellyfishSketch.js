@@ -2,6 +2,7 @@ import p5 from 'p5';
 import Star from './Star';
 const { VerletPhysics2D } = toxi.physics2d;
 const { Rect } = toxi.geom;
+p5.disableFriendlyErrors = true;
 
 const sketch = (p) => {
 

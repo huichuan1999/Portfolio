@@ -1,4 +1,5 @@
 import Butterfly from "./Butterfly";
+p5.disableFriendlyErrors = true;
 
 var sketch = function(p) {
     let physics;
