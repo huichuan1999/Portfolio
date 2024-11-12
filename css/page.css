@@ -670,6 +670,10 @@ p {
     color: brown;
 }
 
+.darkBlue-text{
+    color: rgb(42, 38, 103);
+}
+
 .typingAnimation:last-of-type {
     border-right: none; /* Remove cursor from the last line */
 }
