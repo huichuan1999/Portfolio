@@ -687,3 +687,8 @@ p {
     line-height: 2;
     white-space: normal; /* Allowing the content to wrap */
 }
+
+.link{
+    font-style: italic;
+    text-decoration: underline;
+}
