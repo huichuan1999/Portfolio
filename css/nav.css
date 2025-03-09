@@ -68,6 +68,20 @@
     color: brown;
 }
 
+.navlist.warmGrey {
+
+    border: 2px solid rgba(70, 58, 49, 0.852)
+}
+
+.navlist.warmGrey a:hover {
+    background: #ffffff51;
+    border: 2px solid rgba(70, 58, 49, 0.852)
+}
+
+.navlist.warmGrey a {
+    color: rgba(70, 58, 49, 0.852)
+}
+
 
 .navlist.darkBlue {
     background: #f1efeb;

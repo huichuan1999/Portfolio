@@ -382,6 +382,21 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+.backgroundDegreeShow{
+    position: fixed;
+    background-image: url(../assets/graphicDesigns/DegreeShow/BG.png);
+    filter: blur(10px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 .pixel-style {
     image-rendering: pixelated;
     /* 使图片在放大时保持像素风格 */
@@ -672,6 +687,10 @@ p {
 
 .darkBlue-text{
     color: rgb(42, 38, 103);
+}
+
+.warmGrey-text{
+    color:rgba(70, 58, 49, 0.852)
 }
 
 .typingAnimation:last-of-type {
