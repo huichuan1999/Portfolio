@@ -309,6 +309,19 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+.backgroundHoney {
+    background-image: url(../assets/graphicDesigns/Honey/_20241127181118.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 .backgroundGrphicDesign {
     position: fixed;
     background-image: linear-gradient(-225deg, #767965 0%, #525642 48%, #555944 100%);
