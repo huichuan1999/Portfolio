@@ -43,7 +43,7 @@ const sketch = (p) => {
         p.stroke(255);
         p.strokeWeight(3);
         p.rectMode(p.CORNER);
-        p.rect(0, 0, p.width, p.height);
+        // p.rect(0, 0, p.width, p.height);
         physics.update();
         tailPhysics.update();
 

@@ -30,6 +30,11 @@
 - 自动检测页面类型和路径
 - 提供便捷的全局方法
 
+### 6. `scripts/batch-refactor.js`
+- 批量重构脚本
+- 自动处理所有页面的导航栏重构
+- 提供批量重构功能
+
 ## 📝 重构流程
 
 ### 第一阶段：手动重构（已完成）
@@ -40,6 +45,16 @@
 - ✅ 平面设计页面 (`graphicDesign/graphicDesign.html`)
 - ✅ 游戏开发页面 (`gameDev/gamedevelopment.html`)
 - ✅ PixelOfTheSea页面 (`computationalArtist/PixelOfTheSea.html`)
+- ✅ TheLensOfAI页面 (`computationalArtist/TheLensOfAI.html`)
+- ✅ codeincode页面 (`computationalArtist/codeincode.html`)
+- ✅ petGloves页面 (`graphicDesign/petGloves.html`)
+- ✅ BlushingStars页面 (`graphicDesign/BlushingStars.html`)
+- ✅ RandomFractals页面 (`computationalArtist/RandomFractals.html`)
+- ✅ thePool页面 (`computationalArtist/thePool.html`)
+- ✅ flyingBooks页面 (`computationalArtist/flyingBooks.html`)
+- ✅ Amoebas页面 (`computationalArtist/Amoebas.html`)
+- ✅ NOAA页面 (`computationalArtist/NOAA.html`)
+- ✅ Honey页面 (`graphicDesign/Honey.html`)
 
 ### 第二阶段：批量重构
 使用重构脚本自动处理其他页面：

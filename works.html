@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <title>Works - Huichuan Wang</title>
+
+    <!-- including for some global styling -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/p5.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/flex-items.css">
+    <link rel="stylesheet" href="/css/meida-Queries.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        .works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .work-category {
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .work-category:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .work-category h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .work-category p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .work-category a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-title h1 {
+            font-size: 4rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        .page-title p {
+            font-size: 1.3rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏容器 -->
+    <div id="nav-container"></div>
+
+    <div class="page-container">
+        <div class="works-container">
+            <div class="page-title">
+                <h1>WORKS</h1>
+                <p>Explore my creative portfolio across different mediums</p>
+            </div>
+            
+            <div class="works-grid">
+                <div class="work-category">
+                    <a href="/computationalArtist/computationalArt.html">
+                        <h2>COMPUTATIONAL ARTS</h2>
+                        <p>Interactive installations, generative art, and creative coding projects using p5.js, toxiclibs, and other computational tools.</p>
+                    </a>
+                </div>
+                
+                <div class="work-category">
+                    <a href="/Illustrations/gallery.html">
+                        <h2>ILLUSTRATIONS</h2>
+                        <p>Traditional and digital illustrations, watercolor paintings, and artistic explorations in various visual styles.</p>
+                    </a>
+                </div>
+                
+                <div class="work-category">
+                    <a href="/gameDev/gamedevelopment.html">
+                        <h2>GAME DEV</h2>
+                        <p>Game development projects, interactive experiences, and creative coding experiments available on Itch.io.</p>
+                    </a>
+                </div>
+                
+                <div class="work-category">
+                    <a href="/graphicDesign/graphicDesign.html">
+                        <h2>GRAPHICS</h2>
+                        <p>Graphic design work including posters, branding, exhibition materials, and commercial design projects.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 加载导航栏组件 -->
+    <script type="module">
+        import { createNavbar } from './components/navbar.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('nav-container');
+            if (navContainer) {
+                navContainer.innerHTML = createNavbar();
+            }
+        });
+    </script>
+</body>
+
+</html>

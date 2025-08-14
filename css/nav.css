@@ -8,22 +8,24 @@
 .nav {
     font-size: 16px;
     /* display: flex;  */
-    justify-content: center;
-    /* 水平居中 */
+    justify-content: flex-start;
+    /* 改为左对齐 */
     align-items: center;
     /* 垂直居中（如果需要） */
     flex-direction: row;
     /* width: 100vw; */
+    padding-left: 30px;
+    /* 添加左边距，避免紧贴页面边缘 */
 }
 
 .navlist {
     display: flex;
     /* 设置为 Flex 容器 */
-    justify-content: center;
-    /* 水平居中 */
+    justify-content: flex-start;
+    /* 改为左对齐 */
     align-items: center;
     /* 垂直居中（如果需要） */
-    border: 2px solid #f3ffff;
+    /* border: 2px solid #f3ffff; */
     /* width: 100vw; */
     flex-wrap: nowrap;
     /* 默认情况下不换行 */
@@ -34,8 +36,8 @@
     line-height: 40px;
     font-weight: bold;
     padding: 5px;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     /* flex-basis: 25%; */
     /*width of the box, take up a quarter of the parent's size*/

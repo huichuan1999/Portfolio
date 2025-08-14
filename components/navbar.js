@@ -3,14 +3,7 @@ export function createNavbar() {
         <div class="nav">
             <ul class="navlist">
                 <li class="btli"><a href="/index.html">HOME</a></li>
-                <li class="btli"><a href="/computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
-                <li class="btli"><a href="/Illustrations/gallery.html">ILLUSTRATIONS</a></li>
-                <li class="btli"><a href="/gameDev/gamedevelopment.html">GAME DEV</a>
-                    <ul class="droplist">
-                        <li><a href="https://huichuan-wang.itch.io/">Itch.io</a></li>
-                    </ul>
-                </li>
-                <li class="btli"><a href="/graphicDesign/graphicDesign.html">GRAPHICS</a></li>
+                <li class="btli"><a href="/works.html">WORKS</a></li>
                 <li class="btli"><a href="/about/aboutMe.html">INFO</a>
                     <ul class="droplist">
                         <li><a href="mailto:huichuanwang@outlook.com">E-mail me!</a></li>
