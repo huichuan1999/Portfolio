@@ -6,6 +6,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './index.html',
+                works: './works.html',
                 computationalArt: './computationalArtist/computationalArt.html',
                 ameobas: './computationalArtist/Amoebas.html',
                 codeincode: './computationalArtist/codeincode.html',

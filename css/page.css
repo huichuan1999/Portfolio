@@ -1,6 +1,10 @@
+/* =====================================================
+   FONT DEFINITIONS
+   ===================================================== */
+
 @font-face {
     font-family: 'MyPixelFont';
-    src: url('../assets/fonts/Pixel_Georgia.ttf') format('truetype');
+    src: url('../assets/fonts/Retrocompute.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,7 +18,7 @@
 
 @font-face {
     font-family: 'TextContent';
-    src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    src: url('../assets/fonts/Retrocompute.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,6 +36,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
 
 main,
 header {
@@ -75,6 +84,11 @@ input[type="submit"]:hover {
     cursor: url('../assets/images/cursor/cursor-point.png'), auto;
 }
 
+
+/* =====================================================
+   BACKGROUND ANIMATIONS & KEYFRAMES
+   ===================================================== */
+
 /* 滚动背景图 */
 @keyframes scrollBackground {
     0% {
@@ -89,6 +103,64 @@ input[type="submit"]:hover {
         background-position: 0 0;
     }
 }
+
+@keyframes float1 {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+        /* 动画开始和结束时元素完全不透明 */
+    }
+
+    50% {
+        transform: translateY(-24px);
+        opacity: 0.5;
+        /* 动画中间时元素的透明度降低 */
+    }
+}
+
+@keyframes float2 {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+        /* 动画开始和结束时元素完全不透明 */
+    }
+
+    50% {
+        transform: translateY(24px);
+        opacity: 0.3;
+        /* 动画中间时元素的透明度降低 */
+    }
+}
+
+@keyframes scrollBackgroundinBox {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% + 100vw));
+        /* 图片向左移动自身宽度减去视口宽度的量 */
+    }
+}
+
+@keyframes scrollBackgroundinBox-Vertical {
+    from {
+        transform: translateY(0);
+        /* 从顶部开始 */
+    }
+
+    to {
+        transform: translateY(calc(-100% + 100vh));
+        /* 向上移动图片高度的100% */
+    }
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGES & OVERLAYS
+   ===================================================== */
 
 .backgroundImage {
     background-image: url(../assets/images/BGJPEGsmall.jpg);
@@ -156,6 +228,7 @@ input[type="submit"]:hover {
     height: 100vh;
     z-index: -1;
 }
+
 .backgroundImagePixelOfTheSea {
     background-image: url(../assets/images/PixelOfTheSea/20240901185804BG.jpg);
     background-size: cover;
@@ -169,6 +242,7 @@ input[type="submit"]:hover {
     height: 100vh;
     z-index: -1;
 }
+
 .overlayPixelOfTheSea{
     background-color: rgba(237, 233, 225, 0.737);
     position: fixed;
@@ -213,6 +287,24 @@ input[type="submit"]:hover {
     /* 覆盖整个元素的背景区域 */
     background-repeat: no-repeat;
     background-position: center center;
+    /* 图像居中显示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* 视口的100%宽 */
+    height: 100vh;
+    /* 视口的100%高 */
+    z-index: -2;
+}
+
+.backgroundImageGameDev-blur {
+    background-image: url(../assets/images/WHITETREE_BG01.png);
+    background-size: cover;
+    /* 覆盖整个元素的背景区域 */
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(10px);
     /* 图像居中显示 */
     position: fixed;
     top: 0;
@@ -410,25 +502,14 @@ input[type="submit"]:hover {
     z-index: -1;
 }
 
+
+/* =====================================================
+   FLOATING ELEMENTS & ANIMATIONS
+   ===================================================== */
+
 .pixel-style {
     image-rendering: pixelated;
     /* 使图片在放大时保持像素风格 */
-}
-
-@keyframes float1 {
-
-    0%,
-    100% {
-        transform: translateY(0);
-        opacity: 0.8;
-        /* 动画开始和结束时元素完全不透明 */
-    }
-
-    50% {
-        transform: translateY(-24px);
-        opacity: 0.5;
-        /* 动画中间时元素的透明度降低 */
-    }
 }
 
 #huichuan-wangEN {
@@ -438,22 +519,6 @@ input[type="submit"]:hover {
     width: 20vw;
     z-index: 100;
     animation: float1 3s ease-in-out infinite;
-}
-
-@keyframes float2 {
-
-    0%,
-    100% {
-        transform: translateY(0);
-        opacity: 0.8;
-        /* 动画开始和结束时元素完全不透明 */
-    }
-
-    50% {
-        transform: translateY(24px);
-        opacity: 0.3;
-        /* 动画中间时元素的透明度降低 */
-    }
 }
 
 #huichuan-wangCN {
@@ -499,6 +564,25 @@ input[type="submit"]:hover {
     /* 设置按钮间的间距 */
 }
 
+#floatingWords {
+    position: absolute;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    bottom: 5vh;
+    left: 0%;
+    line-height: 2;
+    white-space: normal; /* Allowing the content to wrap */
+}
+
+.typingAnimation:last-of-type {
+    border-right: none; /* Remove cursor from the last line */
+}
+
+
+/* =====================================================
+   TYPOGRAPHY & TEXT STYLES
+   ===================================================== */
+
 header h1 {
     font-size: 35px;
     margin: 20px 0;
@@ -522,12 +606,57 @@ li {
 
 p {
     /* font-family: 'TextContent'; */
-    font-family: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
+    font-family: Monaco, Consolas, 'Lucida Console', 'Courier New', monospace;
     font-size: 16px;
     line-height: 1.6em;
     margin: 1.5em 0;
     /* font-family: Helvetica, sans-serif; */
 }
+
+.larger-text {
+    font-size: 1.7em;
+    /* Adjust the size as needed */
+}
+
+.brown-text {
+    color: brown;
+}
+
+.darkBlue-text{
+    color: rgb(42, 38, 103);
+}
+
+.warmGrey-text{
+    color:rgba(70, 58, 49, 0.852)
+}
+
+.link{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   LAYOUT & CONTAINERS
+   ===================================================== */
+
+.blog-text {
+    text-align: center;
+}
+
+.blog-content {
+    margin: 120px;
+}
+
+.page-container {
+    /* 上下10%，左右20% */
+    padding: 10% 16%;
+}
+
+
+/* =====================================================
+   MEDIA & RESPONSIVE ELEMENTS
+   ===================================================== */
 
 /* original aspect ratio width="640" height="360" */
 .responsive-video {
@@ -551,18 +680,10 @@ p {
     width: 100%;
 }
 
-.blog-text {
-    text-align: center;
-}
 
-.blog-content {
-    margin: 120px;
-}
-
-.page-container {
-    /* 上下10%，左右20% */
-    padding: 10% 16%;
-}
+/* =====================================================
+   SCROLLING & INTERACTIVE ELEMENTS
+   ===================================================== */
 
 /* 自定义滚动条样式 */
 /* 滚动条的整体样式 */
@@ -617,18 +738,6 @@ p {
     animation: scrollBackgroundinBox 60s linear infinite alternate;
 }
 
-
-@keyframes scrollBackgroundinBox {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(-100% + 100vw));
-        /* 图片向左移动自身宽度减去视口宽度的量 */
-    }
-}
-
 .scrolling-wrapper-Vertical {
     width: 100%;
     /* 容器宽度为100% */
@@ -655,24 +764,6 @@ p {
     /* animation: scrollBackgroundinBox-Vertical 240s linear infinite; */
 }
 
-
-@keyframes scrollBackgroundinBox-Vertical {
-    from {
-        transform: translateY(0);
-        /* 从顶部开始 */
-    }
-
-    to {
-        transform: translateY(calc(-100% + 100vh));
-        /* 向上移动图片高度的100% */
-    }
-}
-
-.larger-text {
-    font-size: 1.7em;
-    /* Adjust the size as needed */
-}
-
 .return-to-top {
     display: none;
     /* Hidden by default */
@@ -694,33 +785,301 @@ p {
     background-color: rgba(255, 255, 255, 0.294);
 }
 
-.brown-text {
-    color: brown;
+
+/* =====================================================
+   WORKS PAGE STYLES
+   ===================================================== */
+
+.works-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.darkBlue-text{
-    color: rgb(42, 38, 103);
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 改为单列布局，竖向排列 */
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.warmGrey-text{
-    color:rgba(70, 58, 49, 0.852)
+.work-category {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.typingAnimation:last-of-type {
-    border-right: none; /* Remove cursor from the last line */
+.work-category:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
 }
 
-#floatingWords {
-    position: absolute;
-    letter-spacing: 0.05em;
-    font-size: 16px;
-    bottom: 5vh;
-    left: 0%;
-    line-height: 2;
-    white-space: normal; /* Allowing the content to wrap */
+.work-category h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
-.link{
+.work-category p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.work-category a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-title h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.page-title p {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+/* 计算机艺术分类特殊样式 */
+.computational-arts-category {
+    width: 100%;
+    max-width: none;
+    padding: 3rem;
+}
+
+.category-header {
+    margin-bottom: 2rem;
+}
+
+.computational-arts-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.featured-project {
+    grid-row: span 2;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.featured-project:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+.featured-project a {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.featured-project h4 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.small-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.small-projects-grid a {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 100px;
+}
+
+.small-projects-grid a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.small-projects-grid h5 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* 背景切换动画 */
+#comp-arts-bg,
+#comp-arts-overlay {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.computational-arts-category:hover ~ * #comp-arts-bg,
+.computational-arts-category:hover ~ * #comp-arts-overlay {
+    opacity: 1;
+}
+
+/* 当hover计算机艺术时显示背景 */
+body:has(.computational-arts-category:hover) #comp-arts-bg,
+body:has(.computational-arts-category:hover) #comp-arts-overlay {
+    opacity: 1;
+}
+
+/* Game Dev分类特殊样式 */
+.game-dev-category {
+    width: 100%;
+    max-width: none;
+    padding: 3rem;
+}
+
+.category-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc;
     font-style: italic;
-    text-decoration: underline;
+    line-height: 1.6;
+}
+
+.game-dev-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.game-dev-grid a {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 150px;
+}
+
+.game-dev-grid a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.game-dev-grid h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Game Dev背景切换 */
+#game-dev-bg {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+/* 当hover Game Dev时显示背景 */
+body:has(.game-dev-category:hover) #game-dev-bg {
+    opacity: 1;
+}
+
+/* Graphics分类特殊样式 */
+.graphics-category {
+    width: 100%;
+    max-width: none;
+    padding: 3rem;
+}
+
+.graphics-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.graphics-small-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.graphics-small-grid a {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 100px;
+}
+
+.graphics-small-grid a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.graphics-small-grid h5 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Graphics背景切换 */
+#graphics-bg {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+/* 当hover Graphics时显示背景 */
+body:has(.graphics-category:hover) #graphics-bg {
+    opacity: 1;
+}
+
+/* Illustrations背景切换 */
+#illustrations-bg,
+#illustrations-overlay {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+/* 当hover Illustrations时显示背景 */
+body:has(.work-category:hover) #illustrations-bg,
+body:has(.work-category:hover) #illustrations-overlay {
+    opacity: 0;
+}
+
+body:has(.work-category:nth-child(2):hover) #illustrations-bg,
+body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
+    opacity: 1;
 }

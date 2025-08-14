@@ -17,89 +17,67 @@
         body {
             overflow-x: hidden;
         }
-        
-        .works-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .work-category {
-            text-align: center;
-            padding: 2rem;
-            border: 2px solid transparent;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .work-category:hover {
-            border-color: #fff;
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
-        }
-        
-        .work-category h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        
-        .work-category p {
-            font-size: 1.1rem;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        
-        .work-category a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .page-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .page-title h1 {
-            font-size: 4rem;
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-        
-        .page-title p {
-            font-size: 1.3rem;
-            color: #ccc;
-        }
     </style>
 </head>
 
 <body>
+    <!-- 背景图片和遮罩 -->
+    <div class="backgroundImageComputationalArts" id="comp-arts-bg"></div>
+    <div class="overlay" id="comp-arts-overlay"></div>
+    <div class="backgroundImageGameDev-blur" id="game-dev-bg"></div>
+    <div class="backgroundDegreeShow" id="graphics-bg"></div>
+    <div class="backgroundImage" id="illustrations-bg"></div>
+    <div class="overlay" id="illustrations-overlay"></div>
+    
     <!-- 导航栏容器 -->
     <div id="nav-container"></div>
 
     <div class="page-container">
         <div class="works-container">
-            <div class="page-title">
-                <h1>WORKS</h1>
-                <p>Explore my creative portfolio across different mediums</p>
-            </div>
             
             <div class="works-grid">
-                <div class="work-category">
-                    <a href="/computationalArtist/computationalArt.html">
+                <div class="work-category computational-arts-category">
+                    <div class="category-header">
                         <h2>COMPUTATIONAL ARTS</h2>
                         <p>Interactive installations, generative art, and creative coding projects using p5.js, toxiclibs, and other computational tools.</p>
-                    </a>
+                    </div>
+                    
+                    <div class="computational-arts-grid">
+                        <!-- 左侧大项目 -->
+                        <div class="featured-project">
+                            <a href="/computationalArtist/PixelOfTheSea.html" class="PixelOfTheSea">
+                                <h4>Pixel Of The Sea</h4>
+                            </a>
+                        </div>
+                        
+                        <!-- 右侧小项目网格 -->
+                        <div class="small-projects-grid">
+                            <a href="/computationalArtist/TheLensOfAI.html" class="TheLensOfAI">
+                                <h5>The Lens of AI: Decomposer Of Information</h5>
+                            </a>
+                            <a href="/computationalArtist/codeincode.html" class="CodeInCode">
+                                <h5>Code in Code: The Resonance of Translation</h5>
+                            </a>
+                            <a href="/computationalArtist/thePool.html" class="ThePool">
+                                <h5>The Pool: Generation of Code</h5>
+                            </a>
+                            <a href="/computationalArtist/NOAA.html" class="NOAA">
+                                <h5>Collaboration with artist Xin Liu: NOAA</h5>
+                            </a>
+                            <a href="/TangibleIllusions/tangibleIllusions.html" class="TangibleIllusions">
+                                <h5>Tangible Illusions: The Soft Boundary of Life</h5>
+                            </a>
+                            <a href="/computationalArtist/RandomFractals.html" class="PhysicalFractal">
+                                <h5>Random Fractals Virtual Plant Specimens</h5>
+                            </a>
+                            <a href="/computationalArtist/Amoebas.html" class="imageTheoryCreatures">
+                                <h5>Virtual biomes: Exploring The Definition of Life</h5>
+                            </a>
+                            <a href="/computationalArtist/flyingBooks.html" class="FlyBook">
+                                <h5>But the books are still waiting forever</h5>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="work-category">
@@ -109,18 +87,72 @@
                     </a>
                 </div>
                 
-                <div class="work-category">
-                    <a href="/gameDev/gamedevelopment.html">
+                <div class="work-category game-dev-category">
+                    <div class="category-header">
                         <h2>GAME DEV</h2>
                         <p>Game development projects, interactive experiences, and creative coding experiments available on Itch.io.</p>
-                    </a>
+                        <div class="category-description">
+                            <span>In Game Projects, Ekawa worked as a full stack unity developer individually.<br>
+                            and work as a 2D Pixel Artist with others in Global Game Jam(GGJ) in 2023 and 2024.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-dev-grid">
+                        <a href="https://store.steampowered.com/app/2542850/1001_Nights/" class="Nights1001">
+                            <h4>1001Nights<br>AI-Driven Game</h4>
+                        </a>
+                        <a href="https://huichuan-wang.itch.io/whitetree" class="WhiteTree">
+                            <h4>WHITETREE</h4>
+                        </a>
+                        <a href="https://aloisru.itch.io/a-trip-of-roots" class="ATripOfRoots">
+                            <h4>A Trip Of Roots<br>From GGJ 2023</h4>
+                        </a>
+                        <a href="https://shawn0791.itch.io/pooppybara" class="Poppybara">
+                            <h4>pooppybara<br>From GGJ 2024</h4>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="work-category">
-                    <a href="/graphicDesign/graphicDesign.html">
+                <div class="work-category graphics-category">
+                    <div class="category-header">
                         <h2>GRAPHICS</h2>
                         <p>Graphic design work including posters, branding, exhibition materials, and commercial design projects.</p>
-                    </a>
+                        <div class="category-description">
+                            <span>In 2021, I kept slime molds for a whole year.<br>
+                            All the vector graphics here are extracted from the photos of slime molds I took myself.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="graphics-grid">
+                        <!-- 左侧大项目 -->
+                        <div class="featured-project">
+                            <a href="/graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html" class="DegreeShow">
+                                <h4>2024 Goldsmiths MAMFA Computational Arts Degree Show</h4>
+                            </a>
+                        </div>
+                        
+                        <!-- 右侧小项目网格 -->
+                        <div class="small-projects-grid graphics-small-grid">
+                            <a href="/graphicDesign/petGloves.html" class="PetGloves">
+                                <h5>Pet bathing gloves packaging</h5>
+                            </a>
+                            <a href="/graphicDesign/genkiForest.html" class="ChiForest">
+                                <h5>ChiForest</h5>
+                            </a>
+                            <a href="/graphicDesign/bookplate.html" class="BookPlate">
+                                <h5>BookPlate</h5>
+                            </a>
+                            <a href="/graphicDesign/BlushingStars.html" class="BlushingStars">
+                                <h5>Blushing Stars</h5>
+                            </a>
+                            <a href="/graphicDesign/UndergroundShelters.html" class="UndergroundShelters">
+                                <h5>Underground and Contemporary Shelters</h5>
+                            </a>
+                            <a href="/graphicDesign/Honey.html" class="Honey">
+                                <h5>Honey</h5>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,6 +166,69 @@
             const navContainer = document.getElementById('nav-container');
             if (navContainer) {
                 navContainer.innerHTML = createNavbar();
+            }
+            
+            // 背景切换功能
+            const compArtsCategory = document.querySelector('.computational-arts-category');
+            const compArtsBg = document.getElementById('comp-arts-bg');
+            const compArtsOverlay = document.getElementById('comp-arts-overlay');
+            
+            const gameDevCategory = document.querySelector('.game-dev-category');
+            const gameDevBg = document.getElementById('game-dev-bg');
+            
+            const graphicsCategory = document.querySelector('.graphics-category');
+            const graphicsBg = document.getElementById('graphics-bg');
+            
+            const illustrationsCategory = document.querySelectorAll('.work-category')[1]; // 第二个work-category是illustrations
+            const illustrationsBg = document.getElementById('illustrations-bg');
+            const illustrationsOverlay = document.getElementById('illustrations-overlay');
+            
+            // 计算机艺术背景切换
+            if (compArtsCategory && compArtsBg && compArtsOverlay) {
+                compArtsCategory.addEventListener('mouseenter', () => {
+                    compArtsBg.style.opacity = '1';
+                    compArtsOverlay.style.opacity = '1';
+                });
+                
+                compArtsCategory.addEventListener('mouseleave', () => {
+                    compArtsBg.style.opacity = '0';
+                    compArtsOverlay.style.opacity = '0';
+                });
+            }
+            
+            // Game Dev背景切换
+            if (gameDevCategory && gameDevBg) {
+                gameDevCategory.addEventListener('mouseenter', () => {
+                    gameDevBg.style.opacity = '1';
+                });
+                
+                gameDevCategory.addEventListener('mouseleave', () => {
+                    gameDevBg.style.opacity = '0';
+                });
+            }
+            
+            // Graphics背景切换
+            if (graphicsCategory && graphicsBg) {
+                graphicsCategory.addEventListener('mouseenter', () => {
+                    graphicsBg.style.opacity = '1';
+                });
+                
+                graphicsCategory.addEventListener('mouseleave', () => {
+                    graphicsBg.style.opacity = '0';
+                });
+            }
+            
+            // Illustrations背景切换
+            if (illustrationsCategory && illustrationsBg && illustrationsOverlay) {
+                illustrationsCategory.addEventListener('mouseenter', () => {
+                    illustrationsBg.style.opacity = '1';
+                    illustrationsOverlay.style.opacity = '1';
+                });
+                
+                illustrationsCategory.addEventListener('mouseleave', () => {
+                    illustrationsBg.style.opacity = '0';
+                    illustrationsOverlay.style.opacity = '0';
+                });
             }
         });
     </script>
