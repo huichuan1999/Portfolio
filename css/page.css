@@ -56,7 +56,7 @@ body {
     margin: 0;
     /* background-color:#fdf4e5;
     color: #c1121f; */
-    background-color: rgb(52, 92, 130);
+    background-color: rgb(22, 38, 65);
     color: rgb(243, 255, 255);
     cursor: url('../assets/images/cursor/cursor-white.png'), auto;
 }
@@ -1083,3 +1083,87 @@ body:has(.work-category:nth-child(2):hover) #illustrations-bg,
 body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
     opacity: 1;
 }
+
+/* 计算机艺术项目背景图片样式 */
+.featured-project a,
+.small-projects-grid a {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-project a::before,
+.small-projects-grid a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: none;
+    transition: background-size 1s, filter 0.5s;
+}
+
+.featured-project a:hover::before,
+.small-projects-grid a:hover::before {
+    filter: blur(6px);
+    background-size: 120%;
+}
+
+.featured-project h4,
+.small-projects-grid h5 {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s;
+    filter: none;
+    margin: 12px;
+    padding: 5px 10px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.featured-project a:hover h4,
+.small-projects-grid a:hover h5 {
+    opacity: 1;
+}
+
+/* 计算机艺术项目具体背景图片 */
+.featured-project a.PixelOfTheSea::before {
+    background-image: url(../assets/images/PIXELOFTHESEA.jpg);
+}
+
+.small-projects-grid a.TheLensOfAI::before {
+    background-image: url(../assets/images/TheLensOfAI.jpg);
+}
+
+.small-projects-grid a.CodeInCode::before {
+    background-image: url(../assets/images/CodeInCode.png);
+}
+
+.small-projects-grid a.ThePool::before {
+    background-image: url(../assets/images/ThePool.jpg);
+}
+
+.small-projects-grid a.NOAA::before {
+    background-image: url(../assets/images/NOAA/flexNOAA.jpeg);
+}
+
+.small-projects-grid a.TangibleIllusions::before {
+    background-image: url(../assets/images/TangibleIllusions.jpg);
+}
+
+.small-projects-grid a.PhysicalFractal::before {
+    background-image: url(../assets/images/PhysicFractal.jpg);
+}
+
+.small-projects-grid a.imageTheoryCreatures::before {
+    background-image: url(../assets/images/TheoryCreatures.jpg);
+}
+
+.small-projects-grid a.FlyBook::before {
+    background-image: url(../assets/FlyingBooks/FINAL_Moment1.png);
+}
+

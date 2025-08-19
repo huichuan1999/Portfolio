@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/flex-items.css">
     <link rel="stylesheet" href="/css/meida-Queries.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
     <style>
         body {
             overflow-x: hidden;
@@ -31,12 +32,154 @@
     
     <!-- 导航栏容器 -->
     <div id="nav-container"></div>
+    
+    <!-- 侧边栏展开按钮（收起时显示） -->
+    <button class="sidebar-expand-btn" id="sidebar-expand-btn">
+        <span class="expand-icon">☰</span>
+    </button>
 
     <div class="page-container">
+        <!-- VS Code风格侧边栏 -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Works Explorer</h3>
+                <button class="sidebar-collapse-btn" id="sidebar-collapse-btn">×</button>
+            </div>
+            <div class="sidebar-content">
+                <!-- Computational Arts -->
+                <div class="sidebar-category">
+                    <div class="category-toggle" data-category="computational-arts" data-target="computational-arts-section">
+                        <span class="toggle-arrow">▶</span>
+                        <span class="category-name">COMPUTATIONAL ARTS</span>
+                    </div>
+                    <div class="category-items" id="computational-arts-items">
+                        <a href="/computationalArtist/PixelOfTheSea.html" class="sidebar-item">
+                            <span class="item-icon">🌊</span>
+                            <span class="item-name">Pixel Of The Sea</span>
+                        </a>
+                        <a href="/computationalArtist/TheLensOfAI.html" class="sidebar-item">
+                            <span class="item-icon">🔍</span>
+                            <span class="item-name">The Lens of AI</span>
+                        </a>
+                        <a href="/computationalArtist/codeincode.html" class="sidebar-item">
+                            <span class="item-icon">💻</span>
+                            <span class="item-name">Code in Code</span>
+                        </a>
+                        <a href="/computationalArtist/thePool.html" class="sidebar-item">
+                            <span class="item-icon">🏊</span>
+                            <span class="item-name">The Pool</span>
+                        </a>
+                        <a href="/computationalArtist/NOAA.html" class="sidebar-item">
+                            <span class="item-icon">🤝</span>
+                            <span class="item-name">NOAA Collaboration</span>
+                        </a>
+                        <a href="/TangibleIllusions/tangibleIllusions.html" class="sidebar-item">
+                            <span class="item-icon">✨</span>
+                            <span class="item-name">Tangible Illusions</span>
+                        </a>
+                        <a href="/computationalArtist/RandomFractals.html" class="sidebar-item">
+                            <span class="item-icon">🌿</span>
+                            <span class="item-name">Random Fractals</span>
+                        </a>
+                        <a href="/computationalArtist/Amoebas.html" class="sidebar-item">
+                            <span class="item-icon">🦠</span>
+                            <span class="item-name">Virtual Biomes</span>
+                        </a>
+                        <a href="/computationalArtist/flyingBooks.html" class="sidebar-item">
+                            <span class="item-icon">📚</span>
+                            <span class="item-name">Flying Books</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Illustrations -->
+                <div class="sidebar-category">
+                    <div class="category-toggle" data-category="illustrations" data-target="illustrations-section">
+                        <span class="toggle-arrow">▶</span>
+                        <span class="category-name">ILLUSTRATIONS</span>
+                    </div>
+                    <div class="category-items" id="illustrations-items">
+                        <a href="/Illustrations/gallery.html" class="sidebar-item">
+                            <span class="item-icon">🎨</span>
+                            <span class="item-name">Gallery</span>
+                        </a>
+                        <a href="/Illustrations/SilentCalcite.html" class="sidebar-item">
+                            <span class="item-icon">💎</span>
+                            <span class="item-name">Silent Calcite</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Development -->
+                <div class="sidebar-category">
+                    <div class="category-toggle" data-category="game-dev" data-target="game-dev-section">
+                        <span class="toggle-arrow">▶</span>
+                        <span class="category-name">GAME DEVELOPMENT</span>
+                    </div>
+                    <div class="category-items" id="game-dev-items">
+                        <a href="https://store.steampowered.com/app/2542850/1001_Nights/" class="sidebar-item" target="_blank">
+                            <span class="item-icon">🌙</span>
+                            <span class="item-name">1001 Nights</span>
+                        </a>
+                        <a href="https://huichuan-wang.itch.io/whitetree" class="sidebar-item" target="_blank">
+                            <span class="item-icon">🌳</span>
+                            <span class="item-name">White Tree</span>
+                        </a>
+                        <a href="https://aloisru.itch.io/a-trip-of-roots" class="sidebar-item" target="_blank">
+                            <span class="item-icon">🌱</span>
+                            <span class="item-name">A Trip Of Roots</span>
+                        </a>
+                        <a href="https://shawn0791.itch.io/pooppybara" class="sidebar-item" target="_blank">
+                            <span class="item-icon">🐹</span>
+                            <span class="item-name">Pooppybara</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphics Design -->
+                <div class="sidebar-category">
+                    <div class="category-toggle" data-category="graphics" data-target="graphics-section">
+                        <span class="toggle-arrow">▶</span>
+                        <span class="category-name">GRAPHICS DESIGN</span>
+                    </div>
+                    <div class="category-items" id="graphics-items">
+                        <a href="/graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html" class="sidebar-item">
+                            <span class="item-icon">🎓</span>
+                            <span class="item-name">Degree Show 2024</span>
+                        </a>
+                        <a href="/graphicDesign/petGloves.html" class="sidebar-item">
+                            <span class="item-icon">🧤</span>
+                            <span class="item-name">Pet Gloves</span>
+                        </a>
+                        <a href="/graphicDesign/genkiForest.html" class="sidebar-item">
+                            <span class="item-icon">🌲</span>
+                            <span class="item-name">Chi Forest</span>
+                        </a>
+                        <a href="/graphicDesign/bookplate.html" class="sidebar-item">
+                            <span class="item-icon">📖</span>
+                            <span class="item-name">Book Plate</span>
+                        </a>
+                        <a href="/graphicDesign/BlushingStars.html" class="sidebar-item">
+                            <span class="item-icon">⭐</span>
+                            <span class="item-name">Blushing Stars</span>
+                        </a>
+                        <a href="/graphicDesign/UndergroundShelters.html" class="sidebar-item">
+                            <span class="item-icon">🏠</span>
+                            <span class="item-name">Underground Shelters</span>
+                        </a>
+                        <a href="/graphicDesign/Honey.html" class="sidebar-item">
+                            <span class="item-icon">🍯</span>
+                            <span class="item-name">Honey</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="works-container">
             
             <div class="works-grid">
-                <div class="work-category computational-arts-category">
+                <div class="work-category computational-arts-category" id="computational-arts-section">
                     <div class="category-header">
                         <h2>COMPUTATIONAL ARTS</h2>
                         <p>Interactive installations, generative art, and creative coding projects using p5.js, toxiclibs, and other computational tools.</p>
@@ -80,14 +223,14 @@
                     </div>
                 </div>
                 
-                <div class="work-category">
+                <div class="work-category" id="illustrations-section">
                     <a href="/Illustrations/gallery.html">
                         <h2>ILLUSTRATIONS</h2>
                         <p>Traditional and digital illustrations, watercolor paintings, and artistic explorations in various visual styles.</p>
                     </a>
                 </div>
                 
-                <div class="work-category game-dev-category">
+                <div class="work-category game-dev-category" id="game-dev-section">
                     <div class="category-header">
                         <h2>GAME DEV</h2>
                         <p>Game development projects, interactive experiences, and creative coding experiments available on Itch.io.</p>
@@ -113,7 +256,7 @@
                     </div>
                 </div>
                 
-                <div class="work-category graphics-category">
+                <div class="work-category graphics-category" id="graphics-section">
                     <div class="category-header">
                         <h2>GRAPHICS</h2>
                         <p>Graphic design work including posters, branding, exhibition materials, and commercial design projects.</p>
@@ -229,6 +372,81 @@
                     illustrationsBg.style.opacity = '0';
                     illustrationsOverlay.style.opacity = '0';
                 });
+            }
+            
+            // ===== 侧边栏功能 =====
+            
+            // 侧边栏收起/展开功能
+            const sidebar = document.getElementById('sidebar');
+            const sidebarCollapseBtn = document.getElementById('sidebar-collapse-btn');
+            const sidebarExpandBtn = document.getElementById('sidebar-expand-btn');
+            
+            // 收起按钮功能
+            if (sidebarCollapseBtn && sidebar) {
+                sidebarCollapseBtn.addEventListener('click', () => {
+                    sidebar.classList.toggle('collapsed');
+                    // 更新按钮文字
+                    sidebarCollapseBtn.textContent = sidebar.classList.contains('collapsed') ? '☰' : '×';
+                });
+            }
+            
+            // 展开按钮功能
+            if (sidebarExpandBtn && sidebar) {
+                sidebarExpandBtn.addEventListener('click', () => {
+                    sidebar.classList.remove('collapsed');
+                    // 更新收起按钮文字
+                    if (sidebarCollapseBtn) {
+                        sidebarCollapseBtn.textContent = '×';
+                    }
+                });
+            }
+            
+            // 分类展开/收起功能 + 滚动定位
+            const categoryToggles = document.querySelectorAll('.category-toggle');
+            
+            categoryToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const categoryName = toggle.getAttribute('data-category');
+                    const targetId = toggle.getAttribute('data-target');
+                    const categoryItems = document.getElementById(`${categoryName}-items`);
+                    const toggleArrow = toggle.querySelector('.toggle-arrow');
+                    
+                    // 滚动定位到对应的内容区域
+                    if (targetId) {
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start',
+                                inline: 'nearest'
+                            });
+                        }
+                    }
+                    
+                    if (categoryItems && toggleArrow) {
+                        // 切换展开状态
+                        const isExpanded = categoryItems.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            // 收起
+                            categoryItems.classList.remove('expanded');
+                            toggleArrow.classList.remove('expanded');
+                        } else {
+                            // 展开
+                            categoryItems.classList.add('expanded');
+                            toggleArrow.classList.add('expanded');
+                        }
+                    }
+                });
+            });
+            
+            // 默认展开第一个分类（计算机艺术）
+            const firstCategoryItems = document.getElementById('computational-arts-items');
+            const firstToggleArrow = document.querySelector('[data-category="computational-arts"] .toggle-arrow');
+            
+            if (firstCategoryItems && firstToggleArrow) {
+                firstCategoryItems.classList.add('expanded');
+                firstToggleArrow.classList.add('expanded');
             }
         });
     </script>
