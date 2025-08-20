@@ -489,7 +489,7 @@ input[type="submit"]:hover {
 
 .backgroundDegreeShow{
     position: fixed;
-    background-image: url(../assets/graphicDesigns/DegreeShow/BG.png);
+    background-image: url(../assets/graphicDesigns/DegreeShow/bg-poster.png);
     filter: blur(10px);
     background-size: cover;
     background-repeat: no-repeat;
@@ -881,6 +881,8 @@ p {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .featured-project:hover {
@@ -982,6 +984,8 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
     text-align: center;
     transition: all 0.3s ease;
     min-height: 150px;
+    position: relative;
+    overflow: hidden;
 }
 
 .game-dev-grid a:hover {
@@ -994,6 +998,52 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
     color: #fff;
     margin: 0;
     line-height: 1.4;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s;
+    filter: none;
+}
+
+/* Game Dev项目链接基础样式已合并到上方 */
+
+.game-dev-grid a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: none;
+    transition: all 0.5s ease;
+}
+
+.game-dev-grid a:hover::before {
+    filter: blur(6px);
+    background-size: 120%;
+}
+
+.game-dev-grid a:hover h4 {
+    opacity: 1;
+}
+
+/* Game Dev项目背景图片 */
+.game-dev-grid a.Nights1001::before {
+    background-image: url(../assets/images/1001nights.png);
+}
+
+.game-dev-grid a.WhiteTree::before {
+    background-image: url(../assets/images/smallWhiteTree1.png);
+}
+
+.game-dev-grid a.ATripOfRoots::before {
+    background-image: url(../assets/images/ATripOfRoots.png);
+}
+
+.game-dev-grid a.Poppybara::before {
+    background-image: url(../assets/images/poppybara.png);
 }
 
 /* Game Dev背景切换 */
@@ -1053,6 +1103,35 @@ body:has(.game-dev-category:hover) #game-dev-bg {
     line-height: 1.3;
 }
 
+/* Graphics项目背景图片 */
+.graphics-grid .featured-project:has(a.DegreeShow)::before {
+    background-image: url(../assets/graphicDesigns/DegreeShow/bg-poster.png);
+}
+
+.graphics-small-grid a.PetGloves::before {
+    background-image: url(../assets/images/graphicDesign/gloves.png);
+}
+
+.graphics-small-grid a.ChiForest::before {
+    background-image: url(../assets/images/genkiForest/genkiForest.png);
+}
+
+.graphics-small-grid a.BookPlate::before {
+    background-image: url(../assets/images/bookplate/0.jpg);
+}
+
+.graphics-small-grid a.BlushingStars::before {
+    background-image: url(../assets/graphicDesigns/blushingStars.jpg);
+}
+
+.graphics-small-grid a.UndergroundShelters::before {
+    background-image: url(../assets/graphicDesigns/Underground-and Contemporary-Shelters/2K7A8945.JPG);
+}
+
+.graphics-small-grid a.Honey::before {
+    background-image: url(../assets/graphicDesigns/Honey/1.png);
+}
+
 /* Graphics背景切换 */
 #graphics-bg {
     opacity: 0;
@@ -1091,8 +1170,7 @@ body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
     overflow: hidden;
 }
 
-.featured-project a::before,
-.small-projects-grid a::before {
+.featured-project::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1104,9 +1182,34 @@ body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
     z-index: -1;
     filter: none;
     transition: background-size 1s, filter 0.5s;
+    border-radius: 15px; /* 保持与容器相同的圆角 */
 }
 
-.featured-project a:hover::before,
+.featured-project a::before {
+    /* 移除原有样式，现在由容器处理背景 */
+    display: none;
+}
+
+.small-projects-grid a::before {
+    content: "";
+    position: absolute;
+    top: -1rem;  /* 扩展到small-projects的padding区域之外 */
+    right: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: none;
+    transition: background-size 1s, filter 0.5s;
+    border-radius: 10px; /* 保持与容器相同的圆角 */
+}
+
+.featured-project:hover::before {
+    filter: blur(6px);
+    background-size: 120%;
+}
+
 .small-projects-grid a:hover::before {
     filter: blur(6px);
     background-size: 120%;
@@ -1125,13 +1228,13 @@ body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
     border-radius: 5px;
 }
 
-.featured-project a:hover h4,
+.featured-project:hover h4,
 .small-projects-grid a:hover h5 {
     opacity: 1;
 }
 
 /* 计算机艺术项目具体背景图片 */
-.featured-project a.PixelOfTheSea::before {
+.featured-project:has(a.PixelOfTheSea)::before {
     background-image: url(../assets/images/PIXELOFTHESEA.jpg);
 }
 

@@ -6,6 +6,28 @@ body {
     overflow-x: hidden;
 }
 
+/* Works页面默认背景 - thePool */
+.works-page-wrapper {
+    position: relative;
+}
+
+.works-page-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/images/IMG_20231207_135331.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(6px);
+    z-index: -1;
+    opacity: var(--default-bg-opacity, 1);
+    transition: opacity 0.3s ease;
+}
+
 /* 平滑滚动效果 */
 html {
     scroll-behavior: smooth;
@@ -16,13 +38,16 @@ html {
     scroll-margin-top: 80px; /* 为导航栏留出空间 */
 }
 
-/* 页面容器布局调整 */
-.page-container {
+/* ===== 新的Works页面专用容器 ===== */
+/* 替换原有的page-container，提供更紧凑的16px边距布局 */
+.works-page-wrapper {
     display: flex;
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 /* 侧边栏容器 */
@@ -257,23 +282,23 @@ body:has(.sidebar.collapsed) .nav {
     width: 100%;
 }
 
-/* 主内容区域调整 - 侧边栏展开时在右侧剩余空间中居中 */
-.works-container {
-    margin-left: 290px; /* 侧边栏280px + 10px缓冲（减少50%） */
-    margin-right: 7px; /* 右侧边距减少65%（20px -> 7px） */
-    width: calc(100% - 297px); /* 总宽度减去左侧边距和右侧边距 */
-    max-width: calc(100% - 297px);
+/* 新的主内容区域 - 最大16px边距 */
+.works-main-content {
+    margin-left: 296px; /* 侧边栏280px + 16px边距 */
+    margin-right: 16px; /* 右侧16px边距 */
+    width: calc(100% - 312px); /* 总宽度减去左右边距 */
+    max-width: calc(100% - 312px);
     transition: margin-left 0.3s ease, margin-right 0.3s ease, width 0.3s ease, max-width 0.3s ease;
     box-sizing: border-box;
-    padding: 0 5px; /* 内边距减少67%（15px -> 5px） */
+    padding: 0; /* 移除内边距，直接使用外边距 */
 }
 
-/* 当侧边栏收起时，主内容区域在整个屏幕中居中 */
-.page-container:has(.sidebar.collapsed) .works-container {
-    margin-left: 12px; /* 收起时边距减少70%（40px -> 12px） */
-    margin-right: 12px; /* 保持居中效果 */
-    width: calc(100% - 24px); /* 总宽度减去左右边距 */
-    max-width: calc(100% - 24px);
+/* 当侧边栏收起时，主内容区域使用16px边距 */
+.works-page-wrapper:has(.sidebar.collapsed) .works-main-content {
+    margin-left: 16px; /* 收起时左侧16px边距 */
+    margin-right: 16px; /* 右侧16px边距 */
+    width: calc(100% - 32px); /* 总宽度减去左右边距 */
+    max-width: calc(100% - 32px);
 }
 
 /* 确保内部网格布局适应容器宽度 */
@@ -347,12 +372,12 @@ body:has(.sidebar.collapsed) .nav {
         width: 100%;
     }
     
-    .works-container {
-        margin-left: 5px; /* 移动端边距减少67%（15px -> 5px） */
-        margin-right: 5px;
-        width: calc(100% - 10px); /* 总宽度减去左右边距 */
-        max-width: calc(100% - 10px);
-        padding: 0 3px; /* 移动端内边距进一步减少 */
+    .works-main-content {
+        margin-left: 16px; /* 移动端保持16px边距 */
+        margin-right: 16px;
+        width: calc(100% - 32px); /* 总宽度减去左右边距 */
+        max-width: calc(100% - 32px);
+        padding: 0; /* 移动端也移除内边距 */
     }
     
     /* 移动端网格布局优化 */

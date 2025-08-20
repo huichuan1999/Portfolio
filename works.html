@@ -38,7 +38,7 @@
         <span class="expand-icon">☰</span>
     </button>
 
-    <div class="page-container">
+    <div class="works-page-wrapper">
         <!-- VS Code风格侧边栏 -->
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -176,8 +176,7 @@
             </div>
         </div>
 
-        <div class="works-container">
-            
+        <div class="works-main-content">
             <div class="works-grid">
                 <div class="work-category computational-arts-category" id="computational-arts-section">
                     <div class="category-header">
@@ -326,14 +325,33 @@
             const illustrationsBg = document.getElementById('illustrations-bg');
             const illustrationsOverlay = document.getElementById('illustrations-overlay');
             
+            // 获取默认背景元素（thePool背景）
+            const defaultBg = document.querySelector('.works-page-wrapper');
+            
+            // 隐藏默认背景的函数
+            function hideDefaultBackground() {
+                if (defaultBg) {
+                    defaultBg.style.setProperty('--default-bg-opacity', '0');
+                }
+            }
+            
+            // 显示默认背景的函数
+            function showDefaultBackground() {
+                if (defaultBg) {
+                    defaultBg.style.setProperty('--default-bg-opacity', '1');
+                }
+            }
+            
             // 计算机艺术背景切换
             if (compArtsCategory && compArtsBg && compArtsOverlay) {
                 compArtsCategory.addEventListener('mouseenter', () => {
+                    hideDefaultBackground();
                     compArtsBg.style.opacity = '1';
                     compArtsOverlay.style.opacity = '1';
                 });
                 
                 compArtsCategory.addEventListener('mouseleave', () => {
+                    showDefaultBackground();
                     compArtsBg.style.opacity = '0';
                     compArtsOverlay.style.opacity = '0';
                 });
@@ -342,10 +360,12 @@
             // Game Dev背景切换
             if (gameDevCategory && gameDevBg) {
                 gameDevCategory.addEventListener('mouseenter', () => {
+                    hideDefaultBackground();
                     gameDevBg.style.opacity = '1';
                 });
                 
                 gameDevCategory.addEventListener('mouseleave', () => {
+                    showDefaultBackground();
                     gameDevBg.style.opacity = '0';
                 });
             }
@@ -353,10 +373,12 @@
             // Graphics背景切换
             if (graphicsCategory && graphicsBg) {
                 graphicsCategory.addEventListener('mouseenter', () => {
+                    hideDefaultBackground();
                     graphicsBg.style.opacity = '1';
                 });
                 
                 graphicsCategory.addEventListener('mouseleave', () => {
+                    showDefaultBackground();
                     graphicsBg.style.opacity = '0';
                 });
             }
@@ -364,11 +386,13 @@
             // Illustrations背景切换
             if (illustrationsCategory && illustrationsBg && illustrationsOverlay) {
                 illustrationsCategory.addEventListener('mouseenter', () => {
+                    hideDefaultBackground();
                     illustrationsBg.style.opacity = '1';
                     illustrationsOverlay.style.opacity = '1';
                 });
                 
                 illustrationsCategory.addEventListener('mouseleave', () => {
+                    showDefaultBackground();
                     illustrationsBg.style.opacity = '0';
                     illustrationsOverlay.style.opacity = '0';
                 });
