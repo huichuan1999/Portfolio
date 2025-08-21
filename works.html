@@ -96,7 +96,7 @@
                 <div class="sidebar-category">
                     <div class="category-toggle" data-category="illustrations" data-target="illustrations-section">
                         <span class="toggle-arrow">▶</span>
-                        <span class="category-name">ILLUSTRATIONS</span>
+                        <span class="category-name">PAINTINGS</span>
                     </div>
                     <div class="category-items" id="illustrations-items">
                         <a href="/Illustrations/gallery.html" class="sidebar-item">
@@ -188,45 +188,62 @@
                         <!-- 左侧大项目 -->
                         <div class="featured-project">
                             <a href="/computationalArtist/PixelOfTheSea.html" class="PixelOfTheSea">
-                                <h4>Pixel Of The Sea</h4>
+                                <h4 data-text="Pixel Of The Sea">Pixel Of The Sea</h4>
                             </a>
                         </div>
                         
                         <!-- 右侧小项目网格 -->
                         <div class="small-projects-grid">
                             <a href="/computationalArtist/TheLensOfAI.html" class="TheLensOfAI">
-                                <h5>The Lens of AI: Decomposer Of Information</h5>
+                                <h5 data-text="The Lens of AI: Decomposer Of Information">The Lens of AI: Decomposer Of Information</h5>
                             </a>
                             <a href="/computationalArtist/codeincode.html" class="CodeInCode">
-                                <h5>Code in Code: The Resonance of Translation</h5>
+                                <h5 data-text="Code in Code: The Resonance of Translation">Code in Code: The Resonance of Translation</h5>
                             </a>
                             <a href="/computationalArtist/thePool.html" class="ThePool">
-                                <h5>The Pool: Generation of Code</h5>
+                                <h5 data-text="The Pool: Generation of Code">The Pool: Generation of Code</h5>
                             </a>
                             <a href="/computationalArtist/NOAA.html" class="NOAA">
-                                <h5>Collaboration with artist Xin Liu: NOAA</h5>
+                                <h5 data-text="Collaboration with artist Xin Liu: NOAA">Collaboration with artist Xin Liu: NOAA</h5>
                             </a>
                             <a href="/TangibleIllusions/tangibleIllusions.html" class="TangibleIllusions">
-                                <h5>Tangible Illusions: The Soft Boundary of Life</h5>
+                                <h5 data-text="Tangible Illusions: The Soft Boundary of Life">Tangible Illusions: The Soft Boundary of Life</h5>
                             </a>
                             <a href="/computationalArtist/RandomFractals.html" class="PhysicalFractal">
-                                <h5>Random Fractals Virtual Plant Specimens</h5>
+                                <h5 data-text="Random Fractals Virtual Plant Specimens">Random Fractals Virtual Plant Specimens</h5>
                             </a>
                             <a href="/computationalArtist/Amoebas.html" class="imageTheoryCreatures">
-                                <h5>Virtual biomes: Exploring The Definition of Life</h5>
+                                <h5 data-text="Virtual biomes: Exploring The Definition of Life">Virtual biomes: Exploring The Definition of Life</h5>
                             </a>
                             <a href="/computationalArtist/flyingBooks.html" class="FlyBook">
-                                <h5>But the books are still waiting forever</h5>
+                                <h5 data-text="But the books are still waiting forever">But the books are still waiting forever</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="work-category" id="illustrations-section">
-                    <a href="/Illustrations/gallery.html">
-                        <h2>ILLUSTRATIONS</h2>
-                        <p>Traditional and digital illustrations, watercolor paintings, and artistic explorations in various visual styles.</p>
-                    </a>
+                <div class="work-category illustrations-category" id="illustrations-section">
+                    <div class="category-header">
+                        <h2>PAINTINGS</h2>
+                        <p>Traditional and digital paintings, watercolor works, and artistic explorations in various visual styles.</p>
+                    </div>
+                    
+                    <div class="illustrations-grid">
+                        <!-- 左侧大项目 - Silent Calcite -->
+                        <div class="featured-project">
+                            <a href="/Illustrations/SilentCalcite.html" class="SilentCalcite">
+                                <h4 data-text="Silent Calcite">Silent Calcite</h4>
+                            </a>
+                        </div>
+                        
+                        <!-- 右侧Gallery链接 -->
+                        <div class="gallery-link-container">
+                            <a href="/Illustrations/gallery.html" class="gallery-link">
+                                <span class="gallery-text">View<br>Gallery</span>
+                                <span class="gallery-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="work-category game-dev-category" id="game-dev-section">
@@ -241,16 +258,16 @@
                     
                     <div class="game-dev-grid">
                         <a href="https://store.steampowered.com/app/2542850/1001_Nights/" class="Nights1001">
-                            <h4>1001Nights<br>AI-Driven Game</h4>
+                            <h4 data-text="1001Nights&#10;AI-Driven Game">1001Nights<br>AI-Driven Game</h4>
                         </a>
                         <a href="https://huichuan-wang.itch.io/whitetree" class="WhiteTree">
-                            <h4>WHITETREE</h4>
+                            <h4 data-text="WHITETREE">WHITETREE</h4>
                         </a>
                         <a href="https://aloisru.itch.io/a-trip-of-roots" class="ATripOfRoots">
-                            <h4>A Trip Of Roots<br>From GGJ 2023</h4>
+                            <h4 data-text="A Trip Of Roots&#10;From GGJ 2023">A Trip Of Roots<br>From GGJ 2024</h4>
                         </a>
                         <a href="https://shawn0791.itch.io/pooppybara" class="Poppybara">
-                            <h4>pooppybara<br>From GGJ 2024</h4>
+                            <h4 data-text="pooppybara&#10;From GGJ 2024">pooppybara<br>From GGJ 2024</h4>
                         </a>
                     </div>
                 </div>
@@ -259,39 +276,39 @@
                     <div class="category-header">
                         <h2>GRAPHICS</h2>
                         <p>Graphic design work including posters, branding, exhibition materials, and commercial design projects.</p>
-                        <div class="category-description">
-                            <span>In 2021, I kept slime molds for a whole year.<br>
-                            All the vector graphics here are extracted from the photos of slime molds I took myself.</span>
-                        </div>
+
                     </div>
                     
                     <div class="graphics-grid">
                         <!-- 左侧大项目 -->
                         <div class="featured-project">
                             <a href="/graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html" class="DegreeShow">
-                                <h4>2024 Goldsmiths MAMFA Computational Arts Degree Show</h4>
+                                <h4 data-text="2024 Goldsmiths MAMFA Computational Arts Degree Show">2024 Goldsmiths MAMFA Computational Arts Degree Show</h4>
                             </a>
                         </div>
                         
                         <!-- 右侧小项目网格 -->
                         <div class="small-projects-grid graphics-small-grid">
                             <a href="/graphicDesign/petGloves.html" class="PetGloves">
-                                <h5>Pet bathing gloves packaging</h5>
+                                <h5 data-text="Pet bathing gloves packaging">Pet bathing gloves packaging</h5>
                             </a>
                             <a href="/graphicDesign/genkiForest.html" class="ChiForest">
-                                <h5>ChiForest</h5>
+                                <h5 data-text="ChiForest">ChiForest</h5>
                             </a>
                             <a href="/graphicDesign/bookplate.html" class="BookPlate">
-                                <h5>BookPlate</h5>
+                                <h5 data-text="BookPlate">BookPlate</h5>
                             </a>
-                            <a href="/graphicDesign/BlushingStars.html" class="BlushingStars">
-                                <h5>Blushing Stars</h5>
+                            <a href="/graphicDesign/BlushingShelters.html" class="BlushingStars">
+                                <h5 data-text="Blushing Stars">Blushing Stars</h5>
                             </a>
                             <a href="/graphicDesign/UndergroundShelters.html" class="UndergroundShelters">
-                                <h5>Underground and Contemporary Shelters</h5>
+                                <h5 data-text="Underground and Contemporary Shelters">Underground and Contemporary Shelters</h5>
                             </a>
                             <a href="/graphicDesign/Honey.html" class="Honey">
-                                <h5>Honey</h5>
+                                <h5 data-text="Honey">Honey</h5>
+                            </a>
+                            <a href="/graphicDesign/slimeMold.html" class="SlimeMold">
+                                <h5 data-text="Slime Mold">Slime Mold</h5>
                             </a>
                         </div>
                     </div>

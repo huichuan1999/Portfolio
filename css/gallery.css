@@ -47,33 +47,61 @@ body:active {
   cursor: url('../assets/images/cursor/grab.png'), auto;
 }
 
+/* 统一的导航栏样式 */
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  z-index: 1000;
+  font-size: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 30px;
+  background: transparent !important;
 }
 
 .navlist {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border: 2px solid black;
   flex-wrap: nowrap;
 }
 
 .navlist a {
-  color: black;
   display: block;
   padding: 0 25px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.navlist a:hover {
+  transition: opacity 2s;
+}
+
+/* 默认颜色样式（黑色主题） */
+.navlist a {
+  color: black;
 }
 
 .navlist a:hover {
   background: gainsboro;
   border: 2px solid black;
-  transition: opacity 2s;
+}
+
+/* 白色主题样式 */
+.nav.white-theme .navlist a {
+  color: black;
+}
+
+.nav.white-theme .navlist a:hover {
+  /* background: gainsboro; */
+  border: 2px solid black;
+}
+
+/* 深色主题样式 */
+.nav.dark-theme .navlist a {
+  color: gainsboro;
+}
+
+.nav.dark-theme .navlist a:hover {
+  /* background: rgb(89, 102, 117); */
+  border: 2px solid gainsboro;
 }
 
 .gallery-container {

@@ -867,13 +867,13 @@ p {
 
 .computational-arts-grid {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr; /* 左侧1份，右侧2份 */
     gap: 2rem;
     margin-top: 2rem;
+    align-items: end; /* 底端对齐 */
 }
 
 .featured-project {
-    grid-row: span 2;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 2rem;
@@ -883,6 +883,9 @@ p {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 1 / 1; /* 强制正方形 */
+    max-width: 100%;
+    width: auto;
 }
 
 .featured-project:hover {
@@ -907,6 +910,8 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    justify-content: space-between; /* 两端对齐 */
+    align-content: space-between;   /* 垂直两端对齐 */
 }
 
 .small-projects-grid a {
@@ -919,6 +924,7 @@ p {
     text-align: center;
     transition: all 0.3s ease;
     min-height: 100px;
+    aspect-ratio: 1 / 1; /* 强制正方形 */
 }
 
 .small-projects-grid a:hover {
@@ -972,6 +978,8 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: space-between; /* 两端对齐 */
+    align-items: stretch; /* 拉伸对齐 */
 }
 
 .game-dev-grid a {
@@ -986,6 +994,7 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
     min-height: 150px;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 1 / 1; /* 强制正方形 */
 }
 
 .game-dev-grid a:hover {
@@ -1002,6 +1011,13 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
     opacity: 0;
     transition: opacity 0.5s;
     filter: none;
+    margin: 12px;
+    padding: 5px 10px;
+    z-index: 1;
+    background: none;
+    border-radius: 5px;
+    color: #fff;
+    mix-blend-mode: difference;
 }
 
 /* Game Dev项目链接基础样式已合并到上方 */
@@ -1067,16 +1083,19 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 
 .graphics-grid {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr; /* 左侧1份，右侧2份 */
     gap: 2rem;
     margin-top: 2rem;
+    align-items: end; /* 底端对齐 */
 }
 
 .graphics-small-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    justify-content: space-between; /* 两端对齐 */
+    align-content: space-between;   /* 垂直两端对齐 */
 }
 
 .graphics-small-grid a {
@@ -1089,6 +1108,7 @@ body:has(.game-dev-category:hover) #game-dev-bg {
     text-align: center;
     transition: all 0.3s ease;
     min-height: 100px;
+    aspect-ratio: 1 / 1; /* 强制正方形 */
 }
 
 .graphics-small-grid a:hover {
@@ -1105,7 +1125,7 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 
 /* Graphics项目背景图片 */
 .graphics-grid .featured-project:has(a.DegreeShow)::before {
-    background-image: url(../assets/graphicDesigns/DegreeShow/bg-poster.png);
+    background-image: url(../assets/graphicDesigns/DegreeShow/insPost_1\ -\ frame\ at\ 0m4s.jpg);
 }
 
 .graphics-small-grid a.PetGloves::before {
@@ -1125,11 +1145,15 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 }
 
 .graphics-small-grid a.UndergroundShelters::before {
-    background-image: url(../assets/graphicDesigns/Underground-and Contemporary-Shelters/2K7A8945.JPG);
+    background-image: url(../assets/graphicDesigns/Underground-and\ Contemporary-Shelters/2K7A8945.JPG);
 }
 
 .graphics-small-grid a.Honey::before {
-    background-image: url(../assets/graphicDesigns/Honey/1.png);
+    background-image: url(../assets/graphicDesigns/Honey/画板\ 1\ 拷贝\ 4.png);
+}
+
+.graphics-small-grid a.SlimeMold::before {
+    background-image: url(../assets/graphicDesigns/1.png);
 }
 
 /* Graphics背景切换 */
@@ -1144,7 +1168,70 @@ body:has(.graphics-category:hover) #graphics-bg {
     opacity: 1;
 }
 
-/* Illustrations背景切换 */
+/* Paintings分类特殊样式 */
+.illustrations-category {
+    width: 100%;
+    max-width: none;
+    padding: 3rem;
+}
+
+.illustrations-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.gallery-link:hover {
+    transform: translateX(10px);
+}
+
+.gallery-text {
+    font-size: 2rem;
+    color: rgb(243, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.gallery-link:hover .gallery-text {
+    color: rgba(243, 255, 255, 0.8);
+}
+
+.gallery-arrow {
+    font-size: 2.5rem;
+    color: rgb(243, 255, 255);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.gallery-link:hover .gallery-arrow {
+    transform: scale(1.3) translateX(5px);
+}
+
+/* Paintings项目背景图片 */
+.illustrations-grid .featured-project:has(a.SilentCalcite)::before {
+    background-image: url(../assets/illustrations/SilentCalcite/etching.png);
+}
+
+/* Paintings背景切换 */
 #illustrations-bg,
 #illustrations-overlay {
     opacity: 0;
@@ -1152,16 +1239,13 @@ body:has(.graphics-category:hover) #graphics-bg {
     pointer-events: none;
 }
 
-/* 当hover Illustrations时显示背景 */
-body:has(.work-category:hover) #illustrations-bg,
-body:has(.work-category:hover) #illustrations-overlay {
-    opacity: 0;
-}
-
-body:has(.work-category:nth-child(2):hover) #illustrations-bg,
-body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
+/* 当hover Paintings时显示背景 */
+body:has(.illustrations-category:hover) #illustrations-bg,
+body:has(.illustrations-category:hover) #illustrations-overlay {
     opacity: 1;
 }
+
+/* 旧的规则已被上方的.paintings-category规则替代 */
 
 /* 计算机艺术项目背景图片样式 */
 .featured-project a,
@@ -1224,8 +1308,10 @@ body:has(.work-category:nth-child(2):hover) #illustrations-overlay {
     margin: 12px;
     padding: 5px 10px;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
+    background: none;
     border-radius: 5px;
+    color: #fff;
+    mix-blend-mode: difference;
 }
 
 .featured-project:hover h4,
