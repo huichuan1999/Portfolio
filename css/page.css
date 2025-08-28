@@ -627,7 +627,7 @@ p {
 }
 
 .warmGrey-text{
-    color:rgba(70, 58, 49, 0.852)
+    color: #f3ffff;
 }
 
 .link{
@@ -1125,7 +1125,7 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 
 /* Graphics项目背景图片 */
 .graphics-grid .featured-project:has(a.DegreeShow)::before {
-    background-image: url(../assets/graphicDesigns/DegreeShow/insPost_1\ -\ frame\ at\ 0m4s.jpg);
+    background-image: url(../assets/graphicDesigns/DegreeShow/insPost_1%20-%20frame%20at%200m4s.jpg);
 }
 
 .graphics-small-grid a.PetGloves::before {
@@ -1145,11 +1145,11 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 }
 
 .graphics-small-grid a.UndergroundShelters::before {
-    background-image: url(../assets/graphicDesigns/Underground-and\ Contemporary-Shelters/2K7A8945.JPG);
+    background-image: url(../assets/graphicDesigns/Underground-and%20Contemporary-Shelters/2K7A8945.JPG);
 }
 
 .graphics-small-grid a.Honey::before {
-    background-image: url(../assets/graphicDesigns/Honey/画板\ 1\ 拷贝\ 4.png);
+    background-image: url(../assets/graphicDesigns/Honey/%E7%94%BB%E6%9D%BF%201%20%E6%8B%B7%E8%B4%9D%204.png);
 }
 
 .graphics-small-grid a.SlimeMold::before {
