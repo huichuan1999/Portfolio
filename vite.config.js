@@ -30,7 +30,6 @@ export default defineConfig({
                 gallery: "./Illustrations/gallery.html",
                 silentCalcite: "./Illustrations/SilentCalcite.html",
                 tangibleIllusions: "./computationalArtist/tangibleIllusions.html",
-                weeklyBlog: "./WeeklyBlog/weeklyBlog.html"
             }
         },
         outDir: "dist",
