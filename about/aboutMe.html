@@ -25,6 +25,90 @@
         body {
             overflow-x: hidden;
         }
+
+        /* 三栏布局样式 */
+        .three-column-layout {
+            display: none;
+            grid-template-columns: 1fr 1.3fr 1.4fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .column {
+            padding: 1rem;
+        }
+
+        .left-column {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .middle-column {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 0;
+            object-fit: cover;
+        }
+
+        .three-column-layout h3 {
+            font-size: 1.2rem;
+            margin-top: 4rem;
+            margin-bottom: 1rem;
+            color: #f3ffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0rem;
+        }
+
+        .three-column-layout h3:first-child {
+            margin-top: 0;
+        }
+
+        .three-column-layout p {
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .three-column-layout .link {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .three-column-layout .link:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式设计 */
+        @media (min-width: 1200px) {
+            .mobile-layout {
+                display: none;
+            }
+            
+            .desktop-layout {
+                display: grid;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .mobile-layout {
+                display: block;
+            }
+            
+            .desktop-layout {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -37,7 +121,8 @@
     <!-- 导航栏容器 -->
     <div id="nav-container"></div>
 
-    <div class="page-container">
+    <!-- 移动端单栏布局 -->
+    <div class="page-container mobile-layout">
 
         <!-- <img src="../assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN"
             alt="Huichuan">
@@ -104,11 +189,21 @@
         </p>
         <h3><br><br>Award:</h3>
         <p>
+            <a href="https://www.futuretense.cc/winners/" class="link" target="_blank"
+                rel="noopener noreferrer"> FutureTense Awards 3rd Edition Shortlist</a>
+            <br><br>
+            <a href="https://hiiibrand.com/winners/2a8f58b885c44efd99244625d481d889" class="link" target="_blank"
+                rel="noopener noreferrer"> HiiiBrand Award 2024 Finallist</a>
+            <br><br>
             <a href="https://hiiibrand.com/winners/720dee54fa3842fa974c0340150367be" class="link" target="_blank"
                 rel="noopener noreferrer"> Hiii Illustration Award 2023 Finallist</a>
         </p>
         <h3><br><br>Exhibitions:</h3>
         <p>
+            Apr 6 - June 20, 2025 - Zhengzhou, Wuyajihe Disembodiment Space, <a
+            href="http://xhslink.com/m/7mKPR2VKMQq" class="link" target="_blank"
+            rel="noopener noreferrer">"Suffix_Land"</a>
+            <br><br>
             Mar 18 - April 20, 2025 - Beijing, Central Academy of Fine Arts Museum, <a
             href="https://www.vam.ac.uk/event/9pmbZOVdEw/digital-design-weekend-2024" class="link" target="_blank"
             rel="noopener noreferrer"> Seeking Mindscapes: Tide to Peak</a>
@@ -196,6 +291,215 @@
             welcome DM me through e-mail or instagram:)</p>
         <button id="return-to-top" class="return-to-top">▲ back<br>to top</button>
         <script type="module" src="../JavaScripts/interactions/return_to_top.js"></script>
+    </div>
+
+    <!-- 桌面端三栏布局 -->
+    <div class="three-column-layout desktop-layout">
+        <!-- 左侧栏 - Bio -->
+        <div class="column left-column">
+            <div class="profile-image">
+                <img src="../assets/images/me.jpg" alt="Huichuan Wang" />
+            </div>
+            <h3>Bio</h3>
+            <p>
+                Huichuan Wang (b.1999) is a computational artist, designer, illustrator, and curator. She graduated from
+                Central Academy of Fine Arts in 2021 and MFA Computational Arts at Goldsmiths, University of London in 2024.
+                Currently, she is based in London, UK, actively participating in multiple non-profit artist groups and
+                research projects.
+            </p>
+            <p>
+                Her artwork spans diverse range of media, including mixed-media painting, installations, game development,
+                and real-time computation. She explores the role and significance of technology and image production within
+                today's digital ecosystems, examining fluid consciousness, warmth, and imagination, ultimately aiming to
+                understand and express the essence of "vitality."
+            </p>
+            <p>
+                Her works have been showcased for two consecutive years at the V&A Museum and exhibited at the Shanghai
+                Biennale, the Central Academy of Fine Arts Museum, and in cities such as London, Paris, Beijing, Shanghai,
+                Chengdu, and Shenyang. In addition to participating in exhibitions, she often serves as a visual designer
+                and executive curator within curatorial teams.
+            </p>
+        </div>
+
+        <!-- 中间栏 - 其他内容 -->
+        <div class="column middle-column">
+            <h3>Media Coverage</h3>
+            <p>
+                <a
+                    href="https://artisle.org/huichuan-wang-%7C-the-essence-of-life-flowing-between-pixels"
+                    class="link" target="_blank" rel="noopener noreferrer">Huichuan Wang | The Essence of Life Flowing Between Pixels</a>
+            </p>
+            <p>
+                <a
+                    href="https://buoyant-art.net/en-GB/interviews/the-romantic-code-of-a-naturalist"
+                    class="link" target="_blank" rel="noopener noreferrer">Huichuan: The Romantic Code of a Naturalist</a>
+            </p>
+            
+            <h3>Projects</h3>
+            <p>
+                <strong>Sep 2024 - Now</strong><br>
+                Artist Collaboration<br>
+                <a href="https://xmuseum.org/exhibition/x%e8%99%9a%e6%8b%9f%e8%81%9a%e9%9b%86%ef%bc%9a%e8%9c%9c/"
+                    class="link" target="_blank" rel="noopener noreferrer">00 Zhang: X Virtual Gathering: Honey</a>, London,
+                UK & Beijing, CN
+            </p>
+            <p>
+                <strong>Sep 2024 - Now</strong><br>
+                Art Residency<br>
+                <a href="https://mp.weixin.qq.com/s/C3ugoULSnC_wvEe4__Db6g" class="link"
+                    target="_blank" rel="noopener noreferrer">Cosmic Arclight</a>, London, UK & Shanghai/Ningxia, CN
+            </p>
+            <p>
+                <strong>Sep 2024 - Now</strong><br>
+                Ada Eden Game Studio, Art Game & Research project<br>
+                <a href="https://store.steampowered.com/app/2542850/1001_Nights/" class="link" target="_blank"
+                    rel="noopener noreferrer"> 1001Nights</a>, London, UK
+            </p>
+            <p>
+                <strong>Sep 2023 - Mar 2024</strong><br>
+                Artist Collaboration<br>
+                <a href="https://xinliu.art/noaa" class="link" target="_blank"
+                    rel="noopener noreferrer">Xin Liu: NOAA</a>, London, UK
+            </p>
+            <p>
+                <strong>June 2023 - Now</strong><br>
+                Artist group<br>
+                <a href="https://www.youtube.com/watch?v=s7EyoeGvdAQ" class="link"
+                    target="_blank" rel="noopener noreferrer"> TTTB Artist-Run Space</a>, London, UK & Beijing, CN
+            </p>
+            <p>
+                <strong>June 2022 - Oct 2023</strong><br>
+                Art collective<br>
+                <a href="https://www.xiaohongshu.com/user/profile/62ada05b000000001b0268fb?xsec_token=&xsec_source=pc_note"
+                    class="link" target="_blank" rel="noopener noreferrer"> 垭口计划Saddle Project</a>, Chengdu, CN
+            </p>
+
+            <h3>Award</h3>
+            <p>
+                <a href="https://www.futuretense.cc/winners/" class="link" target="_blank"
+                    rel="noopener noreferrer"> FutureTense Awards 3rd Edition Shortlist</a>
+            </p>
+            <p>
+                <a href="https://hiiibrand.com/winners/2a8f58b885c44efd99244625d481d889" class="link" target="_blank"
+                    rel="noopener noreferrer"> HiiiBrand Award 2024 Finallist</a>
+            </p>
+            <p>
+                <a href="https://hiiibrand.com/winners/720dee54fa3842fa974c0340150367be" class="link" target="_blank"
+                    rel="noopener noreferrer"> Hiii Illustration Award 2023 Finallist</a>
+            </p>
+
+            <h3>Contact</h3>
+            <p>
+                E-mail: huichuanwang@outlook.com<br>
+                <a href="https://www.instagram.com/huichuan_/ ">Instagram: @huichuan_</a><br>
+                <a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin: huichuan-eka</a>
+            </p>
+            <p>Currently open to work!<br>
+                welcome DM me through e-mail or instagram:)</p>
+        </div>
+
+        <!-- 右侧栏 - Exhibitions -->
+        <div class="column right-column">
+            <h3>Selected Exhibitions</h3>
+            <p>
+                <strong>Apr 6 - June 20, 2025</strong><br>
+                Zhengzhou, Wuyajihe Disembodiment Space<br>
+                <a href="http://xhslink.com/m/7mKPR2VKMQq" class="link" target="_blank"
+                rel="noopener noreferrer">"Suffix_Land"</a>
+            </p>
+            <p>
+                <strong>Mar 18 - April 20, 2025</strong><br>
+                Beijing, Central Academy of Fine Arts Museum, <a href="https://www.vam.ac.uk/event/9pmbZOVdEw/digital-design-weekend-2024" class="link" target="_blank"
+                rel="noopener noreferrer">Seeking Mindscapes: Tide to Peak</a>
+            </p>
+            <p>
+                <strong>Sep 20 - Sep 22, 2024</strong><br>
+                London, V&A Museum, <a href="https://www.vam.ac.uk/event/9pmbZOVdEw/digital-design-weekend-2024" class="link" target="_blank"
+                    rel="noopener noreferrer">London Design Festival - V&A Digital Design Weekend 2024</a>
+            </p>
+            <p>
+                <strong>Sep 12 - Sep 19, 2024</strong><br>
+                London, St James Hatcham Church, <a href="https://www.verse.com.tw/article/blue-collar-poetry-2024" class="link" target="_blank"
+                    rel="noopener noreferrer">Echos from the margins: Resontant voices"</a>
+            </p>
+            <p>
+                <strong>Sep 8 - Sep 10, 2024</strong><br>
+                London, Asylum Chapel, <a href="https://www.instagram.com/p/C_bT-XyK8Dk/" class="link" target="_blank"
+                    rel="noopener noreferrer">"Prelude in Asylum", as Artist and Designer </a>
+            </p>
+            <p>
+                <strong>Aug 29 - Sep 1, 2024</strong><br>
+                London, St James Hatcham Church, <a href="https://www.gold.ac.uk/calendar/?id=15118" class="link" target="_blank"
+                    rel="noopener noreferrer">"This is why the whole remains open"</a>, as Artist and Designer
+            </p>
+            <p>
+                <strong>Aug 11 - Sep 27, 2024</strong><br>
+                Shengyang, River museum, <a href="https://www.xiaohongshu.com/explore/66b227790000000025032a04?xsec_token=ABuMa3ToAVXhSBuuaovRgvcbn1dm2EeP2EAJ-TQ_pL8Gc=&xsec_source=pc_user"
+                    class="link" target="_blank" rel="noopener noreferrer">"Flow Landscape"</a>
+            </p>
+            <p>
+                <strong>Aug 9 - Aug 17, 2024</strong><br>
+                London, FUSEBOX Kingston, <a href="https://creativeyouthcharity.org/news/echos-the-art-of-preservation/" class="link" target="_blank"
+                    rel="noopener noreferrer">"ECHOS: The art of preservation"</a>
+            </p>
+            <p>
+                <strong>Aug 3 - Aug 31, 2024</strong><br>
+                London, Wells Cathedral, <a href="https://www.wellsartcontemporary.co.uk/" class="link" target="_blank"
+                    rel="noopener noreferrer">"Wells Art Contemporary"</a>
+            </p>
+            <p>
+                <strong>May 24 - June 8, 2024</strong><br>
+                Beijing, Park Art Space, <a href="https://www.paintriver.art/graphicDesign/UndergroundShelters.html" class="link" target="_blank"
+                    rel="noopener noreferrer">'Underground and Contemporary Shelters'</a>, as Artist, Designer and Curator
+            </p>
+            <p>
+                <strong>March 27 - 28, 2024</strong><br>
+                Paris, British Embassy in France, <a href="https://www.instagram.com/p/C5a28JRoTyX/?img_index=1" class="link" target="_blank"
+                    rel="noopener noreferrer">The Great Campaign Alumni Award Celebration"</a>
+            </p>
+            <p>
+                <strong>Nov 17 - Dec 20, 2023</strong><br>
+                Beijing Smart e-Sport event Center, <a href="http://www.peopleart.net/wap/news/1413.html" class="link" target="_blank"
+                    rel="noopener noreferrer">"DADU DONGNAN" Science and Technology Art Exhibition</a>
+            </p>
+            <p>
+                <strong>Nov 9 - 12, 2023</strong><br>
+                Shanghai Biennale at West Bund Art Center, <a href="https://www.paintriver.art/computationalArtist/NOAA.html" class="link" target="_blank"
+                    rel="noopener noreferrer">Collaborated with artist Xin Liu on the work "NOAA"</a>
+            </p>
+            <p>
+                <strong>Sep 22 - 24, 2023</strong><br>
+                London, V&A Museum, <a href="https://www.vam.ac.uk/event/D5BEGmd6O4/digital-art-showcase-2023" class="link" target="_blank"
+                    rel="noopener noreferrer">London Design Festival - V&A Digital Design Weekend 2023</a>
+            </p>
+            <p>
+                <strong>Aug 30 - Sep 3, 2023</strong><br>
+                London, St James Hatcham Church, <a href="https://2023.goldcomparts.com/" class="link" target="_blank"
+                    rel="noopener noreferrer">"Symbiosis"</a>, as Artist and Designer
+            </p>
+            <p>
+                <strong>Aug 5 - Oct 6, 2023</strong><br>
+                Chengdu, Raffles City, <a href="https://www.xiaohongshu.com/explore/64c4a9b4000000001201844e?xsec_token=AB9VIFnToBwZXmBxvBpl0i0UhA1To_rpPu0LOo2n630aI=&xsec_source=pc_user"
+                    class="link" target="_blank" rel="noopener noreferrer">2023 Yako Art Graduation Season "Iterative
+                    Generation - Life, Virtual, Potential"</a>, as Designer and Curator
+            </p>
+            <p>
+                <strong>July 12- 14, 2023</strong><br>
+                BCS London Office, <a href="http://www.eva-london.org/eva-london-2023/" class="link" target="_blank"
+                    rel="noopener noreferrer">Electronic and Visualization and the Arts (EVA London Conference)</a>
+            </p>
+            <p>
+                <strong>July 26 - Aug 28, 2022</strong><br>
+                Chengdu, Wink Art Space, <a href="https://www.xiaohongshu.com/explore/645a72a1000000001203289f?xsec_token=ABjhlXSuT27s5AasNnM3AHGysdwaN30aFCC41iEZa8HYU=&xsec_source=pc_search&source=web_profile_page"
+                    class="link" target="_blank" rel="noopener noreferrer">"3.27% CAFA Graduates Spontaneous Offline Group
+                    Exhibition"</a>, as Artist and Curator
+            </p>
+            <p>
+                <strong>June 9-20, 2021</strong><br>
+                Beijing, CAFA Museum, <a href="http://2021art.cafa.edu.cn/pc/student/detail?id=1059" class="link" target="_blank"
+                    rel="noopener noreferrer">"Ready to boom" Central Academy of Fine Arts Undergraduate Degree Show</a>
+            </p>
+        </div>
     </div>
     
     <!-- 加载导航栏组件 -->
