@@ -86,7 +86,7 @@ body:active {
 
 /* 白色主题样式 */
 .nav.white-theme .navlist a {
-  color: black;
+  color: black !important;
 }
 
 .nav.white-theme .navlist a:hover {
@@ -96,12 +96,12 @@ body:active {
 
 /* 深色主题样式 */
 .nav.dark-theme .navlist a {
-  color: gainsboro;
+  color: #f3ffff !important;
 }
 
 .nav.dark-theme .navlist a:hover {
   /* background: rgb(89, 102, 117); */
-  border: 2px solid gainsboro;
+  border: 2px solid #f3ffff;
 }
 
 .gallery-container {
