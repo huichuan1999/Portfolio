@@ -3,17 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="../assets/images/favicon.png" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/hapticdata/toxiclibsjs@0.3.2/build/toxiclibs.js"></script>
-    <script type="module" src="../JavaScripts/Butterfly.js"></script>
-    <script type="module" src="../JavaScripts/butterflySketch.js"></script>
-
-    <title>About</title>
+    <title>新项目页面</title>
 
     <!-- including for some global styling -->
     <link rel="stylesheet" href="../css/page.css">
@@ -29,16 +21,34 @@
 </head>
 
 <body>
-
-    <!-- if you have sub-pages think about adding a simple back button -->
-    <div class="backgroundImageThePool"></div>
-    <div class="overlay"></div>
-
     <!-- 导航栏容器 -->
     <div id="nav-container"></div>
 
     <div class="page-container">
+        <h1>新项目</h1>
+        <h3>
+            <br>2024年<br><br>
+            这是一个新项目的描述
+        </h3>
 
+        <p>
+            这是项目的详细描述内容...
+            <br><br>
+            你可以在这里添加更多内容。
+        </p>
+
+        <h3><br><br>项目图片<br><br></h3>
+        <div class="flex-container flex-basis-half">
+            <div class="flex-item">
+                <img src="../assets/images/project1.jpg" />
+            </div>
+            <div class="flex-item">
+                <img src="../assets/images/project2.jpg" />
+            </div>
+        </div>
+
+        <button id="return-to-top" class="return-to-top">▲ back<br>to top</button>
+        <script type="module" src="../JavaScripts/interactions/return_to_top.js"></script>
     </div>
     
     <!-- 加载导航栏组件 -->
@@ -53,3 +63,5 @@
         });
     </script>
 </body>
+
+</html>

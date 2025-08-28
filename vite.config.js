@@ -6,8 +6,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './index.html',
+                works: './works.html',
                 computationalArt: './computationalArtist/computationalArt.html',
-                ameobas: './computationalArtist/Amoebas.html',
+                amoebas: './computationalArtist/Amoebas.html',
                 codeincode: './computationalArtist/codeincode.html',
                 flyingBooks: './computationalArtist/flyingBooks.html',
                 noaa: './computationalArtist/NOAA.html',
@@ -21,14 +22,14 @@ export default defineConfig({
                 blushingStars: "./graphicDesign/BlushingStars.html",
                 bookplate: "./graphicDesign/bookplate.html",
                 genkiForest: "./graphicDesign/genkiForest.html",
-                graphicDesign: "./graphicDesign/graphicDesign.html",
+                slimeMold: "./graphicDesign/slimeMold.html",
                 petGloves: "./graphicDesign/petGloves.html",
                 underGroundShelters: "./graphicDesign/UndergroundShelters.html",
                 degreeShow: "./graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html",
                 honey:"./graphicDesign/Honey.html",
                 gallery: "./Illustrations/gallery.html",
                 silentCalcite: "./Illustrations/SilentCalcite.html",
-                tangibleIllusions: "./TangibleIllusions/tangibleIllusions.html",
+                tangibleIllusions: "./computationalArtist/tangibleIllusions.html",
                 weeklyBlog: "./WeeklyBlog/weeklyBlog.html"
             }
         },

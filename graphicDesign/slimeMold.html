@@ -6,13 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
-  <title>Graphic Gallery</title>
+  <title>Slime Mold - Graphic Design</title>
   <link rel="stylesheet" href="../css/gallery.css">
   <!-- <link rel="stylesheet" href="../css/page.css"> -->
   <link rel="stylesheet" href="../css/animation.css">
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/loading.css">
   <script type="module" defer src="../JavaScripts/interactions/graphicGallery.js"></script>
+  
+  <!-- 加载导航栏组件 -->
+  <script type="module">
+    import { createNavbar } from '../components/navbar.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const navContainer = document.getElementById('nav-container');
+      if (navContainer) {
+        navContainer.innerHTML = createNavbar();
+      }
+    });
+  </script>
 </head>
 <style>
   body {
@@ -57,55 +69,13 @@
     transition: transform 0.1s ease;
   }
 
-  .nav {
-    background: rgba(255, 255, 255, 0)
-  }
-
-  .navlist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid gainsboro;
-    flex-wrap: nowrap;
-  }
-
-  .navlist a {
-    color: gainsboro;
-  }
-
-  .navlist a:hover {
-    /* background: rgb(89, 102, 117); */
-    background: rgb(89, 102, 117);
-    border: 2px solid gainsboro;
-    transition: opacity 2s;
-  }
+  /* 导航栏样式已统一到 gallery.css */
 </style>
 
 <body>
 
-  <div class="nav">
-    <ul class="navlist">
-      <li class="btli"><a href="/index.html">HOME</a></li>
-      <li class="btli"><a href="/computationalArtist/computationalArt.html">COMPUTATIONAL ARTS</a></li>
-      <li class="btli"><a href="/Illustrations/gallery.html">IllUSTRATIONS</a></li>
-      <li class="btli"><a href="/gameDev/gamedevelopment.html">GAME DEV</a>
-        <ul class="droplist">
-          <li><a href="https://huichuan-wang.itch.io/">Itch.io</a></li>
-        </ul>
-      </li>
-      <li class="btli"><a href="/graphicDesign/graphicDesign.html">GRAPHICS</a></li>
-      <li class="btli"><a href="/about/aboutMe.html">INFO</a>
-        <ul class="droplist">
-          <li><a href="mailto:huichuanwang@outlook.com">E-mail me!</a></li>
-          <li><a href="https://www.instagram.com/huichuan_/ ">Instagram</a></li>
-          <li><a
-              href="https://www.xiaohongshu.com/user/profile/60a0abc50000000001002142?xhsshare=CopyLink&appuid=60a0abc50000000001002142&apptime=1707347193 ">Xiaohongshu/Red</a>
-          </li>
-          <li><a href="https://www.linkedin.com/in/huichuan-ekawa ">Linkedin</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <!-- 导航栏容器 -->
+  <div id="nav-container" class="dark-theme"></div>
   <div class="backgroundImageComputationalArts"></div>
   <div id="loading-screen">
     <div id="loading-text">Loading...</div>
@@ -123,27 +93,11 @@
           <p>
             <div class="typingAnimation" style="animation-delay: 0.5s;">__drag to view entire page</div>
             <div class="typingAnimation" style="animation-delay: 1s;">__refresh to reset the layout<br><br></div>
-        ▼▼▼▼▼▼  Graphic Design Projects ▼▼▼▼▼▼<br>
-
-        <a href="/graphicDesign/petGloves.html "><b>__>>> <span style="color: rgb(183, 222, 115);">Pet bathing gloves packaging</span> ></b></a>
-
-        <br><a href="/graphicDesign/genkiForest.html"><b>__>>> <span style="color: rgb(220, 86, 65);">ChiForest</span> ></b></a>
-
-        <br><a href="/graphicDesign/bookplate.html"><b>__>>> <span style="color: rgb(181, 200, 229);">BookPlate</span> ></b></a>
-
-        <br><a href="/graphicDesign/BlushingStars.html"><b>__>>> <span style="color: rgb(255, 157, 173);">Blushing Stars</span> ></b></a>
-
-        <br><a href="/graphicDesign/UndergroundShelters.html"><b>__>>> <span style="color: rgb(127, 140, 255);">Underground and Contemporary Shelters</span> ></b></a>
-
-        <br><a href="/graphicDesign/Honey.html"><b>__>>> <span style="color: rgb(255, 232, 57);">Honey</span> ></b></a>
-
-        <br><a href="/graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html"><b>__>>> <span style="color: rgb(166, 231, 193);">2024 Goldsmiths MAMFA Computational Arts Degree Show</span> ></b></a>
-        <br><br>
       </p>
     </div>
       <div class="graphicGalleryWords">
         <p>In 2021, I kept slime molds for a whole year ◀
-          <br>All the vector graphics here are extracted from the photos of slime molds I took myself ◀</p>
+          <br>Vector graphics extracted from the photos of slime molds I took myself ◀</p>
       </div>
       <img src="../assets/graphicDesigns/1.png" alt="Image 1" class="gallery-image">
       <img src="../assets/graphicDesigns/14.png" alt="Image 1" class="gallery-image">

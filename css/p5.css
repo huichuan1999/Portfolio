@@ -11,5 +11,6 @@
 #p5-Jellyfish{
     display: block;
     width: 100vw;
+    border: none;
     /* height: 100vh; */
 }
