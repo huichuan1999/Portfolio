@@ -158,3 +158,24 @@
     background-color: rgb(243, 255, 255);
     /* 正方形的颜色 */
 }
+
+/* 首页图标样式 */
+.home-icon-link {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.home-icon {
+    width: 30px;
+    height: 30px;
+    mix-blend-mode: screen;
+    transition: all 0.3s ease;
+}
+
+.home-text {
+    color: #f3ffff;
+    font-weight: bold;
+    white-space: nowrap;
+}
