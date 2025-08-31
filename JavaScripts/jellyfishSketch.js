@@ -10,6 +10,7 @@ const jellyfishSketch = (p) => {
     let canvas;
     let tailPhysics;
     let draggedParticle = null;
+    p5.disableFriendlyErrors = true;
 
     p.setup = () => {
         // canvas = createCanvas(windowWidth, windowHeight);

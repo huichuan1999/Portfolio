@@ -3,6 +3,7 @@ import Butterfly from "./Butterfly";
 var butterflySketch = function(p) {
     let physics;
     let butterfly;
+    p5.disableFriendlyErrors = true;
 
     p.setup = function() {
         let canvas = p.createCanvas(p.windowWidth, p.windowHeight);
