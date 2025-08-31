@@ -4,13 +4,14 @@ const { VerletPhysics2D } = toxi.physics2d;
 const { Rect } = toxi.geom;
 p5.disableFriendlyErrors = true;
 
-const sketch = (p) => {
+const jellyfishSketch = (p) => {
 
     let physics;
     let jellyfish;
     let canvas;
     let tailPhysics;
     let draggedParticle = null;
+    p5.disableFriendlyErrors = true;
 
     p.setup = () => {
         // canvas = createCanvas(windowWidth, windowHeight);
@@ -32,7 +33,7 @@ const sketch = (p) => {
         // tailPhysics.addBehavior(gb);
         // tailPhysics.setDrag(0.01);
 
-        jellyfish = new Star(p.width- p.width / 3, p.height / 3, 9, 60, 120, p, physics, tailPhysics);
+        jellyfish = new Star(p.width - p.width / 3, p.height / 3, 9, 60, 120, p, physics, tailPhysics);
 
     }
 
@@ -93,6 +94,18 @@ const sketch = (p) => {
     p.windowResized = () => {
         p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
+    
+    p.touchStarted = () => {
+        p.mousePressed();
+    };
+
+    p.touchMoved = () => {
+        p.mouseDragged();
+    };
+
+    p.touchEnded = () => {
+        p.mouseReleased();
+    };
 }
 
-new p5(sketch);
+new p5(jellyfishSketch);
