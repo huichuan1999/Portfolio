@@ -1,5 +1,5 @@
 import p5 from 'p5';
-import Star from './Star';
+import Star from './Star.js';
 const { VerletPhysics2D } = toxi.physics2d;
 const { Rect } = toxi.geom;
 p5.disableFriendlyErrors = true;
@@ -15,7 +15,11 @@ const jellyfishSketch = (p) => {
 
     p.setup = () => {
         // canvas = createCanvas(windowWidth, windowHeight);
-        let navHeight = document.querySelector('.nav').offsetHeight;
+        let navHeight = 0;
+        const navElement = document.querySelector('.nav');
+        if (navElement) {
+            navHeight = navElement.offsetHeight;
+        }
         canvas = p.createCanvas(p.windowWidth, p.windowHeight - navHeight);
         canvas.parent('p5-Jellyfish');
 
@@ -99,13 +103,14 @@ const jellyfishSketch = (p) => {
         p.mousePressed();
     };
 
-    p.touchMoved = () => {
+        p.touchMoved = () => {
         p.mouseDragged();
     };
-
+    
     p.touchEnded = () => {
         p.mouseReleased();
     };
 }
 
-new p5(jellyfishSketch);
+// Export the sketch function for use in other modules
+export { jellyfishSketch };

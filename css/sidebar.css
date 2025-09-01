@@ -274,6 +274,14 @@ body:has(.sidebar.collapsed) .sidebar-expand-btn {
     margin-left: 280px; /* 为侧边栏留出空间 */
     width: calc(100% - 280px);
     transition: margin-left 0.3s ease, width 0.3s ease;
+    /* 保持原有的导航栏基本样式 */
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* 当侧边栏收起时，导航栏回到原位 */

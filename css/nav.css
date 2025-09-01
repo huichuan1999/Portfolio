@@ -7,15 +7,16 @@
 
 .nav {
     font-size: 16px;
-    /* display: flex;  */
+    display: flex; /* 启用flex布局 */
     justify-content: flex-start;
     /* 改为左对齐 */
     align-items: center;
     /* 垂直居中（如果需要） */
     flex-direction: row;
     /* width: 100vw; */
-    padding-left: 30px;
-    /* 添加左边距，避免紧贴页面边缘 */
+    padding: 0; /* 移除padding */
+    width: 100%; /* 填满整个宽度 */
+    box-sizing: border-box; /* 包含padding在宽度内 */
 }
 
 .navlist {
@@ -26,9 +27,10 @@
     align-items: center;
     /* 垂直居中（如果需要） */
     /* border: 2px solid #f3ffff; */
-    /* width: 100vw; */
+    width: 100%; /* 填满整个宽度 */
     flex-wrap: nowrap;
     /* 默认情况下不换行 */
+    gap: 10px; /* 添加间距 */
 }
 
 .btli {
@@ -36,8 +38,9 @@
     line-height: 40px;
     font-weight: bold;
     padding: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: nowrap; /* 防止文字换行 */
 
     /* flex-basis: 25%; */
     /*width of the box, take up a quarter of the parent's size*/
@@ -46,8 +49,10 @@
 .navlist a {
     color: #f3ffff;
     display: block;
-    padding: 0 25px;
+    padding: 0 15px;
     border: 2px solid rgba(0, 0, 0, 0);
+    white-space: nowrap; /* 防止文字换行 */
+    text-align: center; /* 文字居中对齐 */
 }
 
 .navlist a:hover {
@@ -178,4 +183,5 @@
     color: #f3ffff;
     font-weight: bold;
     white-space: nowrap;
+    font-size: inherit; /* 继承父元素的字体大小，与其他导航项保持一致 */
 }

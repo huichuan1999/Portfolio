@@ -1,4 +1,4 @@
-import Butterfly from "./Butterfly";
+import Butterfly from "./Butterfly.js";
 p5.disableFriendlyErrors = true;
 
 var butterflySketch = function(p) {
@@ -29,4 +29,5 @@ var butterflySketch = function(p) {
     }
   }
 
-  new p5(butterflySketch);
+// Export the sketch function for use in other modules
+export { butterflySketch };

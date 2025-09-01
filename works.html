@@ -10,10 +10,10 @@
     <!-- including for some global styling -->
     <link rel="stylesheet" href="/css/page.css">
     <link rel="stylesheet" href="/css/p5.css">
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/flex-items.css">
     <link rel="stylesheet" href="/css/meida-Queries.css">
     <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/nav.css">
     <style>
         body {
             overflow-x: hidden;
@@ -30,15 +30,16 @@
     <div class="backgroundImage" id="illustrations-bg"></div>
     <div class="overlay" id="illustrations-overlay"></div>
     
-    <!-- 导航栏容器 -->
-    <div id="nav-container"></div>
-    
-    <!-- 侧边栏展开按钮（收起时显示） -->
-    <button class="sidebar-expand-btn" id="sidebar-expand-btn">
-        <span class="expand-icon">☰</span>
-    </button>
+    <main>
+        <!-- 导航栏容器 -->
+        <div id="nav-container"></div>
+        
+        <!-- 侧边栏展开按钮（收起时显示） -->
+        <button class="sidebar-expand-btn" id="sidebar-expand-btn">
+            <span class="expand-icon">☰</span>
+        </button>
 
-    <div class="works-page-wrapper">
+        <div class="works-page-wrapper">
         <!-- VS Code风格侧边栏 -->
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -491,6 +492,7 @@
             }
         });
     </script>
+    </main>
 </body>
 
 </html>
