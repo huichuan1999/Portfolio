@@ -922,6 +922,12 @@ p {
     align-content: space-between;   /* 垂直两端对齐 */
 }
 
+/* GAME DEV分类使用4x1网格布局 */
+.game-dev-category .small-projects-grid {
+    grid-template-rows: 1fr; /* 只有1行 */
+    align-content: stretch; /* 拉伸对齐 */
+}
+
 .small-projects-grid a {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
@@ -984,6 +990,7 @@ body:has(.computational-arts-category:hover) #comp-arts-overlay {
 .game-dev-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; /* 确保只有1行 */
     gap: 1.5rem;
     margin-top: 2rem;
     justify-content: space-between; /* 两端对齐 */
