@@ -18,9 +18,9 @@
     <!-- including for some global styling -->
     <link rel="stylesheet" href="../css/page.css">
     <link rel="stylesheet" href="../css/p5.css">
-    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/flex-items.css">
     <link rel="stylesheet" href="../css/meida-Queries.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <style>
         body {
             overflow-x: hidden;
@@ -96,7 +96,7 @@
             }
             
             .desktop-layout {
-                display: grid;
+                display: grid !important;
             }
         }
 
@@ -106,7 +106,7 @@
             }
             
             .desktop-layout {
-                display: none;
+                display: none !important;
             }
         }
     </style>
@@ -118,18 +118,19 @@
     <div class="backgroundImageThePool"></div>
     <div class="overlay"></div>
 
-    <!-- 导航栏容器 -->
-    <div id="nav-container"></div>
+    <main>
+        <!-- 导航栏容器 -->
+        <div id="nav-container"></div>
 
-    <!-- 移动端单栏布局 -->
-    <div class="page-container mobile-layout">
+        <!-- 移动端单栏布局 -->
+        <div class="page-container mobile-layout">
 
         <!-- <img src="../assets/images/HuichuanWang/huichuanWangCN-lightblue.png" class="pixel-style" id="huichuan-wangCN"
             alt="Huichuan">
         
         <img src="../assets/images/HuichuanWang/ekawa.png" class="pixel-style" id="ekawa" alt="ekawa"> -->
-        <div style="text-align: right;">
-            <img src="../assets/images/me.jpg" style="width: 15vw;" />
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="../assets/images/me.jpg" style="width: 25vw; max-width: 200px; border-radius: 0;" />
         </div>
         <h3><br><br>Bio</h3>
         <p>
@@ -501,6 +502,7 @@
             </p>
         </div>
     </div>
+    </main>
     
     <!-- 加载导航栏组件 -->
     <script type="module">

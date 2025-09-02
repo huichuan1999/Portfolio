@@ -1,46 +1,385 @@
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+   ===================================================== */
 
-/* Extra large */
+/* Extra large screens (1200px and below) */
 @media screen and (max-width: 1200px) {
     .navlist {
-        flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+        flex-wrap: nowrap; /* 保持不换行 */
     }
 
-    .flex-item{
-        flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
+    .flex-item {
+        flex-basis: 33.33%; /* width of the box, take up a third of the parent's size */
+    }
+
+    .page-container {
+        padding: 8% 12%; /* 减少左右边距 */
     }
 }
 
-/* Large */
+/* Large screens (992px and below) - Tablet Landscape */
 @media screen and (max-width: 992px) {
-  .navlist {
-    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
-}
+    .navlist {
+        flex-wrap: nowrap; /* 保持不换行 */
+        padding: 0 15px; /* 添加左右内边距 */
+    }
+
+    .navlist a {
+        padding: 0 12px; /* 减少导航链接的内边距 */
+        font-size: 13px; /* 稍微减小字体 */
+        white-space: nowrap; /* 防止文字换行 */
+    }
 
     .documentation-header section,
-    main.documentation-page section{
+    main.documentation-page section {
         margin: 40px 5%;
     }
 
-}
+    .page-container {
+        padding: 6% 8%; /* 进一步减少边距 */
+    }
 
-/* Medium */
-@media screen and (max-width: 768px) {
-  .navlist {
-    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
-}
+    /* 三栏布局在平板端变为单栏 */
+    .three-column-layout:not(.desktop-layout) {
+        display: block !important;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
-    .flex-item{
-        flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
+    .column {
+        padding: 0.5rem;
+    }
+
+    .left-column,
+    .middle-column {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1rem;
+    }
+
+    /* 头像在平板端调整大小 */
+    .profile-image img {
+        width: 150px;
+        height: 150px;
     }
 }
 
-/* Small */
-@media screen and (max-width: 576px) {
-  .navlist {
-    flex-wrap: wrap; /* 在窄屏幕上允许元素换行 */
+/* Medium screens (768px and below) - Tablet Portrait */
+@media screen and (max-width: 768px) {
+    .navlist {
+        flex-wrap: nowrap; /* 保持不换行 */
+        justify-content: center; /* 居中对齐 */
+        gap: 2px; /* 减少间距 */
+    }
+
+    .navlist a {
+        padding: 0 6px; /* 减少内边距 */
+        font-size: 12px; /* 更小的字体 */
+        white-space: nowrap; /* 防止文字换行 */
+        text-align: center; /* 文字居中对齐 */
+    }
+
+    .home-text {
+        font-size: 12px; /* 与其他导航项保持一致 */
+    }
+
+    .btli {
+        margin-left: 2px;
+        margin-right: 2px;
+        /* 移除 flex: 1，让按钮长度自适应 */
+    }
+
+    .flex-item {
+        flex-basis: 50%; /* width of the box, take up half of the parent's size */
+    }
+
+    .page-container {
+        padding: 4% 6%; /* 更小的边距 */
+    }
+
+    /* 导航栏在手机端保持横向排列 */
+    .nav {
+        padding: 10px 15px;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navlist li {
+        margin: 0 1px;
+    }
+
+    /* 下拉菜单在手机端的调整 */
+    .droplist {
+        display: none !important; /* 在移动端完全隐藏下拉菜单 */
+    }
+
+    .btli:hover .droplist {
+        display: none !important; /* 确保hover时也不显示 */
+    }
+
+    /* 浮动文字在手机端的调整 */
+    #floatingWords {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0 10px;
+        max-width: 90vw; /* 移动端限制最大宽度 */
+        max-height: 85vh; /* 移动端限制最大高度 */
+        bottom: 8vh; /* 移动端调整底部位置 */
+    }
+
+    /* 响应式视频调整 */
+    .responsive-video {
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
 }
 
-    .flex-item{
-        flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
+/* Small screens (576px and below) - Mobile */
+@media screen and (max-width: 576px) {
+    .navlist {
+        flex-wrap: nowrap; /* 保持不换行 */
+        gap: 1px; /* 最小间距 */
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navlist a {
+        padding: 0 4px;
+        font-size: 11px;
+        white-space: nowrap; /* 防止文字换行 */
+        text-align: center; /* 文字居中对齐 */
+    }
+
+    .home-text {
+        font-size: 11px; /* 与其他导航项保持一致 */
+    }
+
+    .btli {
+        margin-left: 1px;
+        margin-right: 1px;
+        /* 移除 flex: 1，让按钮长度自适应 */
+    }
+
+    /* 在移动端隐藏下拉菜单 */
+    .droplist {
+        display: none !important;
+    }
+
+    .btli:hover .droplist {
+        display: none !important;
+    }
+
+    .flex-item {
+        flex-basis: 100%; /* width of the box, take up full width */
+    }
+
+    .page-container {
+        padding: 3% 4%; /* 最小的边距 */
+    }
+
+    /* 手机端导航栏进一步优化 */
+    .nav {
+        padding: 8px 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navlist {
+        flex-direction: row; /* 保持横向排列 */
+        width: 100%;
+    }
+
+    .navlist a {
+        padding: 4px 6px;
+        border-radius: 3px;
+    }
+
+    /* 浮动文字在手机端的进一步调整 */
+    #floatingWords {
+        font-size: 12px;
+        line-height: 1.3;
+        padding: 0 8px;
+        max-width: 85vw; /* 更小屏幕限制最大宽度 */
+        max-height: 80vh; /* 更小屏幕限制最大高度 */
+        bottom: 10vh; /* 更小屏幕调整底部位置 */
+    }
+
+    /* 头像在手机端进一步缩小 */
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* 标题在手机端的调整 */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* 按钮在手机端的调整 */
+    .return-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Extra small screens (480px and below) - Small Mobile */
+@media screen and (max-width: 480px) {
+    .page-container {
+        padding: 2% 3%;
+    }
+
+    .navlist {
+        flex-wrap: nowrap; /* 保持不换行 */
+        gap: 0px; /* 无间距 */
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navlist a {
+        font-size: 10px;
+        padding: 0 2px;
+        white-space: nowrap; /* 防止文字换行 */
+        text-align: center; /* 文字居中对齐 */
+    }
+
+    .home-text {
+        font-size: 10px; /* 与其他导航项保持一致 */
+    }
+
+    .btli {
+        margin-left: 0px;
+        margin-right: 0px;
+        /* 移除 flex: 1，让按钮长度自适应 */
+    }
+
+    /* 在移动端隐藏下拉菜单 */
+    .droplist {
+        display: none !important;
+    }
+
+    .btli:hover .droplist {
+        display: none !important;
+    }
+
+    .nav {
+        padding: 6px 8px;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center; /* 居中对齐 */
+    }
+
+    #floatingWords {
+        font-size: 11px;
+        line-height: 1.2;
+        max-width: 80vw; /* 超小屏幕限制最大宽度 */
+        max-height: 75vh; /* 超小屏幕限制最大高度 */
+        bottom: 12vh; /* 超小屏幕调整底部位置 */
+    }
+
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .nav {
+        padding: 5px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navlist {
+        flex-direction: row; /* 保持横向排列 */
+        flex-wrap: nowrap; /* 不换行 */
+        width: 100%;
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navlist a {
+        font-size: 11px;
+        padding: 0 4px;
+        white-space: nowrap; /* 防止文字换行 */
+        text-align: center; /* 文字居中对齐 */
+    }
+
+    .home-text {
+        font-size: 11px; /* 与其他导航项保持一致 */
+    }
+
+    .btli {
+        /* 移除 flex: 1，让按钮长度自适应 */
+    }
+
+    /* 在移动端隐藏下拉菜单 */
+    .droplist {
+        display: none !important;
+    }
+
+    .btli:hover .droplist {
+        display: none !important;
+    }
+
+    .page-container {
+        padding: 2% 4%;
+    }
+
+    #floatingWords {
+        font-size: 11px;
+        line-height: 1.2;
+        max-width: 85vw; /* 横屏模式限制最大宽度 */
+        max-height: 70vh; /* 横屏模式限制最大高度 */
+        bottom: 15vh; /* 横屏模式调整底部位置 */
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .pixel-style {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav,
+    #floatingWords,
+    .return-to-top {
+        display: none;
+    }
+
+    .page-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: white;
+        color: black;
     }
 }

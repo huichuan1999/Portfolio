@@ -10,10 +10,10 @@
     <!-- including for some global styling -->
     <link rel="stylesheet" href="/css/page.css">
     <link rel="stylesheet" href="/css/p5.css">
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/flex-items.css">
     <link rel="stylesheet" href="/css/meida-Queries.css">
     <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/nav.css">
     <style>
         body {
             overflow-x: hidden;
@@ -30,15 +30,16 @@
     <div class="backgroundImage" id="illustrations-bg"></div>
     <div class="overlay" id="illustrations-overlay"></div>
     
-    <!-- 导航栏容器 -->
-    <div id="nav-container"></div>
-    
-    <!-- 侧边栏展开按钮（收起时显示） -->
-    <button class="sidebar-expand-btn" id="sidebar-expand-btn">
-        <span class="expand-icon">☰</span>
-    </button>
+    <main>
+        <!-- 导航栏容器 -->
+        <div id="nav-container"></div>
+        
+        <!-- 侧边栏展开按钮（收起时显示） -->
+        <button class="sidebar-expand-btn" id="sidebar-expand-btn">
+            <span class="expand-icon">☰</span>
+        </button>
 
-    <div class="works-page-wrapper">
+        <div class="works-page-wrapper">
         <!-- VS Code风格侧边栏 -->
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -171,6 +172,10 @@
                             <span class="item-icon">🍯</span>
                             <span class="item-name">Honey</span>
                         </a>
+                        <a href="/graphicDesign/slimeMold.html" class="sidebar-item">
+                            <span class="item-icon">🦠</span>
+                            <span class="item-name">Slime Mold</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -256,18 +261,19 @@
                         </div> -->
                     </div>
                     
-                    <div class="game-dev-grid">
+                    <!-- <div class="game-dev-grid"> -->
+                    <div class="small-projects-grid">
                         <a href="https://store.steampowered.com/app/2542850/1001_Nights/" class="Nights1001">
-                            <h4 data-text="1001Nights&#10;AI-Driven Game">1001Nights<br>AI-Driven Game</h4>
+                            <h5 data-text="1001Nights&#10;AI-Driven Game">1001Nights<br>AI-Driven Game</h5>
                         </a>
                         <a href="https://huichuan-wang.itch.io/whitetree" class="WhiteTree">
-                            <h4 data-text="WHITETREE">WHITETREE</h4>
+                            <h5 data-text="WHITETREE">WHITETREE</h5>
                         </a>
                         <a href="https://aloisru.itch.io/a-trip-of-roots" class="ATripOfRoots">
-                            <h4 data-text="A Trip Of Roots&#10;From GGJ 2023">A Trip Of Roots<br>From GGJ 2024</h4>
+                            <h5 data-text="A Trip Of Roots&#10;From GGJ 2023">A Trip Of Roots<br>From GGJ 2024</h5>
                         </a>
                         <a href="https://shawn0791.itch.io/pooppybara" class="Poppybara">
-                            <h4 data-text="pooppybara&#10;From GGJ 2024">pooppybara<br>From GGJ 2024</h4>
+                            <h5 data-text="pooppybara&#10;From GGJ 2024">pooppybara<br>From GGJ 2024</h5>
                         </a>
                     </div>
                 </div>
@@ -422,25 +428,125 @@
             const sidebarCollapseBtn = document.getElementById('sidebar-collapse-btn');
             const sidebarExpandBtn = document.getElementById('sidebar-expand-btn');
             
+            // 检测是否为移动端
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+            
             // 收起按钮功能
             if (sidebarCollapseBtn && sidebar) {
                 sidebarCollapseBtn.addEventListener('click', () => {
-                    sidebar.classList.toggle('collapsed');
-                    // 更新按钮文字
-                    sidebarCollapseBtn.textContent = sidebar.classList.contains('collapsed') ? '☰' : '×';
+                    if (isMobile()) {
+                        // 移动端：隐藏侧边栏，显示展开按钮
+                        sidebar.style.display = 'none';
+                        sidebarExpandBtn.style.display = 'flex';
+                        sidebarExpandBtn.style.opacity = '1';
+                        sidebarExpandBtn.style.visibility = 'visible';
+                    } else {
+                        // 桌面端：收起侧边栏
+                        sidebar.classList.toggle('collapsed');
+                        // 更新按钮文字
+                        sidebarCollapseBtn.textContent = sidebar.classList.contains('collapsed') ? '☰' : '×';
+                    }
                 });
             }
             
             // 展开按钮功能
             if (sidebarExpandBtn && sidebar) {
                 sidebarExpandBtn.addEventListener('click', () => {
-                    sidebar.classList.remove('collapsed');
-                    // 更新收起按钮文字
-                    if (sidebarCollapseBtn) {
-                        sidebarCollapseBtn.textContent = '×';
+                    if (isMobile()) {
+                        // 移动端：显示侧边栏，隐藏展开按钮
+                        sidebar.style.display = 'flex';
+                        sidebarExpandBtn.style.display = 'none';
+                        sidebarExpandBtn.style.opacity = '0';
+                        sidebarExpandBtn.style.visibility = 'hidden';
+                    } else {
+                        // 桌面端：展开侧边栏
+                        sidebar.classList.remove('collapsed');
+                        // 更新收起按钮文字
+                        if (sidebarCollapseBtn) {
+                            sidebarCollapseBtn.textContent = '×';
+                        }
                     }
                 });
             }
+            
+            // 初始化移动端侧边栏状态
+            if (isMobile()) {
+                // 移动端默认显示侧边栏，隐藏展开按钮
+                sidebar.style.display = 'flex';
+                sidebarExpandBtn.style.display = 'none';
+                
+                // 移动端默认展开所有分类
+                const allCategoryItems = document.querySelectorAll('.category-items');
+                const allToggleArrows = document.querySelectorAll('.toggle-arrow');
+                
+                allCategoryItems.forEach(items => {
+                    items.classList.add('expanded');
+                });
+                
+                allToggleArrows.forEach(arrow => {
+                    arrow.classList.add('expanded');
+                });
+            } else {
+                // 桌面端只展开第一个分类
+                const firstCategoryItems = document.getElementById('computational-arts-items');
+                const firstToggleArrow = document.querySelector('[data-category="computational-arts"] .toggle-arrow');
+                
+                if (firstCategoryItems && firstToggleArrow) {
+                    firstCategoryItems.classList.add('expanded');
+                    firstToggleArrow.classList.add('expanded');
+                }
+            }
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', () => {
+                if (isMobile()) {
+                    // 切换到移动端模式
+                    sidebar.style.display = 'flex';
+                    sidebarExpandBtn.style.display = 'none';
+                    // 移动端展开所有分类
+                    const allCategoryItems = document.querySelectorAll('.category-items');
+                    const allToggleArrows = document.querySelectorAll('.toggle-arrow');
+                    
+                    allCategoryItems.forEach(items => {
+                        items.classList.add('expanded');
+                    });
+                    
+                    allToggleArrows.forEach(arrow => {
+                        arrow.classList.add('expanded');
+                    });
+                } else {
+                    // 切换到桌面端模式
+                    sidebarExpandBtn.style.display = 'none';
+                    sidebar.style.display = 'flex';
+                    sidebar.classList.remove('collapsed');
+                    if (sidebarCollapseBtn) {
+                        sidebarCollapseBtn.textContent = '×';
+                    }
+                    // 桌面端只展开第一个分类
+                    const allCategoryItems = document.querySelectorAll('.category-items');
+                    const allToggleArrows = document.querySelectorAll('.toggle-arrow');
+                    
+                    // 先收起所有分类
+                    allCategoryItems.forEach(items => {
+                        items.classList.remove('expanded');
+                    });
+                    
+                    allToggleArrows.forEach(arrow => {
+                        arrow.classList.remove('expanded');
+                    });
+                    
+                    // 只展开第一个分类
+                    const firstCategoryItems = document.getElementById('computational-arts-items');
+                    const firstToggleArrow = document.querySelector('[data-category="computational-arts"] .toggle-arrow');
+                    
+                    if (firstCategoryItems && firstToggleArrow) {
+                        firstCategoryItems.classList.add('expanded');
+                        firstToggleArrow.classList.add('expanded');
+                    }
+                }
+            });
             
             // 分类展开/收起功能 + 滚动定位
             const categoryToggles = document.querySelectorAll('.category-toggle');
@@ -482,15 +588,10 @@
             });
             
             // 默认展开第一个分类（计算机艺术）
-            const firstCategoryItems = document.getElementById('computational-arts-items');
-            const firstToggleArrow = document.querySelector('[data-category="computational-arts"] .toggle-arrow');
-            
-            if (firstCategoryItems && firstToggleArrow) {
-                firstCategoryItems.classList.add('expanded');
-                firstToggleArrow.classList.add('expanded');
-            }
+            // 这个逻辑现在在初始化部分处理，根据设备类型决定展开方式
         });
     </script>
+    </main>
 </body>
 
 </html>
