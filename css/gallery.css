@@ -47,61 +47,442 @@ body:active {
   cursor: url('../assets/images/cursor/grab.png'), auto;
 }
 
-/* 统一的导航栏样式 */
-.nav {
-  font-size: 16px;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  padding-left: 30px;
-  background: transparent !important;
+/* 导航栏主题样式覆盖 - 基于父容器的主题类 */
+
+/* 深色主题样式 */
+#nav-container.dark-theme .nav .navlist a {
+  color: #f3ffff;
 }
 
-.navlist {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
+#nav-container.dark-theme .nav .navlist a:hover {
+  background: rgb(89, 102, 117);
+  border: 2px solid #f3ffff;
 }
 
-.navlist a {
-  display: block;
-  padding: 0 25px;
-  border: 2px solid rgba(0, 0, 0, 0);
+#nav-container.dark-theme .nav .home-text {
+  color: #f3ffff;
 }
 
-.navlist a:hover {
-  transition: opacity 2s;
-}
-
-/* 默认颜色样式（黑色主题） */
-.navlist a {
+/* 白色主题样式 */
+#nav-container.white-theme .nav .navlist a {
   color: black;
 }
 
-.navlist a:hover {
+#nav-container.white-theme .nav .navlist a:hover {
   background: gainsboro;
   border: 2px solid black;
 }
 
-/* 白色主题样式 */
-.nav.white-theme .navlist a {
-  color: black !important;
+#nav-container.white-theme .nav .home-text {
+  color: black;
 }
 
-.nav.white-theme .navlist a:hover {
-  /* background: gainsboro; */
+/* 默认样式 - 适用于没有特定主题的gallery页面（浅色背景） */
+#nav-container:not(.dark-theme):not(.white-theme) .nav .navlist a {
+  color: black;
+}
+
+#nav-container:not(.dark-theme):not(.white-theme) .nav .navlist a:hover {
+  background: gainsboro;
   border: 2px solid black;
 }
 
-/* 深色主题样式 */
-.nav.dark-theme .navlist a {
-  color: #f3ffff !important;
+#nav-container:not(.dark-theme):not(.white-theme) .nav .home-text {
+  color: black;
 }
 
-.nav.dark-theme .navlist a:hover {
-  /* background: rgb(89, 102, 117); */
-  border: 2px solid #f3ffff;
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN FOR GALLERY PAGES
+   ===================================================== */
+
+/* Medium screens (768px and below) - Tablet Portrait */
+@media screen and (max-width: 768px) {
+  /* Dark theme mobile styles */
+  #nav-container.dark-theme .nav .navlist {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2px;
+  }
+
+  #nav-container.dark-theme .nav .navlist a {
+    padding: 0 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .navlist a:hover {
+    background: rgb(89, 102, 117);
+    border: 2px solid #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .home-text {
+    font-size: 12px;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .btli {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  #nav-container.dark-theme .nav {
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .navlist li {
+    margin: 0 1px;
+  }
+
+  #nav-container.dark-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.dark-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+
+  /* White theme mobile styles */
+  #nav-container.white-theme .nav .navlist {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2px;
+  }
+
+  #nav-container.white-theme .nav .navlist a {
+    padding: 0 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+  }
+
+  #nav-container.white-theme .nav .home-text {
+    font-size: 12px;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .btli {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  #nav-container.white-theme .nav {
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .navlist li {
+    margin: 0 1px;
+  }
+
+  #nav-container.white-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.white-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+}
+
+/* Small screens (576px and below) - Mobile */
+@media screen and (max-width: 576px) {
+  /* Dark theme mobile styles */
+  #nav-container.dark-theme .nav .navlist {
+    flex-wrap: nowrap;
+    gap: 1px;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .navlist a {
+    padding: 0 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: center;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .navlist a:hover {
+    background: rgb(89, 102, 117);
+    border: 2px solid #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .home-text {
+    font-size: 11px;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .btli {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  #nav-container.dark-theme .nav {
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #nav-container.dark-theme .nav .navlist {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  #nav-container.dark-theme .nav .navlist a {
+    padding: 4px 6px;
+    border-radius: 3px;
+  }
+
+  #nav-container.dark-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.dark-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+
+  /* White theme mobile styles */
+  #nav-container.white-theme .nav .navlist {
+    flex-wrap: nowrap;
+    gap: 1px;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .navlist a {
+    padding: 0 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: center;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+  }
+
+  #nav-container.white-theme .nav .home-text {
+    font-size: 11px;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .btli {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  #nav-container.white-theme .nav {
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #nav-container.white-theme .nav .navlist {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  #nav-container.white-theme .nav .navlist a {
+    padding: 4px 6px;
+    border-radius: 3px;
+  }
+
+  #nav-container.white-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.white-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+}
+
+/* Extra small screens (480px and below) - Small Mobile */
+@media screen and (max-width: 480px) {
+  /* Dark theme mobile styles */
+  #nav-container.dark-theme .nav .navlist {
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .navlist a {
+    font-size: 10px;
+    padding: 0 2px;
+    white-space: nowrap;
+    text-align: center;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .navlist a:hover {
+    background: rgb(89, 102, 117);
+    border: 2px solid #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .home-text {
+    font-size: 10px;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .btli {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #nav-container.dark-theme .nav {
+    padding: 6px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.dark-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+
+  /* White theme mobile styles */
+  #nav-container.white-theme .nav .navlist {
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .navlist a {
+    font-size: 10px;
+    padding: 0 2px;
+    white-space: nowrap;
+    text-align: center;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+  }
+
+  #nav-container.white-theme .nav .home-text {
+    font-size: 10px;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .btli {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #nav-container.white-theme .nav {
+    padding: 6px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.white-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* Dark theme landscape styles */
+  #nav-container.dark-theme .nav {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .navlist {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #nav-container.dark-theme .nav .navlist a {
+    font-size: 11px;
+    padding: 0 4px;
+    white-space: nowrap;
+    text-align: center;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .navlist a:hover {
+    background: rgb(89, 102, 117);
+    border: 2px solid #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .home-text {
+    font-size: 11px;
+    color: #f3ffff;
+  }
+
+  #nav-container.dark-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.dark-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
+
+  /* White theme landscape styles */
+  #nav-container.white-theme .nav {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .navlist {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #nav-container.white-theme .nav .navlist a {
+    font-size: 11px;
+    padding: 0 4px;
+    white-space: nowrap;
+    text-align: center;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .navlist a:hover {
+    background: gainsboro;
+    border: 2px solid black;
+  }
+
+  #nav-container.white-theme .nav .home-text {
+    font-size: 11px;
+    color: black;
+  }
+
+  #nav-container.white-theme .nav .droplist {
+    display: none !important;
+  }
+
+  #nav-container.white-theme .nav .btli:hover .droplist {
+    display: none !important;
+  }
 }
 
 .gallery-container {
@@ -117,8 +498,32 @@ body:active {
 
 .gallery {
   position: relative;
-  width: 200vw;
-  height: 300vh;
+  width: 120vw;
+  height: 120vh;
+}
+
+/* 移动端gallery尺寸调整 */
+@media screen and (max-width: 768px) {
+  .gallery {
+    width: 120vw; /* 移动端宽度调整为1.2倍 */
+    height: 300vh; /* 移动端高度调整为3倍（更密集） */
+  }
+  
+  .backgroundImagegraphicDesigns {
+    width: 100%; /* 移动端背景图片宽度匹配gallery容器 */
+    height: 100%; /* 移动端背景图片高度匹配gallery容器 */
+  }
+  
+  .overlay {
+    width: 100%; /* 移动端overlay宽度匹配gallery容器 */
+    height: 100%; /* 移动端overlay高度匹配gallery容器 */
+  }
+  
+  .graphicGalleryWords {
+    right: 0px; /* 移动端文字定位到gallery容器的右边缘 */
+    bottom: 0px; /* 移动端文字定位到gallery容器的底部 */
+    /* 由于gallery是120vw × 300vh，文字会出现在可拖拽区域的右下角 */
+  }
 }
 
 .gallery-image {

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+
+    <title>Asymptote</title>
+
+    <!-- including for some global styling -->
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/p5.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/flex-items.css">
+    <link rel="stylesheet" href="../css/meida-Queries.css">
+    <style>
+        body {
+            overflow-x: hidden;
+            background-color: #f5f5f0; /* 偏暖的灰白色背景 */
+        }
+        
+        .page-container {
+            background-color: rgba(245, 245, 240, 0.95); /* 稍微透明的暖灰白色，确保内容区域可见 */
+        }
+        
+        /* 导航栏字体颜色改为深蓝色，与正文一致 */
+        #nav-container .nav .navlist a {
+            color: rgb(42, 38, 103) !important; /* 深蓝色，与darkBlue-text一致 */
+        }
+        
+        #nav-container .nav .home-text {
+            color: rgb(42, 38, 103) !important; /* 深蓝色，与darkBlue-text一致 */
+        }
+        
+        #nav-container .nav .navlist a:hover {
+            color: rgb(42, 38, 103) !important; /* 悬停时保持深蓝色 */
+            border-color: rgb(42, 38, 103) !important; /* 边框也改为深蓝色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="darkBlue-text">
+        <!-- 背景图片和遮罩 - 根据需要添加或修改 -->
+        <!-- <div class="backgroundImageAsymptote"></div> -->
+        <!-- <div class="overlayAsymptote"></div> -->
+        
+        <!-- 导航栏容器 -->
+        <div id="nav-container"></div>
+
+        <div class="page-container">
+
+            <h1>Asymptote</h1>
+            <h1> <br> </h1>
+            <h3>
+                <br>
+                <br>
+                <!-- 年份, 尺寸 -->
+                2025 October<br><br>
+                <!-- 材料和技术 -->
+                Live painting performance, Co-creation with AI
+                <br>
+                Materials: Mineral pigments (iwaenogu), AI model, real-time imaging
+                <br>
+            </h3>
+
+            <br>
+            <br>
+            <section>
+                <div class="responsive-video centered-content">
+                    <!-- Vimeo视频嵌入 -->
+                    <iframe
+                        src="https://player.vimeo.com/video/1138595160?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Asymptote"></iframe>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </section>
+
+            <!-- 项目描述段落 -->
+            <p>
+                Throughout the exhibition, the artist Huichuan continuously paints using mineral pigments (iwaenogu)—a medium rooted in traditional East Asian mural painting, far removed from industrial production and digital technology. The materials are deliberately simple and primitive; even the painting boards and pigments are handcrafted and mixed by the artist. Meanwhile, a camera captures the painting in progress in real-time, periodically transmitting the current image to an AI model trained on hundreds of her own paintings and sketches. The model then generates new images displayed on screen, which the artist uses as reference to continue creation. This process forms a purely visual, non-textual feedback loop: human gestures transform into AI interpretation, and AI's understanding becomes human inspiration.
+            </p>
+            <p>
+                However, this exchange is fundamentally asymmetric. While the creative process involves both human and machine, the artist retains ultimate agency—the freedom to deviate from, ignore, or radically reinterpret what the AI suggests. The human hand maintains veto power over the cycle, ensuring that this remains a collaboration rather than an automation. The AI proposes; the artist disposes. As the artist paints, the AI generates images in real-time, each frame influenced by both the current painting and the AI's own previous outputs, creating a "self-reflective" AI collaborator that serves as both mirror and co-creator. Completed paintings are displayed on the floor and walls surrounding the artist, witnessing this ongoing dialogue.
+            </p>
+
+            <!-- 图片展示 -->
+            <img src="../assets/images/Asymptote/1.jpg" />
+            <br>
+            <br>
+
+            <!-- 更多描述段落 -->
+            <p>
+                In this open-ended feedback loop, the artist can always continue painting and the AI can always generate new responses. There is no natural stopping point—completion becomes a choice rather than a destination. These works are therefore valued not by their finality, but by the time invested in their creation, each painting priced by the hours of human-AI dialogue. In mathematics, an asymptote approaches its limit infinitely without ever meeting it. This work embodies the same principle—a human-AI collaboration forever approaching completion, forever in the process of becoming.
+            </p>
+            <!-- <p>
+                [第四段描述 - 技术细节或创作方法]
+            </p>
+            <p>
+                [第五段描述 - 项目意义或未来展望]
+            </p> -->
+
+            <!-- 多图片并排展示（可选） -->
+            <div class="flex-container flex-basis-half">
+                <div class="flex-item">
+                    <img src="../assets/images/Asymptote/DSC00924.jpg" />
+                </div>
+                <div class="flex-item">
+                    <img src="../assets/images/Asymptote/DSC00925.jpg" />
+                </div>
+                <div class="flex-item">
+                    <img src="../assets/images/Asymptote/DSC00926.jpg" />
+                </div>
+                <div class="flex-item">
+                    <img src="../assets/images/Asymptote/DSC00929.jpg" />
+                </div>
+            </div>
+            <br><br>
+            <img src="../assets/images/Asymptote/2.jpg" />
+           
+
+
+        </div>
+    </div>
+    
+    <!-- 加载导航栏组件 -->
+    <script type="module">
+        import { createNavbar } from '../components/navbar.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('nav-container');
+            if (navContainer) {
+                navContainer.innerHTML = createNavbar();
+            }
+        });
+    </script>
+</body>
+
+</html>
+

@@ -9,8 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const placedImages = [];
 
   images.forEach(image => {
-    // Set random height between 16% and 32% of the viewport height
-    const randomHeightPercentage = Math.floor(Math.random() * (32 - 16 + 1)) + 16;
+    // 检测是否为移动端
+    const isMobile = window.innerWidth <= 768;
+    
+    // 移动端使用更小的图片尺寸，桌面端保持原尺寸
+    let randomHeightPercentage;
+    if (isMobile) {
+      // 移动端：图片高度为视口高度的8%-16%
+      randomHeightPercentage = Math.floor(Math.random() * (16 - 8 + 1)) + 8;
+    } else {
+      // 桌面端：保持原来的16%-32%
+      randomHeightPercentage = Math.floor(Math.random() * (32 - 16 + 1)) + 16;
+    }
+    
     const randomHeight = (randomHeightPercentage / 100) * window.innerHeight;
     image.style.height = `${randomHeight}px`;
     image.style.width = 'auto';
@@ -20,8 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let positionFound = false;
 
     while (attempts < 100 && !positionFound) {
-      const maxWidth = window.innerWidth * 2 - image.clientWidth; // Gallery is twice the viewport width
-      const maxHeight = (window.innerHeight * 3 - 60) - randomHeight; // Gallery is three times the viewport height, minus nav bar
+      // 移动端增加更多的高度空间
+      let galleryWidth, galleryHeight;
+      if (isMobile) {
+        galleryWidth = window.innerWidth * 1.5; // 移动端宽度稍微增加
+        galleryHeight = window.innerHeight * 6; // 移动端高度大幅增加（6倍）
+      } else {
+        galleryWidth = window.innerWidth * 2; // 桌面端保持2倍宽度
+        galleryHeight = window.innerHeight * 3; // 桌面端保持3倍高度
+      }
+      
+      const maxWidth = galleryWidth - image.clientWidth;
+      const maxHeight = (galleryHeight - 60) - randomHeight; // 减去导航栏高度
       const randomX = Math.floor(Math.random() * maxWidth);
       const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
 

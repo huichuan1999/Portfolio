@@ -869,13 +869,19 @@ p {
     padding: 3rem;
 }
 
+/* 小项目网格独立一行显示 */
+.computational-arts-category .small-projects-grid {
+    margin-top: 2rem;
+    width: 100%;
+}
+
 .category-header {
     margin-bottom: 2rem;
 }
 
 .computational-arts-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* 左侧1份，右侧2份 */
+    grid-template-columns: 1fr 1fr; /* 两个大项目并排 */
     gap: 2rem;
     margin-top: 2rem;
     align-items: end; /* 底端对齐 */
@@ -1336,7 +1342,11 @@ body:has(.illustrations-category:hover) #illustrations-overlay {
 
 /* 计算机艺术项目具体背景图片 */
 .featured-project:has(a.PixelOfTheSea)::before {
-    background-image: url(../assets/images/PIXELOFTHESEA.jpg);
+    background-image: url(../assets/images/PixelOfTheSea/cover.jpg);
+}
+
+.featured-project:has(a.Asymptote)::before {
+    background-image: url(../assets/images/Asymptote/cover.jpg);
 }
 
 .small-projects-grid a.TheLensOfAI::before {
@@ -1420,12 +1430,19 @@ body:has(.illustrations-category:hover) #illustrations-overlay {
     }
     
     /* 移动端featured-project样式 - 2x2大小 */
-    .featured-project {
+    .computational-arts-grid .featured-project {
         grid-column: 1 / -1;
-        grid-row: 1 / 2;
         aspect-ratio: 2 / 1; /* 2:1的宽高比，相当于2x2的正方形 */
         padding: 1rem;
         margin-bottom: 1rem;
+    }
+    
+    .computational-arts-grid .featured-project:first-child {
+        grid-row: 1 / 2;
+    }
+    
+    .computational-arts-grid .featured-project:last-child {
+        grid-row: 2 / 3;
     }
     
     .featured-project h4 {

@@ -8,22 +8,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.querySelector('.gallery-container');
     const placedImages = [];
   
-    images.forEach(image => {
-      // Set random height between 16% and 32% of the viewport height
-      const randomHeightPercentage = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
-      const randomHeight = (randomHeightPercentage / 100) * window.innerHeight;
-      image.style.height = `${randomHeight}px`;
-      image.style.width = 'auto';
-  
-      // Attempt to place the image without overlapping
-      let attempts = 0;
-      let positionFound = false;
-  
-      while (attempts < 100 && !positionFound) {
-        const maxWidth = window.innerWidth * 1.2 - image.clientWidth; // Gallery is twice the viewport width
-        const maxHeight = (window.innerHeight * 1.2 - 60) - randomHeight; // Gallery is three times the viewport height, minus nav bar
-        const randomX = Math.floor(Math.random() * maxWidth);
-        const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
+  images.forEach(image => {
+    // 检测是否为移动端
+    const isMobile = window.innerWidth <= 768;
+    
+    // 移动端使用更小的图片尺寸，桌面端保持原尺寸
+    let randomHeightPercentage;
+    if (isMobile) {
+      // 移动端：图片高度为视口高度的15%-25%（增加密度）
+      randomHeightPercentage = Math.floor(Math.random() * (25 - 15 + 1)) + 15;
+    } else {
+      // 桌面端：保持原来的25%-50%
+      randomHeightPercentage = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
+    }
+    
+    const randomHeight = (randomHeightPercentage / 100) * window.innerHeight;
+    image.style.height = `${randomHeight}px`;
+    image.style.width = 'auto';
+
+    // Attempt to place the image without overlapping
+    let attempts = 0;
+    let positionFound = false;
+
+    while (attempts < 100 && !positionFound) {
+      // 移动端调整空间分布，让图片更密集
+      let galleryWidth, galleryHeight;
+      if (isMobile) {
+        galleryWidth = window.innerWidth * 1.2; // 移动端宽度匹配CSS（120vw）
+        galleryHeight = window.innerHeight * 3; // 移动端高度匹配CSS（300vh）
+      } else {
+        galleryWidth = window.innerWidth * 1.2; // 桌面端匹配CSS（120vw）
+        galleryHeight = window.innerHeight * 1.2; // 桌面端匹配CSS（120vh）
+      }
+      
+      const maxWidth = galleryWidth - image.clientWidth;
+      const maxHeight = (galleryHeight - 60) - randomHeight; // 减去导航栏高度
+      const randomX = Math.floor(Math.random() * maxWidth);
+      const randomY = Math.floor(Math.random() * maxHeight) + 60; // 60 is the height of the nav bar
   
         image.style.left = `${randomX}px`;
         image.style.top = `${randomY}px`;

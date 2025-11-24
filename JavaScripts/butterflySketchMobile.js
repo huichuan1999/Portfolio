@@ -14,7 +14,7 @@ var butterflySketch = function(p) {
         physics = new toxi.physics2d.VerletPhysics2D();
         physics.setWorldBounds(new toxi.geom.Rect(0, 0, p.width, p.height));
 
-        butterfly = new Butterfly(p.width / 2, p.height / 2, 60, p, physics);
+        butterfly = new Butterfly(p.width / 2, p.height / 3, 60, p, physics);
     }
 
     p.draw = function() {

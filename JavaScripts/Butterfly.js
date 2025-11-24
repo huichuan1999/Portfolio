@@ -87,8 +87,10 @@ export default class Butterfly {
   display() {
     this.p.strokeWeight(3);
 
-    // 让中心的 particle 跟随鼠标
-    this.centerParticle.set(this.p.mouseX, this.p.mouseY);
+    // 让中心的 particle 跟随鼠标，但只在鼠标移动时
+    if (this.p.mouseX !== this.p.pmouseX || this.p.mouseY !== this.p.pmouseY) {
+      this.centerParticle.set(this.p.mouseX, this.p.mouseY);
+    }
 
     // 绘制两个额外的弹簧
     this.p.stroke(255, 100); // 白色且透明度为100

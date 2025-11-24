@@ -6,11 +6,20 @@ body {
     overflow-x: hidden;
 }
 
-/* Works页面默认背景 - thePool */
+/* ===== Works页面专用容器 ===== */
+/* 替换原有的page-container，提供更紧凑的16px边距布局 */
 .works-page-wrapper {
     position: relative;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+/* Works页面默认背景 - thePool */
 .works-page-wrapper::before {
     content: '';
     position: fixed;
@@ -36,18 +45,6 @@ html {
 /* 为滚动目标添加一些顶部间距，避免被导航栏遮挡 */
 .work-category {
     scroll-margin-top: 80px; /* 为导航栏留出空间 */
-}
-
-/* ===== 新的Works页面专用容器 ===== */
-/* 替换原有的page-container，提供更紧凑的16px边距布局 */
-.works-page-wrapper {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 /* 侧边栏容器 */
@@ -294,6 +291,7 @@ body:has(.sidebar.collapsed) .nav {
 .works-main-content {
     margin-left: 296px; /* 侧边栏280px + 16px边距 */
     margin-right: 16px; /* 右侧16px边距 */
+    margin-top: 80px; /* 为导航栏留出顶部空间 */
     width: calc(100% - 312px); /* 总宽度减去左右边距 */
     max-width: calc(100% - 312px);
     transition: margin-left 0.3s ease, margin-right 0.3s ease, width 0.3s ease, max-width 0.3s ease;
@@ -407,10 +405,10 @@ body:has(.sidebar.collapsed) .nav {
     .works-main-content {
         margin-left: 16px !important;
         margin-right: 16px !important;
+        margin-top: 60px !important; /* 为固定导航栏留出空间 */
         width: calc(100% - 32px) !important;
         max-width: calc(100% - 32px) !important;
         padding: 0 !important;
-        margin-top: 0 !important; /* 移除顶部边距，因为侧边栏现在在导航栏下方 */
     }
     
     /* 移动端网格布局优化 */
