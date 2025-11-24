@@ -25,9 +25,20 @@
             background-color: rgba(245, 245, 240, 0.95); /* 稍微透明的暖灰白色，确保内容区域可见 */
         }
         
+        /* 导航栏背景设为透明 */
+        #nav-container .nav {
+            background: transparent !important;
+        }
+        
+        #nav-container .nav .navlist {
+            background: transparent !important;
+            border: none !important;
+        }
+        
         /* 导航栏字体颜色改为深蓝色，与正文一致 */
         #nav-container .nav .navlist a {
             color: rgb(42, 38, 103) !important; /* 深蓝色，与darkBlue-text一致 */
+            background: transparent !important; /* 链接背景透明 */
         }
         
         #nav-container .nav .home-text {
@@ -37,6 +48,11 @@
         #nav-container .nav .navlist a:hover {
             color: rgb(42, 38, 103) !important; /* 悬停时保持深蓝色 */
             border-color: rgb(42, 38, 103) !important; /* 边框也改为深蓝色 */
+            background: rgba(42, 38, 103, 0.1) !important; /* 悬停时轻微的背景色 */
+        }
+        
+        #nav-container .nav .btli {
+            background: transparent !important; /* 列表项背景透明 */
         }
     </style>
 </head>
