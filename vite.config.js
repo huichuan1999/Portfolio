@@ -29,6 +29,7 @@ export default defineConfig({
                 honey:"./graphicDesign/Honey.html",
                 gallery: "./Illustrations/gallery.html",
                 silentCalcite: "./Illustrations/SilentCalcite.html",
+                asymptote: "./computationalArtist/Asymptote.html",
                 tangibleIllusions: "./computationalArtist/tangibleIllusions.html",
             }
         },
