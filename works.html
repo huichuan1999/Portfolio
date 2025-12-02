@@ -28,11 +28,12 @@
         
         /* category-header 样式调整 */
         .category-header {
-            text-align: left;
+            text-align: left !important;
         }
         
+        .work-category .category-header h2,
         .category-header h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem !important;
         }
     </style>
 </head>
@@ -128,6 +129,10 @@
                             <span class="item-icon">💎</span>
                             <span class="item-name">Silent Calcite</span>
                         </a>
+                        <a href="/Illustrations/ChalkCurret.html" class="sidebar-item">
+                            <span class="item-icon">🖼️</span>
+                            <span class="item-name">Chalk Curret</span>
+                        </a>
                     </div>
                 </div>
 
@@ -171,10 +176,6 @@
                         <a href="/graphicDesign/petGloves.html" class="sidebar-item">
                             <span class="item-icon">🧤</span>
                             <span class="item-name">Pet Gloves</span>
-                        </a>
-                        <a href="/graphicDesign/genkiForest.html" class="sidebar-item">
-                            <span class="item-icon">🌲</span>
-                            <span class="item-name">Chi Forest</span>
                         </a>
                         <a href="/graphicDesign/bookplate.html" class="sidebar-item">
                             <span class="item-icon">📖</span>
@@ -260,7 +261,13 @@
                         <h2>PAINTINGS</h2>
                         <!-- <p>Traditional and digital paintings, watercolor works, and artistic explorations in various visual styles.</p> -->
                     </div>
-                    
+                     <!-- Gallery链接 -->
+                     <div class="gallery-link-container">
+                        <a href="/Illustrations/gallery.html" class="gallery-link">
+                            <span class="gallery-text">🎨🖼️ View Sketches & Life drawings Gallery</span>
+                            <span class="gallery-arrow">→</span>
+                        </a>
+                    </div>
                     <div class="illustrations-grid">
                         <!-- 左侧大项目 - Silent Calcite -->
                         <div class="featured-project">
@@ -269,19 +276,19 @@
                             </a>
                         </div>
                         
-                        <!-- 右侧Gallery链接 -->
-                        <div class="gallery-link-container">
-                            <a href="/Illustrations/gallery.html" class="gallery-link">
-                                <span class="gallery-text">View<br>Gallery</span>
-                                <span class="gallery-arrow">→</span>
+                        <!-- 右侧大项目 - Chalk Curret -->
+                        <div class="featured-project">
+                            <a href="/Illustrations/ChalkCurret.html" class="ChalkCurret">
+                                <h4 data-text="Chalk Curret">Chalk Curret</h4>
                             </a>
                         </div>
                     </div>
+                    
                 </div>
                 
                 <div class="work-category game-dev-category" id="game-dev-section">
                     <div class="category-header">
-                        <h2>GAME DEV</h2>
+                        <h2>GAME DEVELOPMENT</h2>
                         <!-- <p>Game development projects, interactive experiences, and creative coding experiments available on Itch.io.</p> -->
                         <!-- <div class="category-description">
                             <span>In Game Projects, Ekawa worked as a full stack unity developer individually.<br>
@@ -325,9 +332,6 @@
                         <div class="small-projects-grid graphics-small-grid">
                             <a href="/graphicDesign/petGloves.html" class="PetGloves">
                                 <h5 data-text="Pet bathing gloves packaging">Pet bathing gloves packaging</h5>
-                            </a>
-                            <a href="/graphicDesign/genkiForest.html" class="ChiForest">
-                                <h5 data-text="ChiForest">ChiForest</h5>
                             </a>
                             <a href="/graphicDesign/bookplate.html" class="BookPlate">
                                 <h5 data-text="BookPlate">BookPlate</h5>

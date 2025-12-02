@@ -30,6 +30,7 @@ export default defineConfig({
                 gallery: "./Illustrations/gallery.html",
                 silentCalcite: "./Illustrations/SilentCalcite.html",
                 asymptote: "./computationalArtist/Asymptote.html",
+                chalkCurret: "./Illustrations/ChalkCurret.html",
                 tangibleIllusions: "./computationalArtist/tangibleIllusions.html",
             }
         },

@@ -882,7 +882,7 @@ p {
 .computational-arts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 两个大项目并排 */
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
     align-items: end; /* 底端对齐 */
 }
@@ -1105,7 +1105,7 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 .graphics-grid {
     display: grid;
     grid-template-columns: 1fr 2fr; /* 左侧1份，右侧2份 */
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
     align-items: end; /* 底端对齐 */
 }
@@ -1198,15 +1198,16 @@ body:has(.graphics-category:hover) #graphics-bg {
 
 .illustrations-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr; /* 两个大项目并排 */
+    gap: 1rem;
     margin-top: 2rem;
+    align-items: end; /* 底端对齐 */
 }
 
 .gallery-link-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .gallery-link {
@@ -1223,11 +1224,11 @@ body:has(.graphics-category:hover) #graphics-bg {
 }
 
 .gallery-text {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: rgb(243, 255, 255);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0.5px;
     line-height: 1.2;
     transition: color 0.3s ease;
 }
@@ -1237,9 +1238,9 @@ body:has(.graphics-category:hover) #graphics-bg {
 }
 
 .gallery-arrow {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: rgb(243, 255, 255);
-    font-weight: bold;
+    font-weight: normal;
     transition: transform 0.3s ease;
 }
 
@@ -1250,6 +1251,10 @@ body:has(.graphics-category:hover) #graphics-bg {
 /* Paintings项目背景图片 */
 .illustrations-grid .featured-project:has(a.SilentCalcite)::before {
     background-image: url(../assets/illustrations/SilentCalcite/etching.png);
+}
+
+.illustrations-grid .featured-project:has(a.ChalkCurret)::before {
+    background-image: url(../assets/illustrations/ChalkCurrent/ChalkCurrent-Cover.jpg);
 }
 
 /* Paintings背景切换 */
@@ -1547,10 +1552,17 @@ body:has(.illustrations-category:hover) #illustrations-overlay {
     
     .illustrations-grid .featured-project {
         grid-column: 1 / -1;
-        grid-row: 1 / 2;
         aspect-ratio: 2 / 1;
         padding: 1rem;
         margin-bottom: 1rem;
+    }
+    
+    .illustrations-grid .featured-project:first-child {
+        grid-row: 1 / 2;
+    }
+    
+    .illustrations-grid .featured-project:last-child {
+        grid-row: 2 / 3;
     }
     
     .illustrations-grid .featured-project h4 {
@@ -1558,8 +1570,7 @@ body:has(.illustrations-category:hover) #illustrations-overlay {
     }
     
     .gallery-link-container {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
+        margin-top: 1rem;
         padding: 1rem;
     }
     
