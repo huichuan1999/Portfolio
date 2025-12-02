@@ -18,6 +18,22 @@
         body {
             overflow-x: hidden;
         }
+        
+        /* 移除所有圆角 */
+        *,
+        *::before,
+        *::after {
+            border-radius: 0 !important;
+        }
+        
+        /* category-header 样式调整 */
+        .category-header {
+            text-align: left;
+        }
+        
+        .category-header h2 {
+            font-size: 1.8rem;
+        }
     </style>
 </head>
 
@@ -145,7 +161,7 @@
                 <div class="sidebar-category">
                     <div class="category-toggle" data-category="graphics" data-target="graphics-section">
                         <span class="toggle-arrow">▶</span>
-                        <span class="category-name">GRAPHICS DESIGN</span>
+                        <span class="category-name">DESIGN</span>
                     </div>
                     <div class="category-items" id="graphics-items">
                         <a href="/graphicDesign/2024GoldsmithsMAMFAComputationalArtsDegreeShow.html" class="sidebar-item">
@@ -292,7 +308,7 @@
                 
                 <div class="work-category graphics-category" id="graphics-section">
                     <div class="category-header">
-                        <h2>GRAPHIC DESIGN</h2>
+                        <h2>DESIGN</h2>
                         <!-- <p>Graphic design work including posters, branding, exhibition materials, and commercial design projects.</p> -->
 
                     </div>
