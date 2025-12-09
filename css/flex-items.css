@@ -152,10 +152,10 @@
     background-image: url(../assets/images/genkiForest/genkiForest.png);
 }
 .flex-item a.PetGloves::before {
-    background-image: url(../assets/images/graphicDesign/glovesSquare.png);
+    background-image: url(../assets/images/graphicDesign/glovesSquare.jpg);
 }
 .flex-item a.FlyBook::before {
-    background-image: url(../assets/FlyingBooks/FINAL_Moment1.png);
+    background-image: url(../assets/FlyingBooks/FINAL_Moment1.jpg);
 }
 .flex-item a.NOAA::before {
     background-image: url(../assets/images/NOAA/flexNOAA.jpeg);

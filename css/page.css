@@ -1150,7 +1150,7 @@ body:has(.game-dev-category:hover) #game-dev-bg {
 }
 
 .graphics-small-grid a.PetGloves::before {
-    background-image: url(../assets/images/graphicDesign/gloves.png);
+    background-image: url(../assets/images/graphicDesign/glovesSquare.jpg);
 }
 
 .graphics-small-grid a.ChiForest::before {
@@ -1250,7 +1250,7 @@ body:has(.graphics-category:hover) #graphics-bg {
 
 /* Paintings项目背景图片 */
 .illustrations-grid .featured-project:has(a.SilentCalcite)::before {
-    background-image: url(../assets/illustrations/SilentCalcite/etching.png);
+    background-image: url(../assets/illustrations/SilentCalcite/etching.jpg);
 }
 
 .illustrations-grid .featured-project:has(a.ChalkCurret)::before {
@@ -1383,7 +1383,7 @@ body:has(.illustrations-category:hover) #illustrations-overlay {
 }
 
 .small-projects-grid a.FlyBook::before {
-    background-image: url(../assets/FlyingBooks/FINAL_Moment1.png);
+    background-image: url(../assets/FlyingBooks/FINAL_Moment1.jpg);
 }
 
 /* Game Dev项目背景图片 - 同时支持game-dev-grid和small-projects-grid */
